@@ -1,0 +1,135 @@
+[2025-03-10T07:33:19.955Z] INFO: 服务器运行在端口 5001
+-----------------------------------
+
+[2025-03-10T07:33:19.983Z] ERROR: 未捕获的异常:
+数据: {
+  "message": "listen EADDRINUSE: address already in use :::5001",
+  "stack": "Error: listen EADDRINUSE: address already in use :::5001\n    at Server.setupListenHandle [as _listen2] (node:net:1937:16)\n    at listenInCluster (node:net:1994:12)\n    at Server.listen (node:net:2099:7)\n    at Function.listen (/Users/liujinlong/Documents/Luma_clone/server/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/src/index.ts:68:5)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Module.m._compile (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1618:23)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)"
+}
+-----------------------------------
+
+[2025-03-10T07:33:20.033Z] ERROR: 未捕获的异常:
+数据: {
+  "message": "listen EADDRINUSE: address already in use :::5001",
+  "stack": "Error: listen EADDRINUSE: address already in use :::5001\n    at Server.setupListenHandle [as _listen2] (node:net:1937:16)\n    at listenInCluster (node:net:1994:12)\n    at Server.listen (node:net:2099:7)\n    at Function.listen (/Users/liujinlong/Documents/Luma_clone/server/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/src/index.ts:68:5)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Module.m._compile (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1618:23)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)"
+}
+-----------------------------------
+
+[2025-03-10T07:33:20.036Z] ERROR: 未捕获的异常:
+数据: {
+  "message": "listen EADDRINUSE: address already in use :::5001",
+  "stack": "Error: listen EADDRINUSE: address already in use :::5001\n    at Server.setupListenHandle [as _listen2] (node:net:1937:16)\n    at listenInCluster (node:net:1994:12)\n    at Server.listen (node:net:2099:7)\n    at Function.listen (/Users/liujinlong/Documents/Luma_clone/server/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/src/index.ts:68:5)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Module.m._compile (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1618:23)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)"
+}
+-----------------------------------
+
+[2025-03-10T07:33:20.065Z] ERROR: 未捕获的异常:
+数据: {
+  "message": "listen EADDRINUSE: address already in use :::5001",
+  "stack": "Error: listen EADDRINUSE: address already in use :::5001\n    at Server.setupListenHandle [as _listen2] (node:net:1937:16)\n    at listenInCluster (node:net:1994:12)\n    at Server.listen (node:net:2099:7)\n    at Function.listen (/Users/liujinlong/Documents/Luma_clone/server/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/src/index.ts:68:5)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Module.m._compile (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1618:23)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)"
+}
+-----------------------------------
+
+[2025-03-10T07:33:20.120Z] ERROR: 未捕获的异常:
+数据: {
+  "message": "listen EADDRINUSE: address already in use :::5001",
+  "stack": "Error: listen EADDRINUSE: address already in use :::5001\n    at Server.setupListenHandle [as _listen2] (node:net:1937:16)\n    at listenInCluster (node:net:1994:12)\n    at Server.listen (node:net:2099:7)\n    at Function.listen (/Users/liujinlong/Documents/Luma_clone/server/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/src/index.ts:68:5)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Module.m._compile (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1618:23)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)"
+}
+-----------------------------------
+
+[2025-03-10T07:35:33.786Z] INFO: 服务器运行在端口 5001
+-----------------------------------
+
+[2025-03-10T07:35:34.153Z] ERROR: 未捕获的异常:
+数据: {
+  "message": "listen EADDRINUSE: address already in use :::5001",
+  "stack": "Error: listen EADDRINUSE: address already in use :::5001\n    at Server.setupListenHandle [as _listen2] (node:net:1937:16)\n    at listenInCluster (node:net:1994:12)\n    at Server.listen (node:net:2099:7)\n    at Function.listen (/Users/liujinlong/Documents/Luma_clone/server/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/src/index.ts:68:5)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Module.m._compile (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1618:23)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)"
+}
+-----------------------------------
+
+[2025-03-10T07:35:34.156Z] ERROR: 未捕获的异常:
+数据: {
+  "message": "listen EADDRINUSE: address already in use :::5001",
+  "stack": "Error: listen EADDRINUSE: address already in use :::5001\n    at Server.setupListenHandle [as _listen2] (node:net:1937:16)\n    at listenInCluster (node:net:1994:12)\n    at Server.listen (node:net:2099:7)\n    at Function.listen (/Users/liujinlong/Documents/Luma_clone/server/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/src/index.ts:68:5)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Module.m._compile (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1618:23)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)"
+}
+-----------------------------------
+
+[2025-03-10T07:35:34.227Z] ERROR: 未捕获的异常:
+数据: {
+  "message": "listen EADDRINUSE: address already in use :::5001",
+  "stack": "Error: listen EADDRINUSE: address already in use :::5001\n    at Server.setupListenHandle [as _listen2] (node:net:1937:16)\n    at listenInCluster (node:net:1994:12)\n    at Server.listen (node:net:2099:7)\n    at Function.listen (/Users/liujinlong/Documents/Luma_clone/server/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/src/index.ts:68:5)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Module.m._compile (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1618:23)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)"
+}
+-----------------------------------
+
+[2025-03-10T07:35:34.232Z] ERROR: 未捕获的异常:
+数据: {
+  "message": "listen EADDRINUSE: address already in use :::5001",
+  "stack": "Error: listen EADDRINUSE: address already in use :::5001\n    at Server.setupListenHandle [as _listen2] (node:net:1937:16)\n    at listenInCluster (node:net:1994:12)\n    at Server.listen (node:net:2099:7)\n    at Function.listen (/Users/liujinlong/Documents/Luma_clone/server/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/src/index.ts:68:5)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Module.m._compile (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1618:23)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)"
+}
+-----------------------------------
+
+[2025-03-10T07:35:34.267Z] ERROR: 未捕获的异常:
+数据: {
+  "message": "listen EADDRINUSE: address already in use :::5001",
+  "stack": "Error: listen EADDRINUSE: address already in use :::5001\n    at Server.setupListenHandle [as _listen2] (node:net:1937:16)\n    at listenInCluster (node:net:1994:12)\n    at Server.listen (node:net:2099:7)\n    at Function.listen (/Users/liujinlong/Documents/Luma_clone/server/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/src/index.ts:68:5)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Module.m._compile (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1618:23)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)"
+}
+-----------------------------------
+
+[2025-03-10T07:36:03.787Z] ERROR: MongoDB连接失败:
+数据: {
+  "message": "connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017",
+  "stack": "MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017\n    at _handleConnectionErrors (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/connection.js:1165:11)\n    at NativeConnection.openUri (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/connection.js:1096:11)"
+}
+-----------------------------------
+
+[2025-03-10T07:38:17.907Z] INFO: 服务器运行在端口 5001
+-----------------------------------
+
+[2025-03-10T07:38:17.972Z] ERROR: 未捕获的异常:
+数据: {
+  "message": "listen EADDRINUSE: address already in use :::5001",
+  "stack": "Error: listen EADDRINUSE: address already in use :::5001\n    at Server.setupListenHandle [as _listen2] (node:net:1937:16)\n    at listenInCluster (node:net:1994:12)\n    at Server.listen (node:net:2099:7)\n    at Function.listen (/Users/liujinlong/Documents/Luma_clone/server/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/src/index.ts:68:5)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Module.m._compile (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1618:23)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)"
+}
+-----------------------------------
+
+[2025-03-10T07:38:18.008Z] ERROR: 未捕获的异常:
+数据: {
+  "message": "listen EADDRINUSE: address already in use :::5001",
+  "stack": "Error: listen EADDRINUSE: address already in use :::5001\n    at Server.setupListenHandle [as _listen2] (node:net:1937:16)\n    at listenInCluster (node:net:1994:12)\n    at Server.listen (node:net:2099:7)\n    at Function.listen (/Users/liujinlong/Documents/Luma_clone/server/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/src/index.ts:68:5)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Module.m._compile (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1618:23)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)"
+}
+-----------------------------------
+
+[2025-03-10T07:38:18.018Z] ERROR: 未捕获的异常:
+数据: {
+  "message": "listen EADDRINUSE: address already in use :::5001",
+  "stack": "Error: listen EADDRINUSE: address already in use :::5001\n    at Server.setupListenHandle [as _listen2] (node:net:1937:16)\n    at listenInCluster (node:net:1994:12)\n    at Server.listen (node:net:2099:7)\n    at Function.listen (/Users/liujinlong/Documents/Luma_clone/server/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/src/index.ts:68:5)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Module.m._compile (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1618:23)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)"
+}
+-----------------------------------
+
+[2025-03-10T07:38:18.023Z] ERROR: 未捕获的异常:
+数据: {
+  "message": "listen EADDRINUSE: address already in use :::5001",
+  "stack": "Error: listen EADDRINUSE: address already in use :::5001\n    at Server.setupListenHandle [as _listen2] (node:net:1937:16)\n    at listenInCluster (node:net:1994:12)\n    at Server.listen (node:net:2099:7)\n    at Function.listen (/Users/liujinlong/Documents/Luma_clone/server/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/src/index.ts:68:5)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Module.m._compile (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1618:23)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)"
+}
+-----------------------------------
+
+[2025-03-10T07:38:18.129Z] ERROR: 未捕获的异常:
+数据: {
+  "message": "listen EADDRINUSE: address already in use :::5001",
+  "stack": "Error: listen EADDRINUSE: address already in use :::5001\n    at Server.setupListenHandle [as _listen2] (node:net:1937:16)\n    at listenInCluster (node:net:1994:12)\n    at Server.listen (node:net:2099:7)\n    at Function.listen (/Users/liujinlong/Documents/Luma_clone/server/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/src/index.ts:68:5)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Module.m._compile (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1618:23)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)"
+}
+-----------------------------------
+
+[2025-03-10T07:38:47.896Z] ERROR: MongoDB连接失败:
+数据: {
+  "message": "connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017",
+  "stack": "MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017\n    at _handleConnectionErrors (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/connection.js:1165:11)\n    at NativeConnection.openUri (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/connection.js:1096:11)"
+}
+-----------------------------------
+
+[2025-03-10T07:39:21.428Z] ERROR: 数据库存储失败，但图像生成成功:
+数据: {
+  "message": "Operation `images.insertOne()` buffering timed out after 10000ms",
+  "stack": "MongooseError: Operation `images.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+

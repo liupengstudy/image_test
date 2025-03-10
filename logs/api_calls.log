@@ -1,0 +1,2147 @@
+[2025-03-10T02:55:19.104Z] INFO: ===== 开始新的图像生成请求 =====
+-----------------------------------
+[2025-03-10T02:55:19.105Z] INFO: 原始提示词: "生成一只小飞猪"
+-----------------------------------
+[2025-03-10T02:55:19.105Z] INFO: 开始处理提示词: "生成一只小飞猪"
+-----------------------------------
+[2025-03-10T02:55:19.106Z] INFO: 调用DeepSeek R1 API开始
+数据: {
+  "model": "deepseek-reasoner",
+  "system": "\n      你是一个专业的AI图像生成助手。请理解用户的意图，并将其转化为优化的提示词，以便AI模型能够生成高质量的图像。\n      输出应该专注于创建清晰、详细、富有创意的图像描述，包括构图、风格、光照、颜色、情绪等元素。\n      只输出优化后的提示词，不要包含其他解释性文本。\n    ",
+  "user": "生成一只小飞猪"
+}
+-----------------------------------
+[2025-03-10T02:55:49.693Z] INFO: DeepSeek R1 API响应
+数据: {
+  "id": "fd36e994-280c-4037-98ad-d8aac721f3d0",
+  "object": "chat.completion",
+  "created": 1741575319,
+  "model": "deepseek-reasoner",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "A chubby pink piglet with shimmering translucent butterfly wings, soaring joyfully through a cotton candy cloud sky in a whimsical cartoon style. The scene features dynamic diagonal composition with golden sunlight casting soft lens flares, highlighting the pig's glossy skin and iridescent wing patterns. Surrounding the pig are swirling sparkles and floating soap bubbles, with a gradient sunset background blending peach, lavender, and mint hues. The character displays playful expression with sparkling blue eyes and a curly tail trailing rainbow streaks, captured in mid-flight motion with blurred cloud movement emphasizing speed.",
+        "reasoning_content": "好的，用户让我生成一只小飞猪。首先，我需要明确“小飞猪”是什么样的形象。通常，飞猪可能是指有翅膀的猪，或者是通过某种方式飞行的猪，比如用气球、魔法或者机械装置。用户没有具体说明风格，所以我要考虑通用且吸引人的元素。\n\n接下来，构图方面，可能需要一个动态的姿势，比如在空中飞翔，周围有云朵或星星来增强动感。风格的话，可能适合卡通或童话风格，这样更可爱，容易被接受。如果用户有其他风格偏好，比如写实或蒸汽朋克，可能需要调整，但这里没有提示，所以默认选安全的选择。\n\n光照方面，柔和的日光或温暖的夕阳可以营造梦幻的感觉。颜色要鲜艳，尤其是粉色的猪，搭配蓝天或金色云朵，对比强烈。情绪方面，应该是欢乐、自由、奇幻的，表现出飞行的轻松愉快。\n\n细节要注意翅膀的设计，可能是蝴蝶翅膀或小鸟翅膀，材质轻盈。可能添加一些元素，比如系在身上的丝带或魔法光芒，增加层次感。背景可以考虑天空、云层或远处的山脉，让画面更丰富。\n\n还要考虑是否有其他元素，比如同伴或互动对象，但用户没提，可能保持简洁。最后，确保提示词涵盖所有关键点：主题、风格、构图、颜色、光照、细节和情绪，不遗漏重要部分，同时保持简洁明了。"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 83,
+    "completion_tokens": 405,
+    "total_tokens": 488,
+    "prompt_tokens_details": {
+      "cached_tokens": 64
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 290
+    },
+    "prompt_cache_hit_tokens": 64,
+    "prompt_cache_miss_tokens": 19
+  },
+  "system_fingerprint": "fp_5417b77867_prod0225"
+}
+-----------------------------------
+[2025-03-10T02:55:49.700Z] INFO: 优化后的提示词: "A chubby pink piglet with shimmering translucent butterfly wings, soaring joyfully through a cotton candy cloud sky in a whimsical cartoon style. The scene features dynamic diagonal composition with golden sunlight casting soft lens flares, highlighting the pig's glossy skin and iridescent wing patterns. Surrounding the pig are swirling sparkles and floating soap bubbles, with a gradient sunset background blending peach, lavender, and mint hues. The character displays playful expression with sparkling blue eyes and a curly tail trailing rainbow streaks, captured in mid-flight motion with blurred cloud movement emphasizing speed."
+-----------------------------------
+[2025-03-10T02:55:49.701Z] INFO: 准备生成图像，提示词: "A chubby pink piglet with shimmering translucent butterfly wings, soaring joyfully through a cotton candy cloud sky in a whimsical cartoon style. The scene features dynamic diagonal composition with golden sunlight casting soft lens flares, highlighting the pig's glossy skin and iridescent wing patterns. Surrounding the pig are swirling sparkles and floating soap bubbles, with a gradient sunset background blending peach, lavender, and mint hues. The character displays playful expression with sparkling blue eyes and a curly tail trailing rainbow streaks, captured in mid-flight motion with blurred cloud movement emphasizing speed."
+-----------------------------------
+[2025-03-10T02:55:49.701Z] INFO: 调用阿里云通义万相API开始
+数据: {
+  "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
+  "body": {
+    "model": "wanx2.1-t2i-turbo",
+    "input": {
+      "prompt": "A chubby pink piglet with shimmering translucent butterfly wings, soaring joyfully through a cotton candy cloud sky in a whimsical cartoon style. The scene features dynamic diagonal composition with golden sunlight casting soft lens flares, highlighting the pig's glossy skin and iridescent wing patterns. Surrounding the pig are swirling sparkles and floating soap bubbles, with a gradient sunset background blending peach, lavender, and mint hues. The character displays playful expression with sparkling blue eyes and a curly tail trailing rainbow streaks, captured in mid-flight motion with blurred cloud movement emphasizing speed."
+    },
+    "parameters": {
+      "size": "1024*1024",
+      "n": 4,
+      "prompt_extend": true,
+      "watermark": false
+    }
+  },
+  "headers": {
+    "Authorization": "Bearer your_...",
+    "Content-Type": "application/json",
+    "X-DashScope-Async": "enable"
+  }
+}
+-----------------------------------
+[2025-03-10T02:55:49.917Z] ERROR: 通义万相图像生成失败
+Request failed with status code 401
+AxiosError: Request failed with status code 401
+    at settle (/Users/liujinlong/Documents/Luma_clone/server/node_modules/axios/lib/core/settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (/Users/liujinlong/Documents/Luma_clone/server/node_modules/axios/lib/adapters/http.js:599:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (/Users/liujinlong/Documents/Luma_clone/server/node_modules/axios/lib/core/Axios.js:45:41)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+-----------------------------------
+[2025-03-10T02:55:49.918Z] ERROR: Axios错误详情
+{
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: {
+      FormData: [Function: FormData] [FormData] {
+        LINE_BREAK: '\r\n',
+        DEFAULT_CONTENT_TYPE: 'application/octet-stream'
+      },
+      Blob: [class Blob]
+    },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer your_aliyun_api_key',
+      'X-DashScope-Async': 'enable',
+      'User-Agent': 'axios/1.8.2',
+      'Content-Length': '766',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis',
+    data: `{"model":"wanx2.1-t2i-turbo","input":{"prompt":"A chubby pink piglet with shimmering translucent butterfly wings, soaring joyfully through a cotton candy cloud sky in a whimsical cartoon style. The scene features dynamic diagonal composition with golden sunlight casting soft lens flares, highlighting the pig's glossy skin and iridescent wing patterns. Surrounding the pig are swirling sparkles and floating soap bubbles, with a gradient sunset background blending peach, lavender, and mint hues. The character displays playful expression with sparkling blue eyes and a curly tail trailing rainbow streaks, captured in mid-flight motion with blurred cloud movement emphasizing speed."},"parameters":{"size":"1024*1024","n":4,"prompt_extend":true,"watermark":false}}`,
+    allowAbsoluteUrls: true
+  },
+  response: {
+    code: 'InvalidApiKey',
+    message: 'Invalid API-key provided.',
+    request_id: '138ee8b5-18fe-9383-a5f1-d1586d882e66'
+  },
+  status: 401,
+  headers: Object [AxiosHeaders] {
+    'x-request-id': '138ee8b5-18fe-9383-a5f1-d1586d882e66',
+    'content-type': 'application/json',
+    'content-length': '114',
+    'x-envoy-upstream-service-time': '7',
+    date: 'Mon, 10 Mar 2025 02:55:49 GMT',
+    server: 'istio-envoy',
+    'req-cost-time': '7',
+    'req-arrive-time': '1741575349921',
+    'resp-start-time': '1741575349928',
+    vary: 'Accept-Encoding'
+  }
+}
+-----------------------------------
+[2025-03-10T02:55:49.919Z] INFO: API调用失败，使用备选图像源
+数据: [
+  "https://picsum.photos/seed/fallback1/512/512",
+  "https://picsum.photos/seed/fallback2/512/512",
+  "https://picsum.photos/seed/fallback3/512/512",
+  "https://picsum.photos/seed/fallback4/512/512"
+]
+-----------------------------------
+[2025-03-10T02:55:49.919Z] INFO: ===== 图像生成请求完成 =====
+-----------------------------------
+[2025-03-10T03:03:00.436Z] INFO: ===== 开始新的图像生成请求 =====
+-----------------------------------
+[2025-03-10T03:03:00.437Z] INFO: 原始提示词: "生成一只小飞猪"
+-----------------------------------
+[2025-03-10T03:03:00.437Z] INFO: 开始处理提示词: "生成一只小飞猪"
+-----------------------------------
+[2025-03-10T03:03:00.437Z] INFO: 调用DeepSeek R1 API开始
+数据: {
+  "model": "deepseek-reasoner",
+  "system": "\n      你是一个专业的AI图像生成助手。请理解用户的意图，并将其转化为优化的提示词，以便AI模型能够生成高质量的图像。\n      输出应该专注于创建清晰、详细、富有创意的图像描述，包括构图、风格、光照、颜色、情绪等元素。\n      只输出优化后的提示词，不要包含其他解释性文本。\n    ",
+  "user": "生成一只小飞猪"
+}
+-----------------------------------
+[2025-03-10T03:03:28.133Z] INFO: DeepSeek R1 API响应
+数据: {
+  "id": "3cb07143-14fc-49b4-94f2-6a61f6bd3ae6",
+  "object": "chat.completion",
+  "created": 1741575780,
+  "model": "deepseek-reasoner",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "A chubby pink piglet with fluffy cloud-like wings, soaring joyfully through a vibrant sunset sky, golden hour light casting warm gradients on its glossy fur, cartoonish 3D render style with soft cel-shading, surrounded by swirling pastel-colored mist trails, cherry blossom petals floating in the air, twinkling stardust particles emphasizing motion, exaggerated perspective showing tiny village landscape below, playful expression with sparkling blue eyes and curled tail, Disney-Pixar animation quality with hyper-detailed texture on each individual wing feather.",
+        "reasoning_content": "好的，用户让我生成一只小飞猪。首先，我需要明确“小飞猪”是什么样的形象。飞猪可能是指有翅膀的猪，或者是通过某种方式飞行的猪，比如使用道具。需要确定是现实风格还是卡通风格。用户没有指定风格，可能希望可爱或童话感觉。\n\n接下来考虑构图。小飞猪应该位于画面中心，可能在空中飞翔，背景可以是蓝天白云或梦幻的场景。动态姿势，比如展翅飞翔，表情要欢快，增加可爱感。光照方面，柔和的阳光或温暖的光线能营造温馨氛围。颜色方面，使用明亮的色彩，比如粉色的猪，白色的翅膀，搭配柔和的背景色。情绪应该是快乐、自由的感觉。\n\n细节方面，翅膀的设计需要具体，比如蓬松的云朵状翅膀或者蝴蝶翅膀，增加奇幻元素。可能添加一些特效，如星光或光晕，提升魔法感。周围可以有小鸟或云朵作为陪衬，增强画面生动性。风格可能偏向3D渲染或卡通动画，使图像更具吸引力。需要确保提示词涵盖这些元素，结构清晰，描述详细。"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 83,
+    "completion_tokens": 342,
+    "total_tokens": 425,
+    "prompt_tokens_details": {
+      "cached_tokens": 64
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 232
+    },
+    "prompt_cache_hit_tokens": 64,
+    "prompt_cache_miss_tokens": 19
+  },
+  "system_fingerprint": "fp_5417b77867_prod0225"
+}
+-----------------------------------
+[2025-03-10T03:03:28.139Z] INFO: 优化后的提示词: "A chubby pink piglet with fluffy cloud-like wings, soaring joyfully through a vibrant sunset sky, golden hour light casting warm gradients on its glossy fur, cartoonish 3D render style with soft cel-shading, surrounded by swirling pastel-colored mist trails, cherry blossom petals floating in the air, twinkling stardust particles emphasizing motion, exaggerated perspective showing tiny village landscape below, playful expression with sparkling blue eyes and curled tail, Disney-Pixar animation quality with hyper-detailed texture on each individual wing feather."
+-----------------------------------
+[2025-03-10T03:03:28.140Z] INFO: 准备生成图像，提示词: "A chubby pink piglet with fluffy cloud-like wings, soaring joyfully through a vibrant sunset sky, golden hour light casting warm gradients on its glossy fur, cartoonish 3D render style with soft cel-shading, surrounded by swirling pastel-colored mist trails, cherry blossom petals floating in the air, twinkling stardust particles emphasizing motion, exaggerated perspective showing tiny village landscape below, playful expression with sparkling blue eyes and curled tail, Disney-Pixar animation quality with hyper-detailed texture on each individual wing feather."
+-----------------------------------
+[2025-03-10T03:03:28.140Z] INFO: 调用阿里云通义万相API开始
+数据: {
+  "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
+  "body": {
+    "model": "wanx2.1-t2i-turbo",
+    "input": {
+      "prompt": "A chubby pink piglet with fluffy cloud-like wings, soaring joyfully through a vibrant sunset sky, golden hour light casting warm gradients on its glossy fur, cartoonish 3D render style with soft cel-shading, surrounded by swirling pastel-colored mist trails, cherry blossom petals floating in the air, twinkling stardust particles emphasizing motion, exaggerated perspective showing tiny village landscape below, playful expression with sparkling blue eyes and curled tail, Disney-Pixar animation quality with hyper-detailed texture on each individual wing feather."
+    },
+    "parameters": {
+      "size": "1024*1024",
+      "n": 4,
+      "prompt_extend": true,
+      "watermark": false
+    }
+  },
+  "headers": {
+    "Content-Type": "application/json",
+    "X-DashScope-Async": "enable",
+    "Authorization": "Bearer sk-8f..."
+  }
+}
+-----------------------------------
+[2025-03-10T03:03:28.481Z] INFO: 阿里云API响应: 状态码=200
+数据: {
+  "output": {
+    "task_status": "PENDING",
+    "task_id": "5524a422-c692-4c5c-b170-b69335497c27"
+  },
+  "request_id": "4dff0171-5d20-9bad-a61f-6d1b6a4e4053"
+}
+-----------------------------------
+[2025-03-10T03:03:28.484Z] INFO: 通义万相任务创建成功
+数据: {
+  "output": {
+    "task_status": "PENDING",
+    "task_id": "5524a422-c692-4c5c-b170-b69335497c27"
+  },
+  "request_id": "4dff0171-5d20-9bad-a61f-6d1b6a4e4053"
+}
+-----------------------------------
+[2025-03-10T03:03:28.485Z] INFO: 获取到任务ID: 5524a422-c692-4c5c-b170-b69335497c27，开始等待任务完成
+-----------------------------------
+[2025-03-10T03:03:28.486Z] INFO: 轮询任务状态 (第1次): 任务ID=5524a422-c692-4c5c-b170-b69335497c27
+-----------------------------------
+[2025-03-10T03:03:30.487Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/5524a422-c692-4c5c-b170-b69335497c27
+-----------------------------------
+[2025-03-10T03:03:30.610Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "df67af25-fa66-9aca-9acc-78591ef8ad67",
+  "output": {
+    "task_id": "5524a422-c692-4c5c-b170-b69335497c27",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 11:03:28.496",
+    "scheduled_time": "2025-03-10 11:03:28.514"
+  }
+}
+-----------------------------------
+[2025-03-10T03:03:30.612Z] INFO: 任务处理中... 第1次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T03:03:30.613Z] INFO: 轮询任务状态 (第2次): 任务ID=5524a422-c692-4c5c-b170-b69335497c27
+-----------------------------------
+[2025-03-10T03:03:32.614Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/5524a422-c692-4c5c-b170-b69335497c27
+-----------------------------------
+[2025-03-10T03:03:32.721Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "038811fd-9f18-9fd8-90ad-dd78819e1445",
+  "output": {
+    "task_id": "5524a422-c692-4c5c-b170-b69335497c27",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 11:03:28.496",
+    "scheduled_time": "2025-03-10 11:03:28.514"
+  }
+}
+-----------------------------------
+[2025-03-10T03:03:32.724Z] INFO: 任务处理中... 第2次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T03:03:32.724Z] INFO: 轮询任务状态 (第3次): 任务ID=5524a422-c692-4c5c-b170-b69335497c27
+-----------------------------------
+[2025-03-10T03:03:34.726Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/5524a422-c692-4c5c-b170-b69335497c27
+-----------------------------------
+[2025-03-10T03:03:34.837Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "e82688d5-26be-9325-a3dc-e0ef86b3ec56",
+  "output": {
+    "task_id": "5524a422-c692-4c5c-b170-b69335497c27",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 11:03:28.496",
+    "scheduled_time": "2025-03-10 11:03:28.514"
+  }
+}
+-----------------------------------
+[2025-03-10T03:03:34.839Z] INFO: 任务处理中... 第3次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T03:03:34.840Z] INFO: 轮询任务状态 (第4次): 任务ID=5524a422-c692-4c5c-b170-b69335497c27
+-----------------------------------
+[2025-03-10T03:03:36.843Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/5524a422-c692-4c5c-b170-b69335497c27
+-----------------------------------
+[2025-03-10T03:03:36.956Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "792fce89-f172-9f33-93e0-0a5b6d528367",
+  "output": {
+    "task_id": "5524a422-c692-4c5c-b170-b69335497c27",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 11:03:28.496",
+    "scheduled_time": "2025-03-10 11:03:28.514"
+  }
+}
+-----------------------------------
+[2025-03-10T03:03:36.958Z] INFO: 任务处理中... 第4次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T03:03:36.958Z] INFO: 轮询任务状态 (第5次): 任务ID=5524a422-c692-4c5c-b170-b69335497c27
+-----------------------------------
+[2025-03-10T03:03:38.960Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/5524a422-c692-4c5c-b170-b69335497c27
+-----------------------------------
+[2025-03-10T03:03:39.179Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "2c1281dc-3f4e-9a3d-b840-170ed10dfe43",
+  "output": {
+    "task_id": "5524a422-c692-4c5c-b170-b69335497c27",
+    "task_status": "SUCCEEDED",
+    "submit_time": "2025-03-10 11:03:28.496",
+    "scheduled_time": "2025-03-10 11:03:28.514",
+    "end_time": "2025-03-10 11:03:38.006",
+    "results": [
+      {
+        "orig_prompt": "A chubby pink piglet with fluffy cloud-like wings, soaring joyfully through a vibrant sunset sky, golden hour light casting warm gradients on its glossy fur, cartoonish 3D render style with soft cel-shading, surrounded by swirling pastel-colored mist trails, cherry blossom petals floating in the air, twinkling stardust particles emphasizing motion, exaggerated perspective showing tiny village landscape below, playful expression with sparkling blue eyes and curled tail, Disney-Pixar animation quality with hyper-detailed texture on each individual wing feather.",
+        "actual_prompt": "粉嫩胖嘟嘟的小猪拥有云朵般蓬松的翅膀，欢快地翱翔在色彩斑斓的落日天空中。金小时分的光线为它油亮的皮毛镀上温暖渐变色。卡通3D渲染风格，搭配柔和的轮廓线阴影。周围环绕着旋涡状的马卡龙色雾气轨迹，樱花瓣随风飘扬，闪烁的星光尘埃强调速度感。夸张的透视角度展现出下方微型村庄景观。小猪表情活泼可爱，蓝宝石般闪亮的眼睛和卷翘的尾巴充满动感。迪士尼皮克斯级别的超精细纹理细节，每一片翅膀羽毛都清晰可见。近景动态捕捉视角。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/07/20250310/8928fb36/5524a422-c692-4c5c-b170-b69335497c274218722305.png?Expires=1741662217&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=w%2B8wpWdTEzImsADyFJ%2BOKjQ2iXE%3D"
+      },
+      {
+        "orig_prompt": "A chubby pink piglet with fluffy cloud-like wings, soaring joyfully through a vibrant sunset sky, golden hour light casting warm gradients on its glossy fur, cartoonish 3D render style with soft cel-shading, surrounded by swirling pastel-colored mist trails, cherry blossom petals floating in the air, twinkling stardust particles emphasizing motion, exaggerated perspective showing tiny village landscape below, playful expression with sparkling blue eyes and curled tail, Disney-Pixar animation quality with hyper-detailed texture on each individual wing feather.",
+        "actual_prompt": "粉嫩胖嘟嘟的小猪拥有云朵般蓬松的翅膀，欢快地翱翔在色彩斑斓的落日天空中。金小时分的光线为它油亮的皮毛镀上温暖渐变色。卡通3D渲染风格，搭配柔和的轮廓线阴影。周围环绕着旋涡状的马卡龙色雾气轨迹，樱花瓣随风飘扬，闪烁的星光尘埃强调速度感。夸张的透视角度展现出下方微型村庄景观。小猪表情活泼可爱，蓝宝石般闪亮的眼睛和卷翘的尾巴充满动感。迪士尼皮克斯级别的超精细纹理细节，每一片翅膀羽毛都清晰可见。近景动态捕捉视角。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/02/20250310/8928fb36/5524a422-c692-4c5c-b170-b69335497c274218722304.png?Expires=1741662217&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=aoU19NOWh71vvbIf4B8zSfKqW1E%3D"
+      },
+      {
+        "orig_prompt": "A chubby pink piglet with fluffy cloud-like wings, soaring joyfully through a vibrant sunset sky, golden hour light casting warm gradients on its glossy fur, cartoonish 3D render style with soft cel-shading, surrounded by swirling pastel-colored mist trails, cherry blossom petals floating in the air, twinkling stardust particles emphasizing motion, exaggerated perspective showing tiny village landscape below, playful expression with sparkling blue eyes and curled tail, Disney-Pixar animation quality with hyper-detailed texture on each individual wing feather.",
+        "actual_prompt": "粉嫩胖嘟嘟的小猪拥有云朵般蓬松的翅膀，欢快地翱翔在色彩斑斓的落日天空中。金小时分的光线为它油亮的皮毛镀上温暖渐变色。卡通3D渲染风格，搭配柔和的轮廓线阴影。周围环绕着旋涡状的马卡龙色雾气轨迹，樱花瓣随风飘扬，闪烁的星光尘埃强调速度感。夸张的透视角度展现出下方微型村庄景观。小猪表情活泼可爱，蓝宝石般闪亮的眼睛和卷翘的尾巴充满动感。迪士尼皮克斯级别的超精细纹理细节，每一片翅膀羽毛都清晰可见。近景动态捕捉视角。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/37/20250310/b0fe3396/5524a422-c692-4c5c-b170-b69335497c274218722307.png?Expires=1741662217&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=zMIjxLmKjwaIyygeMJ24oPo8MCc%3D"
+      },
+      {
+        "orig_prompt": "A chubby pink piglet with fluffy cloud-like wings, soaring joyfully through a vibrant sunset sky, golden hour light casting warm gradients on its glossy fur, cartoonish 3D render style with soft cel-shading, surrounded by swirling pastel-colored mist trails, cherry blossom petals floating in the air, twinkling stardust particles emphasizing motion, exaggerated perspective showing tiny village landscape below, playful expression with sparkling blue eyes and curled tail, Disney-Pixar animation quality with hyper-detailed texture on each individual wing feather.",
+        "actual_prompt": "粉嫩胖嘟嘟的小猪拥有云朵般蓬松的翅膀，欢快地翱翔在色彩斑斓的落日天空中。金小时分的光线为它油亮的皮毛镀上温暖渐变色。卡通3D渲染风格，搭配柔和的轮廓线阴影。周围环绕着旋涡状的马卡龙色雾气轨迹，樱花瓣随风飘扬，闪烁的星光尘埃强调速度感。夸张的透视角度展现出下方微型村庄景观。小猪表情活泼可爱，蓝宝石般闪亮的眼睛和卷翘的尾巴充满动感。迪士尼皮克斯级别的超精细纹理细节，每一片翅膀羽毛都清晰可见。近景动态捕捉视角。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/81/20250310/b0fe3396/5524a422-c692-4c5c-b170-b69335497c274218722306.png?Expires=1741662217&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=Pu1UcfdcmR8wxWUGePkeQanTlbc%3D"
+      }
+    ],
+    "task_metrics": {
+      "TOTAL": 4,
+      "SUCCEEDED": 4,
+      "FAILED": 0
+    }
+  },
+  "usage": {
+    "image_count": 4
+  }
+}
+-----------------------------------
+[2025-03-10T03:03:39.180Z] INFO: 任务成功完成
+数据: {
+  "request_id": "2c1281dc-3f4e-9a3d-b840-170ed10dfe43",
+  "output": {
+    "task_id": "5524a422-c692-4c5c-b170-b69335497c27",
+    "task_status": "SUCCEEDED",
+    "submit_time": "2025-03-10 11:03:28.496",
+    "scheduled_time": "2025-03-10 11:03:28.514",
+    "end_time": "2025-03-10 11:03:38.006",
+    "results": [
+      {
+        "orig_prompt": "A chubby pink piglet with fluffy cloud-like wings, soaring joyfully through a vibrant sunset sky, golden hour light casting warm gradients on its glossy fur, cartoonish 3D render style with soft cel-shading, surrounded by swirling pastel-colored mist trails, cherry blossom petals floating in the air, twinkling stardust particles emphasizing motion, exaggerated perspective showing tiny village landscape below, playful expression with sparkling blue eyes and curled tail, Disney-Pixar animation quality with hyper-detailed texture on each individual wing feather.",
+        "actual_prompt": "粉嫩胖嘟嘟的小猪拥有云朵般蓬松的翅膀，欢快地翱翔在色彩斑斓的落日天空中。金小时分的光线为它油亮的皮毛镀上温暖渐变色。卡通3D渲染风格，搭配柔和的轮廓线阴影。周围环绕着旋涡状的马卡龙色雾气轨迹，樱花瓣随风飘扬，闪烁的星光尘埃强调速度感。夸张的透视角度展现出下方微型村庄景观。小猪表情活泼可爱，蓝宝石般闪亮的眼睛和卷翘的尾巴充满动感。迪士尼皮克斯级别的超精细纹理细节，每一片翅膀羽毛都清晰可见。近景动态捕捉视角。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/07/20250310/8928fb36/5524a422-c692-4c5c-b170-b69335497c274218722305.png?Expires=1741662217&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=w%2B8wpWdTEzImsADyFJ%2BOKjQ2iXE%3D"
+      },
+      {
+        "orig_prompt": "A chubby pink piglet with fluffy cloud-like wings, soaring joyfully through a vibrant sunset sky, golden hour light casting warm gradients on its glossy fur, cartoonish 3D render style with soft cel-shading, surrounded by swirling pastel-colored mist trails, cherry blossom petals floating in the air, twinkling stardust particles emphasizing motion, exaggerated perspective showing tiny village landscape below, playful expression with sparkling blue eyes and curled tail, Disney-Pixar animation quality with hyper-detailed texture on each individual wing feather.",
+        "actual_prompt": "粉嫩胖嘟嘟的小猪拥有云朵般蓬松的翅膀，欢快地翱翔在色彩斑斓的落日天空中。金小时分的光线为它油亮的皮毛镀上温暖渐变色。卡通3D渲染风格，搭配柔和的轮廓线阴影。周围环绕着旋涡状的马卡龙色雾气轨迹，樱花瓣随风飘扬，闪烁的星光尘埃强调速度感。夸张的透视角度展现出下方微型村庄景观。小猪表情活泼可爱，蓝宝石般闪亮的眼睛和卷翘的尾巴充满动感。迪士尼皮克斯级别的超精细纹理细节，每一片翅膀羽毛都清晰可见。近景动态捕捉视角。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/02/20250310/8928fb36/5524a422-c692-4c5c-b170-b69335497c274218722304.png?Expires=1741662217&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=aoU19NOWh71vvbIf4B8zSfKqW1E%3D"
+      },
+      {
+        "orig_prompt": "A chubby pink piglet with fluffy cloud-like wings, soaring joyfully through a vibrant sunset sky, golden hour light casting warm gradients on its glossy fur, cartoonish 3D render style with soft cel-shading, surrounded by swirling pastel-colored mist trails, cherry blossom petals floating in the air, twinkling stardust particles emphasizing motion, exaggerated perspective showing tiny village landscape below, playful expression with sparkling blue eyes and curled tail, Disney-Pixar animation quality with hyper-detailed texture on each individual wing feather.",
+        "actual_prompt": "粉嫩胖嘟嘟的小猪拥有云朵般蓬松的翅膀，欢快地翱翔在色彩斑斓的落日天空中。金小时分的光线为它油亮的皮毛镀上温暖渐变色。卡通3D渲染风格，搭配柔和的轮廓线阴影。周围环绕着旋涡状的马卡龙色雾气轨迹，樱花瓣随风飘扬，闪烁的星光尘埃强调速度感。夸张的透视角度展现出下方微型村庄景观。小猪表情活泼可爱，蓝宝石般闪亮的眼睛和卷翘的尾巴充满动感。迪士尼皮克斯级别的超精细纹理细节，每一片翅膀羽毛都清晰可见。近景动态捕捉视角。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/37/20250310/b0fe3396/5524a422-c692-4c5c-b170-b69335497c274218722307.png?Expires=1741662217&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=zMIjxLmKjwaIyygeMJ24oPo8MCc%3D"
+      },
+      {
+        "orig_prompt": "A chubby pink piglet with fluffy cloud-like wings, soaring joyfully through a vibrant sunset sky, golden hour light casting warm gradients on its glossy fur, cartoonish 3D render style with soft cel-shading, surrounded by swirling pastel-colored mist trails, cherry blossom petals floating in the air, twinkling stardust particles emphasizing motion, exaggerated perspective showing tiny village landscape below, playful expression with sparkling blue eyes and curled tail, Disney-Pixar animation quality with hyper-detailed texture on each individual wing feather.",
+        "actual_prompt": "粉嫩胖嘟嘟的小猪拥有云朵般蓬松的翅膀，欢快地翱翔在色彩斑斓的落日天空中。金小时分的光线为它油亮的皮毛镀上温暖渐变色。卡通3D渲染风格，搭配柔和的轮廓线阴影。周围环绕着旋涡状的马卡龙色雾气轨迹，樱花瓣随风飘扬，闪烁的星光尘埃强调速度感。夸张的透视角度展现出下方微型村庄景观。小猪表情活泼可爱，蓝宝石般闪亮的眼睛和卷翘的尾巴充满动感。迪士尼皮克斯级别的超精细纹理细节，每一片翅膀羽毛都清晰可见。近景动态捕捉视角。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/81/20250310/b0fe3396/5524a422-c692-4c5c-b170-b69335497c274218722306.png?Expires=1741662217&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=Pu1UcfdcmR8wxWUGePkeQanTlbc%3D"
+      }
+    ],
+    "task_metrics": {
+      "TOTAL": 4,
+      "SUCCEEDED": 4,
+      "FAILED": 0
+    }
+  },
+  "usage": {
+    "image_count": 4
+  }
+}
+-----------------------------------
+[2025-03-10T03:03:39.181Z] INFO: 生成的图像URLs (4个):
+数据: [
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/07/20250310/8928fb36/5524a422-c692-4c5c-b170-b69335497c274218722305.png?Expires=1741662217&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=w%2B8wpWdTEzImsADyFJ%2BOKjQ2iXE%3D",
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/02/20250310/8928fb36/5524a422-c692-4c5c-b170-b69335497c274218722304.png?Expires=1741662217&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=aoU19NOWh71vvbIf4B8zSfKqW1E%3D",
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/37/20250310/b0fe3396/5524a422-c692-4c5c-b170-b69335497c274218722307.png?Expires=1741662217&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=zMIjxLmKjwaIyygeMJ24oPo8MCc%3D",
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/81/20250310/b0fe3396/5524a422-c692-4c5c-b170-b69335497c274218722306.png?Expires=1741662217&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=Pu1UcfdcmR8wxWUGePkeQanTlbc%3D"
+]
+-----------------------------------
+[2025-03-10T03:03:39.181Z] INFO: ===== 图像生成请求完成 =====
+-----------------------------------
+[2025-03-10T03:06:02.624Z] INFO: ===== 开始新的图像生成请求 =====
+-----------------------------------
+[2025-03-10T03:06:02.625Z] INFO: 原始提示词: "一位比基尼美女，走在台阶上"
+-----------------------------------
+[2025-03-10T03:06:02.625Z] INFO: 开始处理提示词: "一位比基尼美女，走在台阶上"
+-----------------------------------
+[2025-03-10T03:06:02.625Z] INFO: 调用DeepSeek R1 API开始
+数据: {
+  "model": "deepseek-reasoner",
+  "system": "\n      你是一个专业的AI图像生成助手。请理解用户的意图，并将其转化为优化的提示词，以便AI模型能够生成高质量的图像。\n      输出应该专注于创建清晰、详细、富有创意的图像描述，包括构图、风格、光照、颜色、情绪等元素。\n      只输出优化后的提示词，不要包含其他解释性文本。\n    ",
+  "user": "一位比基尼美女，走在台阶上"
+}
+-----------------------------------
+[2025-03-10T03:06:41.349Z] INFO: DeepSeek R1 API响应
+数据: {
+  "id": "a984854c-611b-4cd8-ab1b-2c01ecef4228",
+  "object": "chat.completion",
+  "created": 1741575962,
+  "model": "deepseek-reasoner",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "A stunning brunette model in a vibrant floral-print bikini ascends a cascading white marble staircase surrounded by tropical palm trees, golden hour sunlight casting long shadows and creating warm gradients on her toned physique. The composition features a low-angle perspective emphasizing endless steps and azure ocean horizons, with saltwater droplets glistening on her sun-kissed skin. Art deco architectural elements frame the scene in a hyper-realistic digital painting style, blending turquoise water reflections with coral-pink sunset hues, evoking a luxurious tropical resort ambiance. Delicate wind-swept hair and dynamic fabric movement add energy to the serene coastal atmosphere.",
+        "reasoning_content": "嗯，用户想要生成一张比基尼美女走在台阶上的图片。首先，我需要分析用户的需求。比基尼美女，说明主体是一个穿着泳装的女性，可能是在海滩或者泳池边的场景。台阶上，可能是指她正在上下台阶，可能有不同的环境，比如海边别墅的台阶，或者度假村的阶梯，或者可能是城市中的某个地方。\n\n接下来要考虑如何优化提示词。用户可能希望图像质量高，细节丰富。需要添加构图元素，比如台阶的环境，周围是否有其他物体，比如棕榈树、海浪或者阳光。风格方面，用户可能没有指定，但默认可能是写实风格或者偏艺术风格？可能需要考虑光照，比如阳光明媚的白天，或者黄昏时的温暖光线，这样能突出比基尼的颜色和美女的肤色。\n\n颜色方面，鲜艳的比基尼颜色，比如亮蓝、粉色，或者热带图案。周围环境的颜色要协调，比如碧海蓝天，白色沙滩，绿色植物。情绪方面，应该是轻松、愉悦的度假氛围，美女可能面带微笑，姿态优雅地走着。\n\n另外，细节要注意台阶的材质，可能是木质台阶、石阶，或者现代风格的瓷砖。台阶周围可能有植物装饰，或者有水滴，如果是靠近泳池或海边的话。动态元素，比如风吹动头发，或者裙摆飘动，增加画面生动感。\n\n可能还需要考虑景深，比如背景虚化突出主体，或者广角展示整个场景。美女的身材比例和姿态，比如修长的腿，自信的步伐，光影效果在身体上的表现，比如阳光透过棕榈叶洒在身上的光斑。\n\n风格方面，如果用户没有特别说明，可能默认是逼真的摄影风格，或者稍微带点电影感。也可以考虑加入一些艺术渲染，比如柔和的滤镜，增强色彩饱和度，让图片更吸引人。\n\n需要避免的可能是过于暴露或不当的内容，确保符合AI生成的政策。所以比基尼设计要得体，场景健康自然。可能还需要添加一些元素，比如手中的饮料、太阳镜、草帽等配饰，丰富画面。\n\n最后，把所有元素综合起来，形成一段详细且结构清晰的提示词，涵盖环境、主体、构图、光照、颜色、风格、情绪等要素，确保生成的图像高质量且符合用户需求。"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 87,
+    "completion_tokens": 604,
+    "total_tokens": 691,
+    "prompt_tokens_details": {
+      "cached_tokens": 64
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 472
+    },
+    "prompt_cache_hit_tokens": 64,
+    "prompt_cache_miss_tokens": 23
+  },
+  "system_fingerprint": "fp_5417b77867_prod0225"
+}
+-----------------------------------
+[2025-03-10T03:06:41.351Z] INFO: 优化后的提示词: "A stunning brunette model in a vibrant floral-print bikini ascends a cascading white marble staircase surrounded by tropical palm trees, golden hour sunlight casting long shadows and creating warm gradients on her toned physique. The composition features a low-angle perspective emphasizing endless steps and azure ocean horizons, with saltwater droplets glistening on her sun-kissed skin. Art deco architectural elements frame the scene in a hyper-realistic digital painting style, blending turquoise water reflections with coral-pink sunset hues, evoking a luxurious tropical resort ambiance. Delicate wind-swept hair and dynamic fabric movement add energy to the serene coastal atmosphere."
+-----------------------------------
+[2025-03-10T03:06:41.352Z] INFO: 准备生成图像，提示词: "A stunning brunette model in a vibrant floral-print bikini ascends a cascading white marble staircase surrounded by tropical palm trees, golden hour sunlight casting long shadows and creating warm gradients on her toned physique. The composition features a low-angle perspective emphasizing endless steps and azure ocean horizons, with saltwater droplets glistening on her sun-kissed skin. Art deco architectural elements frame the scene in a hyper-realistic digital painting style, blending turquoise water reflections with coral-pink sunset hues, evoking a luxurious tropical resort ambiance. Delicate wind-swept hair and dynamic fabric movement add energy to the serene coastal atmosphere."
+-----------------------------------
+[2025-03-10T03:06:41.353Z] INFO: 调用阿里云通义万相API开始
+数据: {
+  "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
+  "body": {
+    "model": "wanx2.1-t2i-turbo",
+    "input": {
+      "prompt": "A stunning brunette model in a vibrant floral-print bikini ascends a cascading white marble staircase surrounded by tropical palm trees, golden hour sunlight casting long shadows and creating warm gradients on her toned physique. The composition features a low-angle perspective emphasizing endless steps and azure ocean horizons, with saltwater droplets glistening on her sun-kissed skin. Art deco architectural elements frame the scene in a hyper-realistic digital painting style, blending turquoise water reflections with coral-pink sunset hues, evoking a luxurious tropical resort ambiance. Delicate wind-swept hair and dynamic fabric movement add energy to the serene coastal atmosphere."
+    },
+    "parameters": {
+      "size": "1024*1024",
+      "n": 4,
+      "prompt_extend": true,
+      "watermark": false
+    }
+  },
+  "headers": {
+    "Content-Type": "application/json",
+    "X-DashScope-Async": "enable",
+    "Authorization": "Bearer sk-8f..."
+  }
+}
+-----------------------------------
+[2025-03-10T03:06:41.654Z] INFO: 阿里云API响应: 状态码=200
+数据: {
+  "output": {
+    "task_status": "PENDING",
+    "task_id": "144aa38e-c345-4c05-947f-5e344048f10b"
+  },
+  "request_id": "2ff66133-7d20-925f-8a54-61938ad194e8"
+}
+-----------------------------------
+[2025-03-10T03:06:41.655Z] INFO: 通义万相任务创建成功
+数据: {
+  "output": {
+    "task_status": "PENDING",
+    "task_id": "144aa38e-c345-4c05-947f-5e344048f10b"
+  },
+  "request_id": "2ff66133-7d20-925f-8a54-61938ad194e8"
+}
+-----------------------------------
+[2025-03-10T03:06:41.655Z] INFO: 获取到任务ID: 144aa38e-c345-4c05-947f-5e344048f10b，开始等待任务完成
+-----------------------------------
+[2025-03-10T03:06:41.655Z] INFO: 轮询任务状态 (第1次): 任务ID=144aa38e-c345-4c05-947f-5e344048f10b
+-----------------------------------
+[2025-03-10T03:06:43.657Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/144aa38e-c345-4c05-947f-5e344048f10b
+-----------------------------------
+[2025-03-10T03:06:43.792Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "49a2b9ec-bae1-9168-9d45-9f7fe8485e05",
+  "output": {
+    "task_id": "144aa38e-c345-4c05-947f-5e344048f10b",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 11:06:41.665",
+    "scheduled_time": "2025-03-10 11:06:41.690"
+  }
+}
+-----------------------------------
+[2025-03-10T03:06:43.793Z] INFO: 任务处理中... 第1次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T03:06:43.793Z] INFO: 轮询任务状态 (第2次): 任务ID=144aa38e-c345-4c05-947f-5e344048f10b
+-----------------------------------
+[2025-03-10T03:06:45.796Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/144aa38e-c345-4c05-947f-5e344048f10b
+-----------------------------------
+[2025-03-10T03:06:45.904Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "efe125d4-dd8d-9845-8a07-1de5611d7a4c",
+  "output": {
+    "task_id": "144aa38e-c345-4c05-947f-5e344048f10b",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 11:06:41.665",
+    "scheduled_time": "2025-03-10 11:06:41.690"
+  }
+}
+-----------------------------------
+[2025-03-10T03:06:45.906Z] INFO: 任务处理中... 第2次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T03:06:45.907Z] INFO: 轮询任务状态 (第3次): 任务ID=144aa38e-c345-4c05-947f-5e344048f10b
+-----------------------------------
+[2025-03-10T03:06:47.908Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/144aa38e-c345-4c05-947f-5e344048f10b
+-----------------------------------
+[2025-03-10T03:06:48.037Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "e2b061a6-f07c-9735-9741-367b7897ac11",
+  "output": {
+    "task_id": "144aa38e-c345-4c05-947f-5e344048f10b",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 11:06:41.665",
+    "scheduled_time": "2025-03-10 11:06:41.690"
+  }
+}
+-----------------------------------
+[2025-03-10T03:06:48.040Z] INFO: 任务处理中... 第3次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T03:06:48.041Z] INFO: 轮询任务状态 (第4次): 任务ID=144aa38e-c345-4c05-947f-5e344048f10b
+-----------------------------------
+[2025-03-10T03:06:50.043Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/144aa38e-c345-4c05-947f-5e344048f10b
+-----------------------------------
+[2025-03-10T03:06:50.185Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "59715375-961d-9406-92cc-ba6ba01f8009",
+  "output": {
+    "task_id": "144aa38e-c345-4c05-947f-5e344048f10b",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 11:06:41.665",
+    "scheduled_time": "2025-03-10 11:06:41.690"
+  }
+}
+-----------------------------------
+[2025-03-10T03:06:50.187Z] INFO: 任务处理中... 第4次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T03:06:50.187Z] INFO: 轮询任务状态 (第5次): 任务ID=144aa38e-c345-4c05-947f-5e344048f10b
+-----------------------------------
+[2025-03-10T03:06:52.189Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/144aa38e-c345-4c05-947f-5e344048f10b
+-----------------------------------
+[2025-03-10T03:06:52.294Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "ca026b40-4132-902e-ac77-28ae81866e58",
+  "output": {
+    "task_id": "144aa38e-c345-4c05-947f-5e344048f10b",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 11:06:41.665",
+    "scheduled_time": "2025-03-10 11:06:41.690"
+  }
+}
+-----------------------------------
+[2025-03-10T03:06:52.296Z] INFO: 任务处理中... 第5次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T03:06:52.297Z] INFO: 轮询任务状态 (第6次): 任务ID=144aa38e-c345-4c05-947f-5e344048f10b
+-----------------------------------
+[2025-03-10T03:06:54.298Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/144aa38e-c345-4c05-947f-5e344048f10b
+-----------------------------------
+[2025-03-10T03:06:54.513Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "0a92ec11-53a4-9770-ab14-dc87a7640080",
+  "output": {
+    "task_id": "144aa38e-c345-4c05-947f-5e344048f10b",
+    "task_status": "SUCCEEDED",
+    "submit_time": "2025-03-10 11:06:41.665",
+    "scheduled_time": "2025-03-10 11:06:41.690",
+    "end_time": "2025-03-10 11:06:54.344",
+    "results": [
+      {
+        "orig_prompt": "A stunning brunette model in a vibrant floral-print bikini ascends a cascading white marble staircase surrounded by tropical palm trees, golden hour sunlight casting long shadows and creating warm gradients on her toned physique. The composition features a low-angle perspective emphasizing endless steps and azure ocean horizons, with saltwater droplets glistening on her sun-kissed skin. Art deco architectural elements frame the scene in a hyper-realistic digital painting style, blending turquoise water reflections with coral-pink sunset hues, evoking a luxurious tropical resort ambiance. Delicate wind-swept hair and dynamic fabric movement add energy to the serene coastal atmosphere.",
+        "actual_prompt": "一位迷人的棕发女模穿着鲜艳的热带花卉比基尼，正沿着纯白大理石台阶拾级而上。她肌肤紧致，古铜色光泽在落日余晖中闪耀，盐分在肌肤表面形成晶莹水珠。低角度取景凸显无尽阶梯，远处可见碧蓝海平线。茂密椰林环绕四周，金色时刻拉长影子，在她健美的身姿上形成温暖渐变光影。\n\n她的秀发随海风轻扬，比基尼布料自然飘动，增添动感。装饰艺术风格建筑框架点缀场景，超现实数字绘画风格融合青绿色水面倒影与珊瑚粉夕阳色调，营造奢华度假村氛围。近景构图聚焦模特神态，展现自信微笑与从容步伐。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/37/20250310/8928fb36/144aa38e-c345-4c05-947f-5e344048f10b3465152522.png?Expires=1741662410&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=mS3M1adpLOqpgQgGVIq6wlsRUfY%3D"
+      },
+      {
+        "orig_prompt": "A stunning brunette model in a vibrant floral-print bikini ascends a cascading white marble staircase surrounded by tropical palm trees, golden hour sunlight casting long shadows and creating warm gradients on her toned physique. The composition features a low-angle perspective emphasizing endless steps and azure ocean horizons, with saltwater droplets glistening on her sun-kissed skin. Art deco architectural elements frame the scene in a hyper-realistic digital painting style, blending turquoise water reflections with coral-pink sunset hues, evoking a luxurious tropical resort ambiance. Delicate wind-swept hair and dynamic fabric movement add energy to the serene coastal atmosphere.",
+        "actual_prompt": "一位迷人的棕发女模穿着鲜艳的热带花卉比基尼，正沿着纯白大理石台阶拾级而上。她肌肤紧致，古铜色光泽在落日余晖中闪耀，盐分在肌肤表面形成晶莹水珠。低角度取景凸显无尽阶梯，远处可见碧蓝海平线。茂密椰林环绕四周，金色时刻拉长影子，在她健美的身姿上形成温暖渐变光影。\n\n她的秀发随海风轻扬，比基尼布料自然飘动，增添动感。装饰艺术风格建筑框架点缀场景，超现实数字绘画风格融合青绿色水面倒影与珊瑚粉夕阳色调，营造奢华度假村氛围。近景构图聚焦模特神态，展现自信微笑与从容步伐。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/fb/20250310/b0fe3396/144aa38e-c345-4c05-947f-5e344048f10b3465152524.png?Expires=1741662410&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=pqOgNKaSxIjvLdQ3dYTFvQJnV2c%3D"
+      },
+      {
+        "orig_prompt": "A stunning brunette model in a vibrant floral-print bikini ascends a cascading white marble staircase surrounded by tropical palm trees, golden hour sunlight casting long shadows and creating warm gradients on her toned physique. The composition features a low-angle perspective emphasizing endless steps and azure ocean horizons, with saltwater droplets glistening on her sun-kissed skin. Art deco architectural elements frame the scene in a hyper-realistic digital painting style, blending turquoise water reflections with coral-pink sunset hues, evoking a luxurious tropical resort ambiance. Delicate wind-swept hair and dynamic fabric movement add energy to the serene coastal atmosphere.",
+        "actual_prompt": "一位迷人的棕发女模穿着鲜艳的热带花卉比基尼，正沿着纯白大理石台阶拾级而上。她肌肤紧致，古铜色光泽在落日余晖中闪耀，盐分在肌肤表面形成晶莹水珠。低角度取景凸显无尽阶梯，远处可见碧蓝海平线。茂密椰林环绕四周，金色时刻拉长影子，在她健美的身姿上形成温暖渐变光影。\n\n她的秀发随海风轻扬，比基尼布料自然飘动，增添动感。装饰艺术风格建筑框架点缀场景，超现实数字绘画风格融合青绿色水面倒影与珊瑚粉夕阳色调，营造奢华度假村氛围。近景构图聚焦模特神态，展现自信微笑与从容步伐。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/cf/20250310/8928fb36/144aa38e-c345-4c05-947f-5e344048f10b3465152523.png?Expires=1741662410&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=ojeur1G3aOLq%2BYS8zg5RzuTvox8%3D"
+      },
+      {
+        "orig_prompt": "A stunning brunette model in a vibrant floral-print bikini ascends a cascading white marble staircase surrounded by tropical palm trees, golden hour sunlight casting long shadows and creating warm gradients on her toned physique. The composition features a low-angle perspective emphasizing endless steps and azure ocean horizons, with saltwater droplets glistening on her sun-kissed skin. Art deco architectural elements frame the scene in a hyper-realistic digital painting style, blending turquoise water reflections with coral-pink sunset hues, evoking a luxurious tropical resort ambiance. Delicate wind-swept hair and dynamic fabric movement add energy to the serene coastal atmosphere.",
+        "actual_prompt": "一位迷人的棕发女模穿着鲜艳的热带花卉比基尼，正沿着纯白大理石台阶拾级而上。她肌肤紧致，古铜色光泽在落日余晖中闪耀，盐分在肌肤表面形成晶莹水珠。低角度取景凸显无尽阶梯，远处可见碧蓝海平线。茂密椰林环绕四周，金色时刻拉长影子，在她健美的身姿上形成温暖渐变光影。\n\n她的秀发随海风轻扬，比基尼布料自然飘动，增添动感。装饰艺术风格建筑框架点缀场景，超现实数字绘画风格融合青绿色水面倒影与珊瑚粉夕阳色调，营造奢华度假村氛围。近景构图聚焦模特神态，展现自信微笑与从容步伐。",
+        "url": "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/65/20250310/775d1686/144aa38e-c345-4c05-947f-5e344048f10b3465152525.png?Expires=1741662413&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=wBzVfja%2B251pV0xL%2B4txXEOg4Y0%3D"
+      }
+    ],
+    "task_metrics": {
+      "TOTAL": 4,
+      "SUCCEEDED": 4,
+      "FAILED": 0
+    }
+  },
+  "usage": {
+    "image_count": 4
+  }
+}
+-----------------------------------
+[2025-03-10T03:06:54.516Z] INFO: 任务成功完成
+数据: {
+  "request_id": "0a92ec11-53a4-9770-ab14-dc87a7640080",
+  "output": {
+    "task_id": "144aa38e-c345-4c05-947f-5e344048f10b",
+    "task_status": "SUCCEEDED",
+    "submit_time": "2025-03-10 11:06:41.665",
+    "scheduled_time": "2025-03-10 11:06:41.690",
+    "end_time": "2025-03-10 11:06:54.344",
+    "results": [
+      {
+        "orig_prompt": "A stunning brunette model in a vibrant floral-print bikini ascends a cascading white marble staircase surrounded by tropical palm trees, golden hour sunlight casting long shadows and creating warm gradients on her toned physique. The composition features a low-angle perspective emphasizing endless steps and azure ocean horizons, with saltwater droplets glistening on her sun-kissed skin. Art deco architectural elements frame the scene in a hyper-realistic digital painting style, blending turquoise water reflections with coral-pink sunset hues, evoking a luxurious tropical resort ambiance. Delicate wind-swept hair and dynamic fabric movement add energy to the serene coastal atmosphere.",
+        "actual_prompt": "一位迷人的棕发女模穿着鲜艳的热带花卉比基尼，正沿着纯白大理石台阶拾级而上。她肌肤紧致，古铜色光泽在落日余晖中闪耀，盐分在肌肤表面形成晶莹水珠。低角度取景凸显无尽阶梯，远处可见碧蓝海平线。茂密椰林环绕四周，金色时刻拉长影子，在她健美的身姿上形成温暖渐变光影。\n\n她的秀发随海风轻扬，比基尼布料自然飘动，增添动感。装饰艺术风格建筑框架点缀场景，超现实数字绘画风格融合青绿色水面倒影与珊瑚粉夕阳色调，营造奢华度假村氛围。近景构图聚焦模特神态，展现自信微笑与从容步伐。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/37/20250310/8928fb36/144aa38e-c345-4c05-947f-5e344048f10b3465152522.png?Expires=1741662410&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=mS3M1adpLOqpgQgGVIq6wlsRUfY%3D"
+      },
+      {
+        "orig_prompt": "A stunning brunette model in a vibrant floral-print bikini ascends a cascading white marble staircase surrounded by tropical palm trees, golden hour sunlight casting long shadows and creating warm gradients on her toned physique. The composition features a low-angle perspective emphasizing endless steps and azure ocean horizons, with saltwater droplets glistening on her sun-kissed skin. Art deco architectural elements frame the scene in a hyper-realistic digital painting style, blending turquoise water reflections with coral-pink sunset hues, evoking a luxurious tropical resort ambiance. Delicate wind-swept hair and dynamic fabric movement add energy to the serene coastal atmosphere.",
+        "actual_prompt": "一位迷人的棕发女模穿着鲜艳的热带花卉比基尼，正沿着纯白大理石台阶拾级而上。她肌肤紧致，古铜色光泽在落日余晖中闪耀，盐分在肌肤表面形成晶莹水珠。低角度取景凸显无尽阶梯，远处可见碧蓝海平线。茂密椰林环绕四周，金色时刻拉长影子，在她健美的身姿上形成温暖渐变光影。\n\n她的秀发随海风轻扬，比基尼布料自然飘动，增添动感。装饰艺术风格建筑框架点缀场景，超现实数字绘画风格融合青绿色水面倒影与珊瑚粉夕阳色调，营造奢华度假村氛围。近景构图聚焦模特神态，展现自信微笑与从容步伐。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/fb/20250310/b0fe3396/144aa38e-c345-4c05-947f-5e344048f10b3465152524.png?Expires=1741662410&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=pqOgNKaSxIjvLdQ3dYTFvQJnV2c%3D"
+      },
+      {
+        "orig_prompt": "A stunning brunette model in a vibrant floral-print bikini ascends a cascading white marble staircase surrounded by tropical palm trees, golden hour sunlight casting long shadows and creating warm gradients on her toned physique. The composition features a low-angle perspective emphasizing endless steps and azure ocean horizons, with saltwater droplets glistening on her sun-kissed skin. Art deco architectural elements frame the scene in a hyper-realistic digital painting style, blending turquoise water reflections with coral-pink sunset hues, evoking a luxurious tropical resort ambiance. Delicate wind-swept hair and dynamic fabric movement add energy to the serene coastal atmosphere.",
+        "actual_prompt": "一位迷人的棕发女模穿着鲜艳的热带花卉比基尼，正沿着纯白大理石台阶拾级而上。她肌肤紧致，古铜色光泽在落日余晖中闪耀，盐分在肌肤表面形成晶莹水珠。低角度取景凸显无尽阶梯，远处可见碧蓝海平线。茂密椰林环绕四周，金色时刻拉长影子，在她健美的身姿上形成温暖渐变光影。\n\n她的秀发随海风轻扬，比基尼布料自然飘动，增添动感。装饰艺术风格建筑框架点缀场景，超现实数字绘画风格融合青绿色水面倒影与珊瑚粉夕阳色调，营造奢华度假村氛围。近景构图聚焦模特神态，展现自信微笑与从容步伐。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/cf/20250310/8928fb36/144aa38e-c345-4c05-947f-5e344048f10b3465152523.png?Expires=1741662410&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=ojeur1G3aOLq%2BYS8zg5RzuTvox8%3D"
+      },
+      {
+        "orig_prompt": "A stunning brunette model in a vibrant floral-print bikini ascends a cascading white marble staircase surrounded by tropical palm trees, golden hour sunlight casting long shadows and creating warm gradients on her toned physique. The composition features a low-angle perspective emphasizing endless steps and azure ocean horizons, with saltwater droplets glistening on her sun-kissed skin. Art deco architectural elements frame the scene in a hyper-realistic digital painting style, blending turquoise water reflections with coral-pink sunset hues, evoking a luxurious tropical resort ambiance. Delicate wind-swept hair and dynamic fabric movement add energy to the serene coastal atmosphere.",
+        "actual_prompt": "一位迷人的棕发女模穿着鲜艳的热带花卉比基尼，正沿着纯白大理石台阶拾级而上。她肌肤紧致，古铜色光泽在落日余晖中闪耀，盐分在肌肤表面形成晶莹水珠。低角度取景凸显无尽阶梯，远处可见碧蓝海平线。茂密椰林环绕四周，金色时刻拉长影子，在她健美的身姿上形成温暖渐变光影。\n\n她的秀发随海风轻扬，比基尼布料自然飘动，增添动感。装饰艺术风格建筑框架点缀场景，超现实数字绘画风格融合青绿色水面倒影与珊瑚粉夕阳色调，营造奢华度假村氛围。近景构图聚焦模特神态，展现自信微笑与从容步伐。",
+        "url": "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/65/20250310/775d1686/144aa38e-c345-4c05-947f-5e344048f10b3465152525.png?Expires=1741662413&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=wBzVfja%2B251pV0xL%2B4txXEOg4Y0%3D"
+      }
+    ],
+    "task_metrics": {
+      "TOTAL": 4,
+      "SUCCEEDED": 4,
+      "FAILED": 0
+    }
+  },
+  "usage": {
+    "image_count": 4
+  }
+}
+-----------------------------------
+[2025-03-10T03:06:54.517Z] INFO: 生成的图像URLs (4个):
+数据: [
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/37/20250310/8928fb36/144aa38e-c345-4c05-947f-5e344048f10b3465152522.png?Expires=1741662410&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=mS3M1adpLOqpgQgGVIq6wlsRUfY%3D",
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/fb/20250310/b0fe3396/144aa38e-c345-4c05-947f-5e344048f10b3465152524.png?Expires=1741662410&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=pqOgNKaSxIjvLdQ3dYTFvQJnV2c%3D",
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/cf/20250310/8928fb36/144aa38e-c345-4c05-947f-5e344048f10b3465152523.png?Expires=1741662410&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=ojeur1G3aOLq%2BYS8zg5RzuTvox8%3D",
+  "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/65/20250310/775d1686/144aa38e-c345-4c05-947f-5e344048f10b3465152525.png?Expires=1741662413&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=wBzVfja%2B251pV0xL%2B4txXEOg4Y0%3D"
+]
+-----------------------------------
+[2025-03-10T03:06:54.519Z] INFO: ===== 图像生成请求完成 =====
+-----------------------------------
+[2025-03-10T03:07:55.310Z] INFO: ===== 开始新的图像生成请求 =====
+-----------------------------------
+[2025-03-10T03:07:55.310Z] INFO: 原始提示词: "成龙大哥，走在伦敦马路上"
+-----------------------------------
+[2025-03-10T03:07:55.310Z] INFO: 开始处理提示词: "成龙大哥，走在伦敦马路上"
+-----------------------------------
+[2025-03-10T03:07:55.311Z] INFO: 调用DeepSeek R1 API开始
+数据: {
+  "model": "deepseek-reasoner",
+  "system": "\n      你是一个专业的AI图像生成助手。请理解用户的意图，并将其转化为优化的提示词，以便AI模型能够生成高质量的图像。\n      输出应该专注于创建清晰、详细、富有创意的图像描述，包括构图、风格、光照、颜色、情绪等元素。\n      只输出优化后的提示词，不要包含其他解释性文本。\n    ",
+  "user": "成龙大哥，走在伦敦马路上"
+}
+-----------------------------------
+[2025-03-10T03:08:41.384Z] INFO: DeepSeek R1 API响应
+数据: {
+  "id": "092cc3b9-d85f-4c12-a726-e70db487e2d1",
+  "object": "chat.completion",
+  "created": 1741576075,
+  "model": "deepseek-reasoner",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "A dynamic portrait of Jackie Chan mid-stride on a rainy London street, wearing his signature confident smile and casual black athletic gear. The composition features dramatic low-angle framing with a wide lens, capturing iconic red double-decker buses and Victorian architecture in the bokeh background. Soft diffused daylight filters through overcast skies, reflecting off wet cobblestone streets where golden gaslight spills from vintage lampposts. Cinematic atmosphere with hyper-detailed textures in his leather jacket and rain-dappled surroundings, rendered in a vibrant color palette mixing British racing green storefronts with pops of red telephone booth accents. Motion blur subtly trails his determined walking pose suggesting imminent action, while maintaining sharp focus on his alert expression and wind-swept black hair. The scene balances urban grittiness with heroic lighting reminiscent of 90s Hong Kong action film posters.",
+        "reasoning_content": "好的，用户给的提示是“成龙大哥，走在伦敦马路上”。我需要把这个转化为优化的提示词，适合AI生成高质量的图像。首先，得明确用户的需求。用户可能想要一张成龙在伦敦街道上的动态照片，可能带有动作元素，但不确定是否要打斗场景。所以需要保持灵活性。\n\n首先，主体是成龙，要描述他的外貌特征，比如标志性的笑容、黑色短发、运动装，可能还要提到他经典的动作电影形象，但这里可能只是走路，所以姿势要自然，可能带点准备动作的感觉，比如稍微警惕的样子，这样既有动感又不夸张。\n\n然后是环境，伦敦的马路。需要包括典型的英伦元素，比如红色双层巴士、电话亭、乔治亚风格的建筑，可能还有鹅卵石街道或者维多利亚时期的建筑。天气方面，用户没提，但伦敦常阴雨，可以考虑阴天或者细雨，增加氛围感。街道潮湿，反射路灯的光，这样能增强视觉效果。\n\n构图方面，低角度拍摄可能更有电影感，突出成龙的动作，同时展示环境。广角镜头可以捕捉更多街景，增加画面深度。风格应该是电影感、高细节、超现实的，这样图像更吸引人。光照方面，柔和的漫射光，阴天的自然光加上暖色调的商店灯光，形成对比，突出主体。\n\n颜色方面，主色调是冷色调的灰色和蓝色，搭配红色的巴士和电话亭，形成视觉焦点。情绪上，要有冒险和神秘的感觉，可能带点紧张，但成龙的表情是自信的微笑，平衡紧张和轻松。\n\n还要注意细节，比如行人的模糊处理，强调动态，交通灯、路牌等元素增加真实感。可能还需要考虑时间，比如黄昏或傍晚，这样灯光效果更明显，影子拉长，增强戏剧性。\n\n总结下来，需要涵盖人物特征、环境细节、构图、风格、光照、颜色、情绪，以及一些动态元素，确保提示词全面且具体，帮助AI生成高质量且符合用户想象的图像。"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 85,
+    "completion_tokens": 591,
+    "total_tokens": 676,
+    "prompt_tokens_details": {
+      "cached_tokens": 64
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 417
+    },
+    "prompt_cache_hit_tokens": 64,
+    "prompt_cache_miss_tokens": 21
+  },
+  "system_fingerprint": "fp_5417b77867_prod0225"
+}
+-----------------------------------
+[2025-03-10T03:08:41.388Z] INFO: 优化后的提示词: "A dynamic portrait of Jackie Chan mid-stride on a rainy London street, wearing his signature confident smile and casual black athletic gear. The composition features dramatic low-angle framing with a wide lens, capturing iconic red double-decker buses and Victorian architecture in the bokeh background. Soft diffused daylight filters through overcast skies, reflecting off wet cobblestone streets where golden gaslight spills from vintage lampposts. Cinematic atmosphere with hyper-detailed textures in his leather jacket and rain-dappled surroundings, rendered in a vibrant color palette mixing British racing green storefronts with pops of red telephone booth accents. Motion blur subtly trails his determined walking pose suggesting imminent action, while maintaining sharp focus on his alert expression and wind-swept black hair. The scene balances urban grittiness with heroic lighting reminiscent of 90s Hong Kong action film posters."
+-----------------------------------
+[2025-03-10T03:08:41.389Z] INFO: 准备生成图像，提示词: "A dynamic portrait of Jackie Chan mid-stride on a rainy London street, wearing his signature confident smile and casual black athletic gear. The composition features dramatic low-angle framing with a wide lens, capturing iconic red double-decker buses and Victorian architecture in the bokeh background. Soft diffused daylight filters through overcast skies, reflecting off wet cobblestone streets where golden gaslight spills from vintage lampposts. Cinematic atmosphere with hyper-detailed textures in his leather jacket and rain-dappled surroundings, rendered in a vibrant color palette mixing British racing green storefronts with pops of red telephone booth accents. Motion blur subtly trails his determined walking pose suggesting imminent action, while maintaining sharp focus on his alert expression and wind-swept black hair. The scene balances urban grittiness with heroic lighting reminiscent of 90s Hong Kong action film posters."
+-----------------------------------
+[2025-03-10T03:08:41.390Z] INFO: 调用阿里云通义万相API开始
+数据: {
+  "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
+  "body": {
+    "model": "wanx2.1-t2i-turbo",
+    "input": {
+      "prompt": "A dynamic portrait of Jackie Chan mid-stride on a rainy London street, wearing his signature confident smile and casual black athletic gear. The composition features dramatic low-angle framing with a wide lens, capturing iconic red double-decker buses and Victorian architecture in the bokeh background. Soft diffused daylight filters through overcast skies, reflecting off wet cobblestone streets where golden gaslight spills from vintage lampposts. Cinematic atmosphere with hyper-detailed textures in his leather jacket and rain-dappled surroundings, rendered in a vibrant color palette mixing British racing green storefronts with pops of red telephone booth accents. Motion blur subtly trails his determined walking pose suggesting imminent action, while maintaining sharp focus on his alert expression and wind-swept black hair. The scene balances urban grittiness with heroic lighting reminiscent of 90s Hong Kong action film posters."
+    },
+    "parameters": {
+      "size": "1024*1024",
+      "n": 4,
+      "prompt_extend": true,
+      "watermark": false
+    }
+  },
+  "headers": {
+    "Content-Type": "application/json",
+    "X-DashScope-Async": "enable",
+    "Authorization": "Bearer sk-8f..."
+  }
+}
+-----------------------------------
+[2025-03-10T03:08:41.680Z] INFO: 阿里云API响应: 状态码=200
+数据: {
+  "output": {
+    "task_status": "PENDING",
+    "task_id": "617fdd8a-bb93-4cba-842e-ec38f0ef3e23"
+  },
+  "request_id": "a3063dc4-b7fb-9def-b4e7-fc886141c245"
+}
+-----------------------------------
+[2025-03-10T03:08:41.682Z] INFO: 通义万相任务创建成功
+数据: {
+  "output": {
+    "task_status": "PENDING",
+    "task_id": "617fdd8a-bb93-4cba-842e-ec38f0ef3e23"
+  },
+  "request_id": "a3063dc4-b7fb-9def-b4e7-fc886141c245"
+}
+-----------------------------------
+[2025-03-10T03:08:41.683Z] INFO: 获取到任务ID: 617fdd8a-bb93-4cba-842e-ec38f0ef3e23，开始等待任务完成
+-----------------------------------
+[2025-03-10T03:08:41.684Z] INFO: 轮询任务状态 (第1次): 任务ID=617fdd8a-bb93-4cba-842e-ec38f0ef3e23
+-----------------------------------
+[2025-03-10T03:08:43.686Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/617fdd8a-bb93-4cba-842e-ec38f0ef3e23
+-----------------------------------
+[2025-03-10T03:08:43.774Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "c54a65bd-d592-92cf-99af-8163941e5a3f",
+  "output": {
+    "task_id": "617fdd8a-bb93-4cba-842e-ec38f0ef3e23",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 11:08:41.701",
+    "scheduled_time": "2025-03-10 11:08:41.721"
+  }
+}
+-----------------------------------
+[2025-03-10T03:08:43.775Z] INFO: 任务处理中... 第1次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T03:08:43.775Z] INFO: 轮询任务状态 (第2次): 任务ID=617fdd8a-bb93-4cba-842e-ec38f0ef3e23
+-----------------------------------
+[2025-03-10T03:08:45.776Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/617fdd8a-bb93-4cba-842e-ec38f0ef3e23
+-----------------------------------
+[2025-03-10T03:08:45.882Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "f18d6aec-0f21-98c4-8759-f666d285dd5e",
+  "output": {
+    "task_id": "617fdd8a-bb93-4cba-842e-ec38f0ef3e23",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 11:08:41.701",
+    "scheduled_time": "2025-03-10 11:08:41.721"
+  }
+}
+-----------------------------------
+[2025-03-10T03:08:45.884Z] INFO: 任务处理中... 第2次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T03:08:45.884Z] INFO: 轮询任务状态 (第3次): 任务ID=617fdd8a-bb93-4cba-842e-ec38f0ef3e23
+-----------------------------------
+[2025-03-10T03:08:47.885Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/617fdd8a-bb93-4cba-842e-ec38f0ef3e23
+-----------------------------------
+[2025-03-10T03:08:47.976Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "cdd14890-b94d-9ec4-8c25-48c0dc5d5b62",
+  "output": {
+    "task_id": "617fdd8a-bb93-4cba-842e-ec38f0ef3e23",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 11:08:41.701",
+    "scheduled_time": "2025-03-10 11:08:41.721"
+  }
+}
+-----------------------------------
+[2025-03-10T03:08:47.978Z] INFO: 任务处理中... 第3次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T03:08:47.978Z] INFO: 轮询任务状态 (第4次): 任务ID=617fdd8a-bb93-4cba-842e-ec38f0ef3e23
+-----------------------------------
+[2025-03-10T03:08:49.980Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/617fdd8a-bb93-4cba-842e-ec38f0ef3e23
+-----------------------------------
+[2025-03-10T03:08:50.069Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "36053bc5-e8de-9039-bd0a-fdcfe7fc63ce",
+  "output": {
+    "task_id": "617fdd8a-bb93-4cba-842e-ec38f0ef3e23",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 11:08:41.701",
+    "scheduled_time": "2025-03-10 11:08:41.721"
+  }
+}
+-----------------------------------
+[2025-03-10T03:08:50.071Z] INFO: 任务处理中... 第4次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T03:08:50.071Z] INFO: 轮询任务状态 (第5次): 任务ID=617fdd8a-bb93-4cba-842e-ec38f0ef3e23
+-----------------------------------
+[2025-03-10T03:08:52.073Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/617fdd8a-bb93-4cba-842e-ec38f0ef3e23
+-----------------------------------
+[2025-03-10T03:08:52.413Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "11293b82-538e-9712-9806-4a14827fa842",
+  "output": {
+    "task_id": "617fdd8a-bb93-4cba-842e-ec38f0ef3e23",
+    "task_status": "SUCCEEDED",
+    "submit_time": "2025-03-10 11:08:41.701",
+    "scheduled_time": "2025-03-10 11:08:41.721",
+    "end_time": "2025-03-10 11:08:51.645",
+    "results": [
+      {
+        "orig_prompt": "A dynamic portrait of Jackie Chan mid-stride on a rainy London street, wearing his signature confident smile and casual black athletic gear. The composition features dramatic low-angle framing with a wide lens, capturing iconic red double-decker buses and Victorian architecture in the bokeh background. Soft diffused daylight filters through overcast skies, reflecting off wet cobblestone streets where golden gaslight spills from vintage lampposts. Cinematic atmosphere with hyper-detailed textures in his leather jacket and rain-dappled surroundings, rendered in a vibrant color palette mixing British racing green storefronts with pops of red telephone booth accents. Motion blur subtly trails his determined walking pose suggesting imminent action, while maintaining sharp focus on his alert expression and wind-swept black hair. The scene balances urban grittiness with heroic lighting reminiscent of 90s Hong Kong action film posters.",
+        "actual_prompt": "成龙动态肖像，雨中伦敦街头大步前行。他身着标志性黑色运动装，面带自信微笑。低角度广角镜头构图，背景虚化出红色双层巴士和维多利亚式建筑。阴天柔光洒在湿漉漉的鹅卵石街道上，古董路灯投下金色光影。他的皮革夹克纹理细节丰富，周围雨滴四溅。画面色彩饱满，英国赛车绿商店与红色电话亭相映成趣。动作模糊暗示即将发生的动感，但面部表情和被风吹乱的黑发保持锐利对焦。英雄主义光照风格，兼具城市粗粝感与90年代香港动作片海报神韵。近景全身人像，展现坚定步伐与警觉眼神。",
+        "url": "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/b5/20250310/775d1686/617fdd8a-bb93-4cba-842e-ec38f0ef3e234281424263.png?Expires=1741662530&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=MLEUIwfYKfLW0VBm2gKwY6Q%2FHP0%3D"
+      },
+      {
+        "orig_prompt": "A dynamic portrait of Jackie Chan mid-stride on a rainy London street, wearing his signature confident smile and casual black athletic gear. The composition features dramatic low-angle framing with a wide lens, capturing iconic red double-decker buses and Victorian architecture in the bokeh background. Soft diffused daylight filters through overcast skies, reflecting off wet cobblestone streets where golden gaslight spills from vintage lampposts. Cinematic atmosphere with hyper-detailed textures in his leather jacket and rain-dappled surroundings, rendered in a vibrant color palette mixing British racing green storefronts with pops of red telephone booth accents. Motion blur subtly trails his determined walking pose suggesting imminent action, while maintaining sharp focus on his alert expression and wind-swept black hair. The scene balances urban grittiness with heroic lighting reminiscent of 90s Hong Kong action film posters.",
+        "actual_prompt": "成龙动态肖像，雨中伦敦街头大步前行。他身着标志性黑色运动装，面带自信微笑。低角度广角镜头构图，背景虚化出红色双层巴士和维多利亚式建筑。阴天柔光洒在湿漉漉的鹅卵石街道上，古董路灯投下金色光影。他的皮革夹克纹理细节丰富，周围雨滴四溅。画面色彩饱满，英国赛车绿商店与红色电话亭相映成趣。动作模糊暗示即将发生的动感，但面部表情和被风吹乱的黑发保持锐利对焦。英雄主义光照风格，兼具城市粗粝感与90年代香港动作片海报神韵。近景全身人像，展现坚定步伐与警觉眼神。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/73/20250310/8928fb36/617fdd8a-bb93-4cba-842e-ec38f0ef3e234281424262.png?Expires=1741662530&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=VyPe6sXUD4eYTvDtae%2FtiIShqiU%3D"
+      },
+      {
+        "orig_prompt": "A dynamic portrait of Jackie Chan mid-stride on a rainy London street, wearing his signature confident smile and casual black athletic gear. The composition features dramatic low-angle framing with a wide lens, capturing iconic red double-decker buses and Victorian architecture in the bokeh background. Soft diffused daylight filters through overcast skies, reflecting off wet cobblestone streets where golden gaslight spills from vintage lampposts. Cinematic atmosphere with hyper-detailed textures in his leather jacket and rain-dappled surroundings, rendered in a vibrant color palette mixing British racing green storefronts with pops of red telephone booth accents. Motion blur subtly trails his determined walking pose suggesting imminent action, while maintaining sharp focus on his alert expression and wind-swept black hair. The scene balances urban grittiness with heroic lighting reminiscent of 90s Hong Kong action film posters.",
+        "actual_prompt": "成龙动态肖像，雨中伦敦街头大步前行。他身着标志性黑色运动装，面带自信微笑。低角度广角镜头构图，背景虚化出红色双层巴士和维多利亚式建筑。阴天柔光洒在湿漉漉的鹅卵石街道上，古董路灯投下金色光影。他的皮革夹克纹理细节丰富，周围雨滴四溅。画面色彩饱满，英国赛车绿商店与红色电话亭相映成趣。动作模糊暗示即将发生的动感，但面部表情和被风吹乱的黑发保持锐利对焦。英雄主义光照风格，兼具城市粗粝感与90年代香港动作片海报神韵。近景全身人像，展现坚定步伐与警觉眼神。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/ac/20250310/8928fb36/617fdd8a-bb93-4cba-842e-ec38f0ef3e234281424265.png?Expires=1741662530&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=HaY%2BEp65pZ0MwNlNmXHR%2BuZyC2Y%3D"
+      },
+      {
+        "orig_prompt": "A dynamic portrait of Jackie Chan mid-stride on a rainy London street, wearing his signature confident smile and casual black athletic gear. The composition features dramatic low-angle framing with a wide lens, capturing iconic red double-decker buses and Victorian architecture in the bokeh background. Soft diffused daylight filters through overcast skies, reflecting off wet cobblestone streets where golden gaslight spills from vintage lampposts. Cinematic atmosphere with hyper-detailed textures in his leather jacket and rain-dappled surroundings, rendered in a vibrant color palette mixing British racing green storefronts with pops of red telephone booth accents. Motion blur subtly trails his determined walking pose suggesting imminent action, while maintaining sharp focus on his alert expression and wind-swept black hair. The scene balances urban grittiness with heroic lighting reminiscent of 90s Hong Kong action film posters.",
+        "actual_prompt": "成龙动态肖像，雨中伦敦街头大步前行。他身着标志性黑色运动装，面带自信微笑。低角度广角镜头构图，背景虚化出红色双层巴士和维多利亚式建筑。阴天柔光洒在湿漉漉的鹅卵石街道上，古董路灯投下金色光影。他的皮革夹克纹理细节丰富，周围雨滴四溅。画面色彩饱满，英国赛车绿商店与红色电话亭相映成趣。动作模糊暗示即将发生的动感，但面部表情和被风吹乱的黑发保持锐利对焦。英雄主义光照风格，兼具城市粗粝感与90年代香港动作片海报神韵。近景全身人像，展现坚定步伐与警觉眼神。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/56/20250310/b0fe3396/617fdd8a-bb93-4cba-842e-ec38f0ef3e234281424264.png?Expires=1741662530&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=LFV5pCF%2Bc9iuNWmiWTFDSVjc5Ig%3D"
+      }
+    ],
+    "task_metrics": {
+      "TOTAL": 4,
+      "SUCCEEDED": 4,
+      "FAILED": 0
+    }
+  },
+  "usage": {
+    "image_count": 4
+  }
+}
+-----------------------------------
+[2025-03-10T03:08:52.414Z] INFO: 任务成功完成
+数据: {
+  "request_id": "11293b82-538e-9712-9806-4a14827fa842",
+  "output": {
+    "task_id": "617fdd8a-bb93-4cba-842e-ec38f0ef3e23",
+    "task_status": "SUCCEEDED",
+    "submit_time": "2025-03-10 11:08:41.701",
+    "scheduled_time": "2025-03-10 11:08:41.721",
+    "end_time": "2025-03-10 11:08:51.645",
+    "results": [
+      {
+        "orig_prompt": "A dynamic portrait of Jackie Chan mid-stride on a rainy London street, wearing his signature confident smile and casual black athletic gear. The composition features dramatic low-angle framing with a wide lens, capturing iconic red double-decker buses and Victorian architecture in the bokeh background. Soft diffused daylight filters through overcast skies, reflecting off wet cobblestone streets where golden gaslight spills from vintage lampposts. Cinematic atmosphere with hyper-detailed textures in his leather jacket and rain-dappled surroundings, rendered in a vibrant color palette mixing British racing green storefronts with pops of red telephone booth accents. Motion blur subtly trails his determined walking pose suggesting imminent action, while maintaining sharp focus on his alert expression and wind-swept black hair. The scene balances urban grittiness with heroic lighting reminiscent of 90s Hong Kong action film posters.",
+        "actual_prompt": "成龙动态肖像，雨中伦敦街头大步前行。他身着标志性黑色运动装，面带自信微笑。低角度广角镜头构图，背景虚化出红色双层巴士和维多利亚式建筑。阴天柔光洒在湿漉漉的鹅卵石街道上，古董路灯投下金色光影。他的皮革夹克纹理细节丰富，周围雨滴四溅。画面色彩饱满，英国赛车绿商店与红色电话亭相映成趣。动作模糊暗示即将发生的动感，但面部表情和被风吹乱的黑发保持锐利对焦。英雄主义光照风格，兼具城市粗粝感与90年代香港动作片海报神韵。近景全身人像，展现坚定步伐与警觉眼神。",
+        "url": "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/b5/20250310/775d1686/617fdd8a-bb93-4cba-842e-ec38f0ef3e234281424263.png?Expires=1741662530&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=MLEUIwfYKfLW0VBm2gKwY6Q%2FHP0%3D"
+      },
+      {
+        "orig_prompt": "A dynamic portrait of Jackie Chan mid-stride on a rainy London street, wearing his signature confident smile and casual black athletic gear. The composition features dramatic low-angle framing with a wide lens, capturing iconic red double-decker buses and Victorian architecture in the bokeh background. Soft diffused daylight filters through overcast skies, reflecting off wet cobblestone streets where golden gaslight spills from vintage lampposts. Cinematic atmosphere with hyper-detailed textures in his leather jacket and rain-dappled surroundings, rendered in a vibrant color palette mixing British racing green storefronts with pops of red telephone booth accents. Motion blur subtly trails his determined walking pose suggesting imminent action, while maintaining sharp focus on his alert expression and wind-swept black hair. The scene balances urban grittiness with heroic lighting reminiscent of 90s Hong Kong action film posters.",
+        "actual_prompt": "成龙动态肖像，雨中伦敦街头大步前行。他身着标志性黑色运动装，面带自信微笑。低角度广角镜头构图，背景虚化出红色双层巴士和维多利亚式建筑。阴天柔光洒在湿漉漉的鹅卵石街道上，古董路灯投下金色光影。他的皮革夹克纹理细节丰富，周围雨滴四溅。画面色彩饱满，英国赛车绿商店与红色电话亭相映成趣。动作模糊暗示即将发生的动感，但面部表情和被风吹乱的黑发保持锐利对焦。英雄主义光照风格，兼具城市粗粝感与90年代香港动作片海报神韵。近景全身人像，展现坚定步伐与警觉眼神。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/73/20250310/8928fb36/617fdd8a-bb93-4cba-842e-ec38f0ef3e234281424262.png?Expires=1741662530&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=VyPe6sXUD4eYTvDtae%2FtiIShqiU%3D"
+      },
+      {
+        "orig_prompt": "A dynamic portrait of Jackie Chan mid-stride on a rainy London street, wearing his signature confident smile and casual black athletic gear. The composition features dramatic low-angle framing with a wide lens, capturing iconic red double-decker buses and Victorian architecture in the bokeh background. Soft diffused daylight filters through overcast skies, reflecting off wet cobblestone streets where golden gaslight spills from vintage lampposts. Cinematic atmosphere with hyper-detailed textures in his leather jacket and rain-dappled surroundings, rendered in a vibrant color palette mixing British racing green storefronts with pops of red telephone booth accents. Motion blur subtly trails his determined walking pose suggesting imminent action, while maintaining sharp focus on his alert expression and wind-swept black hair. The scene balances urban grittiness with heroic lighting reminiscent of 90s Hong Kong action film posters.",
+        "actual_prompt": "成龙动态肖像，雨中伦敦街头大步前行。他身着标志性黑色运动装，面带自信微笑。低角度广角镜头构图，背景虚化出红色双层巴士和维多利亚式建筑。阴天柔光洒在湿漉漉的鹅卵石街道上，古董路灯投下金色光影。他的皮革夹克纹理细节丰富，周围雨滴四溅。画面色彩饱满，英国赛车绿商店与红色电话亭相映成趣。动作模糊暗示即将发生的动感，但面部表情和被风吹乱的黑发保持锐利对焦。英雄主义光照风格，兼具城市粗粝感与90年代香港动作片海报神韵。近景全身人像，展现坚定步伐与警觉眼神。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/ac/20250310/8928fb36/617fdd8a-bb93-4cba-842e-ec38f0ef3e234281424265.png?Expires=1741662530&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=HaY%2BEp65pZ0MwNlNmXHR%2BuZyC2Y%3D"
+      },
+      {
+        "orig_prompt": "A dynamic portrait of Jackie Chan mid-stride on a rainy London street, wearing his signature confident smile and casual black athletic gear. The composition features dramatic low-angle framing with a wide lens, capturing iconic red double-decker buses and Victorian architecture in the bokeh background. Soft diffused daylight filters through overcast skies, reflecting off wet cobblestone streets where golden gaslight spills from vintage lampposts. Cinematic atmosphere with hyper-detailed textures in his leather jacket and rain-dappled surroundings, rendered in a vibrant color palette mixing British racing green storefronts with pops of red telephone booth accents. Motion blur subtly trails his determined walking pose suggesting imminent action, while maintaining sharp focus on his alert expression and wind-swept black hair. The scene balances urban grittiness with heroic lighting reminiscent of 90s Hong Kong action film posters.",
+        "actual_prompt": "成龙动态肖像，雨中伦敦街头大步前行。他身着标志性黑色运动装，面带自信微笑。低角度广角镜头构图，背景虚化出红色双层巴士和维多利亚式建筑。阴天柔光洒在湿漉漉的鹅卵石街道上，古董路灯投下金色光影。他的皮革夹克纹理细节丰富，周围雨滴四溅。画面色彩饱满，英国赛车绿商店与红色电话亭相映成趣。动作模糊暗示即将发生的动感，但面部表情和被风吹乱的黑发保持锐利对焦。英雄主义光照风格，兼具城市粗粝感与90年代香港动作片海报神韵。近景全身人像，展现坚定步伐与警觉眼神。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/56/20250310/b0fe3396/617fdd8a-bb93-4cba-842e-ec38f0ef3e234281424264.png?Expires=1741662530&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=LFV5pCF%2Bc9iuNWmiWTFDSVjc5Ig%3D"
+      }
+    ],
+    "task_metrics": {
+      "TOTAL": 4,
+      "SUCCEEDED": 4,
+      "FAILED": 0
+    }
+  },
+  "usage": {
+    "image_count": 4
+  }
+}
+-----------------------------------
+[2025-03-10T03:08:52.415Z] INFO: 生成的图像URLs (4个):
+数据: [
+  "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/b5/20250310/775d1686/617fdd8a-bb93-4cba-842e-ec38f0ef3e234281424263.png?Expires=1741662530&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=MLEUIwfYKfLW0VBm2gKwY6Q%2FHP0%3D",
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/73/20250310/8928fb36/617fdd8a-bb93-4cba-842e-ec38f0ef3e234281424262.png?Expires=1741662530&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=VyPe6sXUD4eYTvDtae%2FtiIShqiU%3D",
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/ac/20250310/8928fb36/617fdd8a-bb93-4cba-842e-ec38f0ef3e234281424265.png?Expires=1741662530&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=HaY%2BEp65pZ0MwNlNmXHR%2BuZyC2Y%3D",
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/56/20250310/b0fe3396/617fdd8a-bb93-4cba-842e-ec38f0ef3e234281424264.png?Expires=1741662530&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=LFV5pCF%2Bc9iuNWmiWTFDSVjc5Ig%3D"
+]
+-----------------------------------
+[2025-03-10T03:08:52.415Z] INFO: ===== 图像生成请求完成 =====
+-----------------------------------
+[2025-03-10T06:10:21.186Z] INFO: ===== 开始新的图像生成请求 =====
+-----------------------------------
+[2025-03-10T06:10:21.187Z] INFO: 原始提示词: "生成一只会飞的大水牛"
+-----------------------------------
+[2025-03-10T06:10:21.187Z] INFO: 开始处理提示词: "生成一只会飞的大水牛"
+-----------------------------------
+[2025-03-10T06:10:21.187Z] INFO: 调用阿里云QWQ 32B API开始
+数据: {
+  "model": "qwq-32b",
+  "prompt": "我需要你帮我优化以下中文提示词，用于AI图像生成。\n请生成一个详细、富有创意、高质量的中文图像描述，包括构图、风格、光照、颜色、情绪等元素。\n仅输出优化后的中文提示词，不要翻译成英文，也不要有其他解释。\n原始提示词: \"生成一只会飞的大水牛\""
+}
+-----------------------------------
+[2025-03-10T06:10:37.730Z] INFO: 阿里云QWQ 32B API响应
+数据: {
+  "optimizedPrompt": "【构图】俯视视角展现巨型水牛悬浮于云层之上，四蹄舒展如御风而行，背景层叠的雪山与渐变暮色天空形成空间纵深，左下角点缀星点彩虹色光斑\n\n【风格】超现实奇幻画风，融合生物机械美学与自然元素，水牛肌肉线条采用细腻的大理石纹理，双翼由半透明虹彩鳞片构成，带有蒸汽朋克风格的发光关节装置\n\n【光照】黄昏时刻的逆光场景，左侧45度角投射暖金色顶光，水牛背部镀上玫瑰金轮廓光，翅膀透出内部幽蓝能量光晕，云层下方透出紫罗兰色暮光\n\n【色彩】主色调为赭石色水牛躯体与珍珠白云层形成对比，翅膀渐变虹彩（靛蓝-品红-琥珀金），背景天空呈现薰衣草紫至日落橙的柔和渐变，机械部件点缀祖母绿冷光\n\n【情绪】史诗般的奇幻氛围，既展现远古巨兽的威严力量，又通过轻盈悬浮姿态传递突破重力的奇迹感，画面弥漫着神秘而充满生命力的能量波动\n\n【细节】水牛角部缠绕发光藤蔓状能量束，蹄间扬起星尘般的发光雾霭，鳞翅末端与云层产生电离火花，远处可见若隐若现的浮空岛屿"
+}
+-----------------------------------
+[2025-03-10T06:10:37.734Z] INFO: 优化后的提示词: "【构图】俯视视角展现巨型水牛悬浮于云层之上，四蹄舒展如御风而行，背景层叠的雪山与渐变暮色天空形成空间纵深，左下角点缀星点彩虹色光斑
+
+【风格】超现实奇幻画风，融合生物机械美学与自然元素，水牛肌肉线条采用细腻的大理石纹理，双翼由半透明虹彩鳞片构成，带有蒸汽朋克风格的发光关节装置
+
+【光照】黄昏时刻的逆光场景，左侧45度角投射暖金色顶光，水牛背部镀上玫瑰金轮廓光，翅膀透出内部幽蓝能量光晕，云层下方透出紫罗兰色暮光
+
+【色彩】主色调为赭石色水牛躯体与珍珠白云层形成对比，翅膀渐变虹彩（靛蓝-品红-琥珀金），背景天空呈现薰衣草紫至日落橙的柔和渐变，机械部件点缀祖母绿冷光
+
+【情绪】史诗般的奇幻氛围，既展现远古巨兽的威严力量，又通过轻盈悬浮姿态传递突破重力的奇迹感，画面弥漫着神秘而充满生命力的能量波动
+
+【细节】水牛角部缠绕发光藤蔓状能量束，蹄间扬起星尘般的发光雾霭，鳞翅末端与云层产生电离火花，远处可见若隐若现的浮空岛屿"
+-----------------------------------
+[2025-03-10T06:10:37.737Z] INFO: 准备生成图像，提示词: "【构图】俯视视角展现巨型水牛悬浮于云层之上，四蹄舒展如御风而行，背景层叠的雪山与渐变暮色天空形成空间纵深，左下角点缀星点彩虹色光斑
+
+【风格】超现实奇幻画风，融合生物机械美学与自然元素，水牛肌肉线条采用细腻的大理石纹理，双翼由半透明虹彩鳞片构成，带有蒸汽朋克风格的发光关节装置
+
+【光照】黄昏时刻的逆光场景，左侧45度角投射暖金色顶光，水牛背部镀上玫瑰金轮廓光，翅膀透出内部幽蓝能量光晕，云层下方透出紫罗兰色暮光
+
+【色彩】主色调为赭石色水牛躯体与珍珠白云层形成对比，翅膀渐变虹彩（靛蓝-品红-琥珀金），背景天空呈现薰衣草紫至日落橙的柔和渐变，机械部件点缀祖母绿冷光
+
+【情绪】史诗般的奇幻氛围，既展现远古巨兽的威严力量，又通过轻盈悬浮姿态传递突破重力的奇迹感，画面弥漫着神秘而充满生命力的能量波动
+
+【细节】水牛角部缠绕发光藤蔓状能量束，蹄间扬起星尘般的发光雾霭，鳞翅末端与云层产生电离火花，远处可见若隐若现的浮空岛屿"
+-----------------------------------
+[2025-03-10T06:10:37.738Z] INFO: 调用阿里云通义万相API开始
+数据: {
+  "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
+  "body": {
+    "model": "wanx2.1-t2i-turbo",
+    "input": {
+      "prompt": "【构图】俯视视角展现巨型水牛悬浮于云层之上，四蹄舒展如御风而行，背景层叠的雪山与渐变暮色天空形成空间纵深，左下角点缀星点彩虹色光斑\n\n【风格】超现实奇幻画风，融合生物机械美学与自然元素，水牛肌肉线条采用细腻的大理石纹理，双翼由半透明虹彩鳞片构成，带有蒸汽朋克风格的发光关节装置\n\n【光照】黄昏时刻的逆光场景，左侧45度角投射暖金色顶光，水牛背部镀上玫瑰金轮廓光，翅膀透出内部幽蓝能量光晕，云层下方透出紫罗兰色暮光\n\n【色彩】主色调为赭石色水牛躯体与珍珠白云层形成对比，翅膀渐变虹彩（靛蓝-品红-琥珀金），背景天空呈现薰衣草紫至日落橙的柔和渐变，机械部件点缀祖母绿冷光\n\n【情绪】史诗般的奇幻氛围，既展现远古巨兽的威严力量，又通过轻盈悬浮姿态传递突破重力的奇迹感，画面弥漫着神秘而充满生命力的能量波动\n\n【细节】水牛角部缠绕发光藤蔓状能量束，蹄间扬起星尘般的发光雾霭，鳞翅末端与云层产生电离火花，远处可见若隐若现的浮空岛屿"
+    },
+    "parameters": {
+      "size": "1024*1024",
+      "n": 4,
+      "prompt_extend": true,
+      "watermark": false
+    }
+  },
+  "headers": {
+    "Content-Type": "application/json",
+    "X-DashScope-Async": "enable",
+    "Authorization": "Bearer sk-8f..."
+  }
+}
+-----------------------------------
+[2025-03-10T06:10:38.204Z] INFO: 阿里云API响应: 状态码=200
+数据: {
+  "output": {
+    "task_status": "PENDING",
+    "task_id": "9881980b-ea97-4987-9e0e-19b607f3def7"
+  },
+  "request_id": "10a6d371-fe23-93c7-9e11-1c1829fd1779"
+}
+-----------------------------------
+[2025-03-10T06:10:38.205Z] INFO: 通义万相任务创建成功
+数据: {
+  "output": {
+    "task_status": "PENDING",
+    "task_id": "9881980b-ea97-4987-9e0e-19b607f3def7"
+  },
+  "request_id": "10a6d371-fe23-93c7-9e11-1c1829fd1779"
+}
+-----------------------------------
+[2025-03-10T06:10:38.206Z] INFO: 获取到任务ID: 9881980b-ea97-4987-9e0e-19b607f3def7，开始等待任务完成
+-----------------------------------
+[2025-03-10T06:10:38.207Z] INFO: 轮询任务状态 (第1次): 任务ID=9881980b-ea97-4987-9e0e-19b607f3def7
+-----------------------------------
+[2025-03-10T06:10:40.208Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/9881980b-ea97-4987-9e0e-19b607f3def7
+-----------------------------------
+[2025-03-10T06:10:40.321Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "70fe400e-e9d2-9e2d-b3ed-d8eb0ebb2606",
+  "output": {
+    "task_id": "9881980b-ea97-4987-9e0e-19b607f3def7",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 14:10:38.226",
+    "scheduled_time": "2025-03-10 14:10:38.245"
+  }
+}
+-----------------------------------
+[2025-03-10T06:10:40.322Z] INFO: 任务处理中... 第1次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T06:10:40.323Z] INFO: 轮询任务状态 (第2次): 任务ID=9881980b-ea97-4987-9e0e-19b607f3def7
+-----------------------------------
+[2025-03-10T06:10:42.324Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/9881980b-ea97-4987-9e0e-19b607f3def7
+-----------------------------------
+[2025-03-10T06:10:42.545Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "270e5535-84db-9756-8e49-4b3042763dba",
+  "output": {
+    "task_id": "9881980b-ea97-4987-9e0e-19b607f3def7",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 14:10:38.226",
+    "scheduled_time": "2025-03-10 14:10:38.245"
+  }
+}
+-----------------------------------
+[2025-03-10T06:10:42.546Z] INFO: 任务处理中... 第2次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T06:10:42.547Z] INFO: 轮询任务状态 (第3次): 任务ID=9881980b-ea97-4987-9e0e-19b607f3def7
+-----------------------------------
+[2025-03-10T06:10:44.549Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/9881980b-ea97-4987-9e0e-19b607f3def7
+-----------------------------------
+[2025-03-10T06:10:44.660Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "0092d235-6043-99e2-816a-b3828bf145b3",
+  "output": {
+    "task_id": "9881980b-ea97-4987-9e0e-19b607f3def7",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 14:10:38.226",
+    "scheduled_time": "2025-03-10 14:10:38.245"
+  }
+}
+-----------------------------------
+[2025-03-10T06:10:44.661Z] INFO: 任务处理中... 第3次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T06:10:44.661Z] INFO: 轮询任务状态 (第4次): 任务ID=9881980b-ea97-4987-9e0e-19b607f3def7
+-----------------------------------
+[2025-03-10T06:10:46.663Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/9881980b-ea97-4987-9e0e-19b607f3def7
+-----------------------------------
+[2025-03-10T06:10:46.797Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "3ac6670f-e96e-9729-9067-ba7681d689f5",
+  "output": {
+    "task_id": "9881980b-ea97-4987-9e0e-19b607f3def7",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 14:10:38.226",
+    "scheduled_time": "2025-03-10 14:10:38.245"
+  }
+}
+-----------------------------------
+[2025-03-10T06:10:46.799Z] INFO: 任务处理中... 第4次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T06:10:46.800Z] INFO: 轮询任务状态 (第5次): 任务ID=9881980b-ea97-4987-9e0e-19b607f3def7
+-----------------------------------
+[2025-03-10T06:10:48.803Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/9881980b-ea97-4987-9e0e-19b607f3def7
+-----------------------------------
+[2025-03-10T06:10:48.912Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "eb6ef87f-a906-9a0e-a06e-43c79488d989",
+  "output": {
+    "task_id": "9881980b-ea97-4987-9e0e-19b607f3def7",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 14:10:38.226",
+    "scheduled_time": "2025-03-10 14:10:38.245"
+  }
+}
+-----------------------------------
+[2025-03-10T06:10:48.913Z] INFO: 任务处理中... 第5次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T06:10:48.913Z] INFO: 轮询任务状态 (第6次): 任务ID=9881980b-ea97-4987-9e0e-19b607f3def7
+-----------------------------------
+[2025-03-10T06:10:50.916Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/9881980b-ea97-4987-9e0e-19b607f3def7
+-----------------------------------
+[2025-03-10T06:10:51.033Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "f1a0a253-b82e-9410-9aa7-ebc83068ac76",
+  "output": {
+    "task_id": "9881980b-ea97-4987-9e0e-19b607f3def7",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 14:10:38.226",
+    "scheduled_time": "2025-03-10 14:10:38.245"
+  }
+}
+-----------------------------------
+[2025-03-10T06:10:51.035Z] INFO: 任务处理中... 第6次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T06:10:51.036Z] INFO: 轮询任务状态 (第7次): 任务ID=9881980b-ea97-4987-9e0e-19b607f3def7
+-----------------------------------
+[2025-03-10T06:10:53.037Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/9881980b-ea97-4987-9e0e-19b607f3def7
+-----------------------------------
+[2025-03-10T06:10:53.143Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "db7751e3-2939-9340-b5e3-914152aa0de1",
+  "output": {
+    "task_id": "9881980b-ea97-4987-9e0e-19b607f3def7",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 14:10:38.226",
+    "scheduled_time": "2025-03-10 14:10:38.245"
+  }
+}
+-----------------------------------
+[2025-03-10T06:10:53.144Z] INFO: 任务处理中... 第7次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T06:10:53.145Z] INFO: 轮询任务状态 (第8次): 任务ID=9881980b-ea97-4987-9e0e-19b607f3def7
+-----------------------------------
+[2025-03-10T06:10:55.146Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/9881980b-ea97-4987-9e0e-19b607f3def7
+-----------------------------------
+[2025-03-10T06:10:55.276Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "a0adc344-bc7f-9d7f-b0ac-6ab79ac54f97",
+  "output": {
+    "task_id": "9881980b-ea97-4987-9e0e-19b607f3def7",
+    "task_status": "SUCCEEDED",
+    "submit_time": "2025-03-10 14:10:38.226",
+    "scheduled_time": "2025-03-10 14:10:38.245",
+    "end_time": "2025-03-10 14:10:53.425",
+    "results": [
+      {
+        "orig_prompt": "【构图】俯视视角展现巨型水牛悬浮于云层之上，四蹄舒展如御风而行，背景层叠的雪山与渐变暮色天空形成空间纵深，左下角点缀星点彩虹色光斑\n\n【风格】超现实奇幻画风，融合生物机械美学与自然元素，水牛肌肉线条采用细腻的大理石纹理，双翼由半透明虹彩鳞片构成，带有蒸汽朋克风格的发光关节装置\n\n【光照】黄昏时刻的逆光场景，左侧45度角投射暖金色顶光，水牛背部镀上玫瑰金轮廓光，翅膀透出内部幽蓝能量光晕，云层下方透出紫罗兰色暮光\n\n【色彩】主色调为赭石色水牛躯体与珍珠白云层形成对比，翅膀渐变虹彩（靛蓝-品红-琥珀金），背景天空呈现薰衣草紫至日落橙的柔和渐变，机械部件点缀祖母绿冷光\n\n【情绪】史诗般的奇幻氛围，既展现远古巨兽的威严力量，又通过轻盈悬浮姿态传递突破重力的奇迹感，画面弥漫着神秘而充满生命力的能量波动\n\n【细节】水牛角部缠绕发光藤蔓状能量束，蹄间扬起星尘般的发光雾霭，鳞翅末端与云层产生电离火花，远处可见若隐若现的浮空岛屿",
+        "actual_prompt": "超现实奇幻画风，一头巨型水牛悬浮于云层之上，四蹄舒展仿佛御风而行。水牛肌肉呈现大理石纹理，双翼由半透明虹彩鳞片构成，关节处配有发光的蒸汽朋克装置。俯视视角展现，背景是层叠雪山与渐变暮色天空，左下角点缀彩虹色光斑。黄昏逆光下，暖金色顶光照亮水牛，背部有玫瑰金轮廓光，翅膀透出幽蓝能量光晕。主色调为赭石与珍珠白对比，翅膀渐变虹彩，天空从薰衣草紫渐变至日落橙。水牛角缠绕发光藤蔓，蹄间扬起星尘雾霭，远方可见浮空岛屿。史诗氛围，充满神秘生命力。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/9f/20250310/8928fb36/9881980b-ea97-4987-9e0e-19b607f3def71527343357.png?Expires=1741673449&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=DIzaHQRsfU28gD03mX7P3UpewiI%3D"
+      },
+      {
+        "orig_prompt": "【构图】俯视视角展现巨型水牛悬浮于云层之上，四蹄舒展如御风而行，背景层叠的雪山与渐变暮色天空形成空间纵深，左下角点缀星点彩虹色光斑\n\n【风格】超现实奇幻画风，融合生物机械美学与自然元素，水牛肌肉线条采用细腻的大理石纹理，双翼由半透明虹彩鳞片构成，带有蒸汽朋克风格的发光关节装置\n\n【光照】黄昏时刻的逆光场景，左侧45度角投射暖金色顶光，水牛背部镀上玫瑰金轮廓光，翅膀透出内部幽蓝能量光晕，云层下方透出紫罗兰色暮光\n\n【色彩】主色调为赭石色水牛躯体与珍珠白云层形成对比，翅膀渐变虹彩（靛蓝-品红-琥珀金），背景天空呈现薰衣草紫至日落橙的柔和渐变，机械部件点缀祖母绿冷光\n\n【情绪】史诗般的奇幻氛围，既展现远古巨兽的威严力量，又通过轻盈悬浮姿态传递突破重力的奇迹感，画面弥漫着神秘而充满生命力的能量波动\n\n【细节】水牛角部缠绕发光藤蔓状能量束，蹄间扬起星尘般的发光雾霭，鳞翅末端与云层产生电离火花，远处可见若隐若现的浮空岛屿",
+        "actual_prompt": "超现实奇幻画风，一头巨型水牛悬浮于云层之上，四蹄舒展仿佛御风而行。水牛肌肉呈现大理石纹理，双翼由半透明虹彩鳞片构成，关节处配有发光的蒸汽朋克装置。俯视视角展现，背景是层叠雪山与渐变暮色天空，左下角点缀彩虹色光斑。黄昏逆光下，暖金色顶光照亮水牛，背部有玫瑰金轮廓光，翅膀透出幽蓝能量光晕。主色调为赭石与珍珠白对比，翅膀渐变虹彩，天空从薰衣草紫渐变至日落橙。水牛角缠绕发光藤蔓，蹄间扬起星尘雾霭，远方可见浮空岛屿。史诗氛围，充满神秘生命力。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/3a/20250310/8928fb36/9881980b-ea97-4987-9e0e-19b607f3def71527343354.png?Expires=1741673449&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=KggG18SYpiC2%2FkNWOpitza3GfXQ%3D"
+      },
+      {
+        "orig_prompt": "【构图】俯视视角展现巨型水牛悬浮于云层之上，四蹄舒展如御风而行，背景层叠的雪山与渐变暮色天空形成空间纵深，左下角点缀星点彩虹色光斑\n\n【风格】超现实奇幻画风，融合生物机械美学与自然元素，水牛肌肉线条采用细腻的大理石纹理，双翼由半透明虹彩鳞片构成，带有蒸汽朋克风格的发光关节装置\n\n【光照】黄昏时刻的逆光场景，左侧45度角投射暖金色顶光，水牛背部镀上玫瑰金轮廓光，翅膀透出内部幽蓝能量光晕，云层下方透出紫罗兰色暮光\n\n【色彩】主色调为赭石色水牛躯体与珍珠白云层形成对比，翅膀渐变虹彩（靛蓝-品红-琥珀金），背景天空呈现薰衣草紫至日落橙的柔和渐变，机械部件点缀祖母绿冷光\n\n【情绪】史诗般的奇幻氛围，既展现远古巨兽的威严力量，又通过轻盈悬浮姿态传递突破重力的奇迹感，画面弥漫着神秘而充满生命力的能量波动\n\n【细节】水牛角部缠绕发光藤蔓状能量束，蹄间扬起星尘般的发光雾霭，鳞翅末端与云层产生电离火花，远处可见若隐若现的浮空岛屿",
+        "actual_prompt": "超现实奇幻画风，一头巨型水牛悬浮于云层之上，四蹄舒展仿佛御风而行。水牛肌肉呈现大理石纹理，双翼由半透明虹彩鳞片构成，关节处配有发光的蒸汽朋克装置。俯视视角展现，背景是层叠雪山与渐变暮色天空，左下角点缀彩虹色光斑。黄昏逆光下，暖金色顶光照亮水牛，背部有玫瑰金轮廓光，翅膀透出幽蓝能量光晕。主色调为赭石与珍珠白对比，翅膀渐变虹彩，天空从薰衣草紫渐变至日落橙。水牛角缠绕发光藤蔓，蹄间扬起星尘雾霭，远方可见浮空岛屿。史诗氛围，充满神秘生命力。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/8a/20250310/8928fb36/9881980b-ea97-4987-9e0e-19b607f3def71527343356.png?Expires=1741673449&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=73dC%2FaPkTlXhOFGRJYgh9T56FEs%3D"
+      },
+      {
+        "orig_prompt": "【构图】俯视视角展现巨型水牛悬浮于云层之上，四蹄舒展如御风而行，背景层叠的雪山与渐变暮色天空形成空间纵深，左下角点缀星点彩虹色光斑\n\n【风格】超现实奇幻画风，融合生物机械美学与自然元素，水牛肌肉线条采用细腻的大理石纹理，双翼由半透明虹彩鳞片构成，带有蒸汽朋克风格的发光关节装置\n\n【光照】黄昏时刻的逆光场景，左侧45度角投射暖金色顶光，水牛背部镀上玫瑰金轮廓光，翅膀透出内部幽蓝能量光晕，云层下方透出紫罗兰色暮光\n\n【色彩】主色调为赭石色水牛躯体与珍珠白云层形成对比，翅膀渐变虹彩（靛蓝-品红-琥珀金），背景天空呈现薰衣草紫至日落橙的柔和渐变，机械部件点缀祖母绿冷光\n\n【情绪】史诗般的奇幻氛围，既展现远古巨兽的威严力量，又通过轻盈悬浮姿态传递突破重力的奇迹感，画面弥漫着神秘而充满生命力的能量波动\n\n【细节】水牛角部缠绕发光藤蔓状能量束，蹄间扬起星尘般的发光雾霭，鳞翅末端与云层产生电离火花，远处可见若隐若现的浮空岛屿",
+        "actual_prompt": "超现实奇幻画风，一头巨型水牛悬浮于云层之上，四蹄舒展仿佛御风而行。水牛肌肉呈现大理石纹理，双翼由半透明虹彩鳞片构成，关节处配有发光的蒸汽朋克装置。俯视视角展现，背景是层叠雪山与渐变暮色天空，左下角点缀彩虹色光斑。黄昏逆光下，暖金色顶光照亮水牛，背部有玫瑰金轮廓光，翅膀透出幽蓝能量光晕。主色调为赭石与珍珠白对比，翅膀渐变虹彩，天空从薰衣草紫渐变至日落橙。水牛角缠绕发光藤蔓，蹄间扬起星尘雾霭，远方可见浮空岛屿。史诗氛围，充满神秘生命力。",
+        "url": "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/41/20250310/775d1686/9881980b-ea97-4987-9e0e-19b607f3def71527343355.png?Expires=1741673452&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=PgTJ5oY9nIb2UACywDGS6xZbcDE%3D"
+      }
+    ],
+    "task_metrics": {
+      "TOTAL": 4,
+      "SUCCEEDED": 4,
+      "FAILED": 0
+    }
+  },
+  "usage": {
+    "image_count": 4
+  }
+}
+-----------------------------------
+[2025-03-10T06:10:55.279Z] INFO: 任务成功完成
+数据: {
+  "request_id": "a0adc344-bc7f-9d7f-b0ac-6ab79ac54f97",
+  "output": {
+    "task_id": "9881980b-ea97-4987-9e0e-19b607f3def7",
+    "task_status": "SUCCEEDED",
+    "submit_time": "2025-03-10 14:10:38.226",
+    "scheduled_time": "2025-03-10 14:10:38.245",
+    "end_time": "2025-03-10 14:10:53.425",
+    "results": [
+      {
+        "orig_prompt": "【构图】俯视视角展现巨型水牛悬浮于云层之上，四蹄舒展如御风而行，背景层叠的雪山与渐变暮色天空形成空间纵深，左下角点缀星点彩虹色光斑\n\n【风格】超现实奇幻画风，融合生物机械美学与自然元素，水牛肌肉线条采用细腻的大理石纹理，双翼由半透明虹彩鳞片构成，带有蒸汽朋克风格的发光关节装置\n\n【光照】黄昏时刻的逆光场景，左侧45度角投射暖金色顶光，水牛背部镀上玫瑰金轮廓光，翅膀透出内部幽蓝能量光晕，云层下方透出紫罗兰色暮光\n\n【色彩】主色调为赭石色水牛躯体与珍珠白云层形成对比，翅膀渐变虹彩（靛蓝-品红-琥珀金），背景天空呈现薰衣草紫至日落橙的柔和渐变，机械部件点缀祖母绿冷光\n\n【情绪】史诗般的奇幻氛围，既展现远古巨兽的威严力量，又通过轻盈悬浮姿态传递突破重力的奇迹感，画面弥漫着神秘而充满生命力的能量波动\n\n【细节】水牛角部缠绕发光藤蔓状能量束，蹄间扬起星尘般的发光雾霭，鳞翅末端与云层产生电离火花，远处可见若隐若现的浮空岛屿",
+        "actual_prompt": "超现实奇幻画风，一头巨型水牛悬浮于云层之上，四蹄舒展仿佛御风而行。水牛肌肉呈现大理石纹理，双翼由半透明虹彩鳞片构成，关节处配有发光的蒸汽朋克装置。俯视视角展现，背景是层叠雪山与渐变暮色天空，左下角点缀彩虹色光斑。黄昏逆光下，暖金色顶光照亮水牛，背部有玫瑰金轮廓光，翅膀透出幽蓝能量光晕。主色调为赭石与珍珠白对比，翅膀渐变虹彩，天空从薰衣草紫渐变至日落橙。水牛角缠绕发光藤蔓，蹄间扬起星尘雾霭，远方可见浮空岛屿。史诗氛围，充满神秘生命力。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/9f/20250310/8928fb36/9881980b-ea97-4987-9e0e-19b607f3def71527343357.png?Expires=1741673449&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=DIzaHQRsfU28gD03mX7P3UpewiI%3D"
+      },
+      {
+        "orig_prompt": "【构图】俯视视角展现巨型水牛悬浮于云层之上，四蹄舒展如御风而行，背景层叠的雪山与渐变暮色天空形成空间纵深，左下角点缀星点彩虹色光斑\n\n【风格】超现实奇幻画风，融合生物机械美学与自然元素，水牛肌肉线条采用细腻的大理石纹理，双翼由半透明虹彩鳞片构成，带有蒸汽朋克风格的发光关节装置\n\n【光照】黄昏时刻的逆光场景，左侧45度角投射暖金色顶光，水牛背部镀上玫瑰金轮廓光，翅膀透出内部幽蓝能量光晕，云层下方透出紫罗兰色暮光\n\n【色彩】主色调为赭石色水牛躯体与珍珠白云层形成对比，翅膀渐变虹彩（靛蓝-品红-琥珀金），背景天空呈现薰衣草紫至日落橙的柔和渐变，机械部件点缀祖母绿冷光\n\n【情绪】史诗般的奇幻氛围，既展现远古巨兽的威严力量，又通过轻盈悬浮姿态传递突破重力的奇迹感，画面弥漫着神秘而充满生命力的能量波动\n\n【细节】水牛角部缠绕发光藤蔓状能量束，蹄间扬起星尘般的发光雾霭，鳞翅末端与云层产生电离火花，远处可见若隐若现的浮空岛屿",
+        "actual_prompt": "超现实奇幻画风，一头巨型水牛悬浮于云层之上，四蹄舒展仿佛御风而行。水牛肌肉呈现大理石纹理，双翼由半透明虹彩鳞片构成，关节处配有发光的蒸汽朋克装置。俯视视角展现，背景是层叠雪山与渐变暮色天空，左下角点缀彩虹色光斑。黄昏逆光下，暖金色顶光照亮水牛，背部有玫瑰金轮廓光，翅膀透出幽蓝能量光晕。主色调为赭石与珍珠白对比，翅膀渐变虹彩，天空从薰衣草紫渐变至日落橙。水牛角缠绕发光藤蔓，蹄间扬起星尘雾霭，远方可见浮空岛屿。史诗氛围，充满神秘生命力。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/3a/20250310/8928fb36/9881980b-ea97-4987-9e0e-19b607f3def71527343354.png?Expires=1741673449&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=KggG18SYpiC2%2FkNWOpitza3GfXQ%3D"
+      },
+      {
+        "orig_prompt": "【构图】俯视视角展现巨型水牛悬浮于云层之上，四蹄舒展如御风而行，背景层叠的雪山与渐变暮色天空形成空间纵深，左下角点缀星点彩虹色光斑\n\n【风格】超现实奇幻画风，融合生物机械美学与自然元素，水牛肌肉线条采用细腻的大理石纹理，双翼由半透明虹彩鳞片构成，带有蒸汽朋克风格的发光关节装置\n\n【光照】黄昏时刻的逆光场景，左侧45度角投射暖金色顶光，水牛背部镀上玫瑰金轮廓光，翅膀透出内部幽蓝能量光晕，云层下方透出紫罗兰色暮光\n\n【色彩】主色调为赭石色水牛躯体与珍珠白云层形成对比，翅膀渐变虹彩（靛蓝-品红-琥珀金），背景天空呈现薰衣草紫至日落橙的柔和渐变，机械部件点缀祖母绿冷光\n\n【情绪】史诗般的奇幻氛围，既展现远古巨兽的威严力量，又通过轻盈悬浮姿态传递突破重力的奇迹感，画面弥漫着神秘而充满生命力的能量波动\n\n【细节】水牛角部缠绕发光藤蔓状能量束，蹄间扬起星尘般的发光雾霭，鳞翅末端与云层产生电离火花，远处可见若隐若现的浮空岛屿",
+        "actual_prompt": "超现实奇幻画风，一头巨型水牛悬浮于云层之上，四蹄舒展仿佛御风而行。水牛肌肉呈现大理石纹理，双翼由半透明虹彩鳞片构成，关节处配有发光的蒸汽朋克装置。俯视视角展现，背景是层叠雪山与渐变暮色天空，左下角点缀彩虹色光斑。黄昏逆光下，暖金色顶光照亮水牛，背部有玫瑰金轮廓光，翅膀透出幽蓝能量光晕。主色调为赭石与珍珠白对比，翅膀渐变虹彩，天空从薰衣草紫渐变至日落橙。水牛角缠绕发光藤蔓，蹄间扬起星尘雾霭，远方可见浮空岛屿。史诗氛围，充满神秘生命力。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/8a/20250310/8928fb36/9881980b-ea97-4987-9e0e-19b607f3def71527343356.png?Expires=1741673449&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=73dC%2FaPkTlXhOFGRJYgh9T56FEs%3D"
+      },
+      {
+        "orig_prompt": "【构图】俯视视角展现巨型水牛悬浮于云层之上，四蹄舒展如御风而行，背景层叠的雪山与渐变暮色天空形成空间纵深，左下角点缀星点彩虹色光斑\n\n【风格】超现实奇幻画风，融合生物机械美学与自然元素，水牛肌肉线条采用细腻的大理石纹理，双翼由半透明虹彩鳞片构成，带有蒸汽朋克风格的发光关节装置\n\n【光照】黄昏时刻的逆光场景，左侧45度角投射暖金色顶光，水牛背部镀上玫瑰金轮廓光，翅膀透出内部幽蓝能量光晕，云层下方透出紫罗兰色暮光\n\n【色彩】主色调为赭石色水牛躯体与珍珠白云层形成对比，翅膀渐变虹彩（靛蓝-品红-琥珀金），背景天空呈现薰衣草紫至日落橙的柔和渐变，机械部件点缀祖母绿冷光\n\n【情绪】史诗般的奇幻氛围，既展现远古巨兽的威严力量，又通过轻盈悬浮姿态传递突破重力的奇迹感，画面弥漫着神秘而充满生命力的能量波动\n\n【细节】水牛角部缠绕发光藤蔓状能量束，蹄间扬起星尘般的发光雾霭，鳞翅末端与云层产生电离火花，远处可见若隐若现的浮空岛屿",
+        "actual_prompt": "超现实奇幻画风，一头巨型水牛悬浮于云层之上，四蹄舒展仿佛御风而行。水牛肌肉呈现大理石纹理，双翼由半透明虹彩鳞片构成，关节处配有发光的蒸汽朋克装置。俯视视角展现，背景是层叠雪山与渐变暮色天空，左下角点缀彩虹色光斑。黄昏逆光下，暖金色顶光照亮水牛，背部有玫瑰金轮廓光，翅膀透出幽蓝能量光晕。主色调为赭石与珍珠白对比，翅膀渐变虹彩，天空从薰衣草紫渐变至日落橙。水牛角缠绕发光藤蔓，蹄间扬起星尘雾霭，远方可见浮空岛屿。史诗氛围，充满神秘生命力。",
+        "url": "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/41/20250310/775d1686/9881980b-ea97-4987-9e0e-19b607f3def71527343355.png?Expires=1741673452&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=PgTJ5oY9nIb2UACywDGS6xZbcDE%3D"
+      }
+    ],
+    "task_metrics": {
+      "TOTAL": 4,
+      "SUCCEEDED": 4,
+      "FAILED": 0
+    }
+  },
+  "usage": {
+    "image_count": 4
+  }
+}
+-----------------------------------
+[2025-03-10T06:10:55.280Z] INFO: 生成的图像URLs (4个):
+数据: [
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/9f/20250310/8928fb36/9881980b-ea97-4987-9e0e-19b607f3def71527343357.png?Expires=1741673449&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=DIzaHQRsfU28gD03mX7P3UpewiI%3D",
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/3a/20250310/8928fb36/9881980b-ea97-4987-9e0e-19b607f3def71527343354.png?Expires=1741673449&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=KggG18SYpiC2%2FkNWOpitza3GfXQ%3D",
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/8a/20250310/8928fb36/9881980b-ea97-4987-9e0e-19b607f3def71527343356.png?Expires=1741673449&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=73dC%2FaPkTlXhOFGRJYgh9T56FEs%3D",
+  "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/41/20250310/775d1686/9881980b-ea97-4987-9e0e-19b607f3def71527343355.png?Expires=1741673452&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=PgTJ5oY9nIb2UACywDGS6xZbcDE%3D"
+]
+-----------------------------------
+[2025-03-10T06:10:55.280Z] INFO: ===== 图像生成请求完成 =====
+-----------------------------------
+[2025-03-10T06:12:07.065Z] INFO: ===== 开始新的图像生成请求 =====
+-----------------------------------
+[2025-03-10T06:12:07.066Z] INFO: 原始提示词: "一座雪山，山顶是一座小木屋"
+-----------------------------------
+[2025-03-10T06:12:07.066Z] INFO: 开始处理提示词: "一座雪山，山顶是一座小木屋"
+-----------------------------------
+[2025-03-10T06:12:07.067Z] INFO: 调用阿里云QWQ 32B API开始
+数据: {
+  "model": "qwq-32b",
+  "prompt": "我需要你帮我优化以下中文提示词，用于AI图像生成。\n请生成一个详细、富有创意、高质量的中文图像描述，包括构图、风格、光照、颜色、情绪等元素。\n仅输出优化后的中文提示词，不要翻译成英文，也不要有其他解释。\n原始提示词: \"一座雪山，山顶是一座小木屋\""
+}
+-----------------------------------
+[2025-03-10T06:12:28.472Z] INFO: 阿里云QWQ 32B API响应
+数据: {
+  "optimizedPrompt": "雪山之巅的木质小屋：俯视视角呈现巍峨雪峰层叠延展，主峰顶矗立着原木色尖顶木屋，屋顶覆盖积雪，烟囱轻吐白烟。远景冰川蓝调雪山笼罩薄雾，近景冷杉林披银装，斜射晨光为木屋镀上琥珀色光晕，木质窗框透出暖黄灯光。冷色调的冰晶与暖色调的建筑形成对比，空气中悬浮微光粒子，营造静谧神圣的阿尔卑斯山居氛围，摄影风格强调雪地反光与木纹肌理，画面弥漫清冷而温暖的矛盾美感。"
+}
+-----------------------------------
+[2025-03-10T06:12:28.473Z] INFO: 优化后的提示词: "雪山之巅的木质小屋：俯视视角呈现巍峨雪峰层叠延展，主峰顶矗立着原木色尖顶木屋，屋顶覆盖积雪，烟囱轻吐白烟。远景冰川蓝调雪山笼罩薄雾，近景冷杉林披银装，斜射晨光为木屋镀上琥珀色光晕，木质窗框透出暖黄灯光。冷色调的冰晶与暖色调的建筑形成对比，空气中悬浮微光粒子，营造静谧神圣的阿尔卑斯山居氛围，摄影风格强调雪地反光与木纹肌理，画面弥漫清冷而温暖的矛盾美感。"
+-----------------------------------
+[2025-03-10T06:12:28.474Z] INFO: 准备生成图像，提示词: "雪山之巅的木质小屋：俯视视角呈现巍峨雪峰层叠延展，主峰顶矗立着原木色尖顶木屋，屋顶覆盖积雪，烟囱轻吐白烟。远景冰川蓝调雪山笼罩薄雾，近景冷杉林披银装，斜射晨光为木屋镀上琥珀色光晕，木质窗框透出暖黄灯光。冷色调的冰晶与暖色调的建筑形成对比，空气中悬浮微光粒子，营造静谧神圣的阿尔卑斯山居氛围，摄影风格强调雪地反光与木纹肌理，画面弥漫清冷而温暖的矛盾美感。"
+-----------------------------------
+[2025-03-10T06:12:28.474Z] INFO: 调用阿里云通义万相API开始
+数据: {
+  "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
+  "body": {
+    "model": "wanx2.1-t2i-turbo",
+    "input": {
+      "prompt": "雪山之巅的木质小屋：俯视视角呈现巍峨雪峰层叠延展，主峰顶矗立着原木色尖顶木屋，屋顶覆盖积雪，烟囱轻吐白烟。远景冰川蓝调雪山笼罩薄雾，近景冷杉林披银装，斜射晨光为木屋镀上琥珀色光晕，木质窗框透出暖黄灯光。冷色调的冰晶与暖色调的建筑形成对比，空气中悬浮微光粒子，营造静谧神圣的阿尔卑斯山居氛围，摄影风格强调雪地反光与木纹肌理，画面弥漫清冷而温暖的矛盾美感。"
+    },
+    "parameters": {
+      "size": "1024*1024",
+      "n": 4,
+      "prompt_extend": true,
+      "watermark": false
+    }
+  },
+  "headers": {
+    "Content-Type": "application/json",
+    "X-DashScope-Async": "enable",
+    "Authorization": "Bearer sk-8f..."
+  }
+}
+-----------------------------------
+[2025-03-10T06:12:28.745Z] INFO: 阿里云API响应: 状态码=200
+数据: {
+  "output": {
+    "task_status": "PENDING",
+    "task_id": "b8e0d061-7186-4c38-9734-ce837ec841d9"
+  },
+  "request_id": "3b73ac45-401e-9331-8713-446e069dac13"
+}
+-----------------------------------
+[2025-03-10T06:12:28.746Z] INFO: 通义万相任务创建成功
+数据: {
+  "output": {
+    "task_status": "PENDING",
+    "task_id": "b8e0d061-7186-4c38-9734-ce837ec841d9"
+  },
+  "request_id": "3b73ac45-401e-9331-8713-446e069dac13"
+}
+-----------------------------------
+[2025-03-10T06:12:28.746Z] INFO: 获取到任务ID: b8e0d061-7186-4c38-9734-ce837ec841d9，开始等待任务完成
+-----------------------------------
+[2025-03-10T06:12:28.747Z] INFO: 轮询任务状态 (第1次): 任务ID=b8e0d061-7186-4c38-9734-ce837ec841d9
+-----------------------------------
+[2025-03-10T06:12:30.748Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/b8e0d061-7186-4c38-9734-ce837ec841d9
+-----------------------------------
+[2025-03-10T06:12:30.866Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "fbf9fbe1-d271-90fe-88d7-79259798426d",
+  "output": {
+    "task_id": "b8e0d061-7186-4c38-9734-ce837ec841d9",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 14:12:28.855",
+    "scheduled_time": "2025-03-10 14:12:28.874"
+  }
+}
+-----------------------------------
+[2025-03-10T06:12:30.868Z] INFO: 任务处理中... 第1次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T06:12:30.868Z] INFO: 轮询任务状态 (第2次): 任务ID=b8e0d061-7186-4c38-9734-ce837ec841d9
+-----------------------------------
+[2025-03-10T06:12:32.871Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/b8e0d061-7186-4c38-9734-ce837ec841d9
+-----------------------------------
+[2025-03-10T06:12:32.986Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "621d56d5-b79f-9b66-a436-df2fe78be11f",
+  "output": {
+    "task_id": "b8e0d061-7186-4c38-9734-ce837ec841d9",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 14:12:28.855",
+    "scheduled_time": "2025-03-10 14:12:28.874"
+  }
+}
+-----------------------------------
+[2025-03-10T06:12:32.988Z] INFO: 任务处理中... 第2次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T06:12:32.989Z] INFO: 轮询任务状态 (第3次): 任务ID=b8e0d061-7186-4c38-9734-ce837ec841d9
+-----------------------------------
+[2025-03-10T06:12:34.991Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/b8e0d061-7186-4c38-9734-ce837ec841d9
+-----------------------------------
+[2025-03-10T06:12:35.114Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "a088583e-9f91-94d1-8b14-e630f7bfc1a4",
+  "output": {
+    "task_id": "b8e0d061-7186-4c38-9734-ce837ec841d9",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 14:12:28.855",
+    "scheduled_time": "2025-03-10 14:12:28.874"
+  }
+}
+-----------------------------------
+[2025-03-10T06:12:35.116Z] INFO: 任务处理中... 第3次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T06:12:35.117Z] INFO: 轮询任务状态 (第4次): 任务ID=b8e0d061-7186-4c38-9734-ce837ec841d9
+-----------------------------------
+[2025-03-10T06:12:37.120Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/b8e0d061-7186-4c38-9734-ce837ec841d9
+-----------------------------------
+[2025-03-10T06:12:37.288Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "a02a7eb1-1fc4-9907-985d-ec8bfdfc9480",
+  "output": {
+    "task_id": "b8e0d061-7186-4c38-9734-ce837ec841d9",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 14:12:28.855",
+    "scheduled_time": "2025-03-10 14:12:28.874"
+  }
+}
+-----------------------------------
+[2025-03-10T06:12:37.290Z] INFO: 任务处理中... 第4次检查, 状态: RUNNING
+-----------------------------------
+[2025-03-10T06:12:37.290Z] INFO: 轮询任务状态 (第5次): 任务ID=b8e0d061-7186-4c38-9734-ce837ec841d9
+-----------------------------------
+[2025-03-10T06:12:39.291Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/b8e0d061-7186-4c38-9734-ce837ec841d9
+-----------------------------------
+[2025-03-10T06:12:39.405Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "7b2b9429-e61d-933c-8de2-5febe34bbf45",
+  "output": {
+    "task_id": "b8e0d061-7186-4c38-9734-ce837ec841d9",
+    "task_status": "SUCCEEDED",
+    "submit_time": "2025-03-10 14:12:28.855",
+    "scheduled_time": "2025-03-10 14:12:28.874",
+    "end_time": "2025-03-10 14:12:38.098",
+    "results": [
+      {
+        "orig_prompt": "雪山之巅的木质小屋：俯视视角呈现巍峨雪峰层叠延展，主峰顶矗立着原木色尖顶木屋，屋顶覆盖积雪，烟囱轻吐白烟。远景冰川蓝调雪山笼罩薄雾，近景冷杉林披银装，斜射晨光为木屋镀上琥珀色光晕，木质窗框透出暖黄灯光。冷色调的冰晶与暖色调的建筑形成对比，空气中悬浮微光粒子，营造静谧神圣的阿尔卑斯山居氛围，摄影风格强调雪地反光与木纹肌理，画面弥漫清冷而温暖的矛盾美感。",
+        "actual_prompt": "雪山之巅的木屋景象：俯瞰视角展现连绵起伏的雪峰，主峰上一座原木色尖顶小屋静立其中，屋顶积雪皑皑，烟囱飘出袅袅白烟。远景冰川在蓝调薄雾中若隐若现，近景冷杉银装素裹。晨光斜照，为木屋镀上琥珀光泽，窗内暖黄灯光透出。冷色调冰雪与暖色调建筑对比鲜明，空气中微光粒子浮动，营造静谧神圣氛围。写实摄影风格，注重雪地反光与木纹质感，展现清冷与温暖交织的独特美感。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/91/20250310/8928fb36/b8e0d061-7186-4c38-9734-ce837ec841d93392892092.png?Expires=1741673557&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=O2J%2Bj%2F4O0s%2FR9naE0WDMcWVKQWU%3D"
+      },
+      {
+        "orig_prompt": "雪山之巅的木质小屋：俯视视角呈现巍峨雪峰层叠延展，主峰顶矗立着原木色尖顶木屋，屋顶覆盖积雪，烟囱轻吐白烟。远景冰川蓝调雪山笼罩薄雾，近景冷杉林披银装，斜射晨光为木屋镀上琥珀色光晕，木质窗框透出暖黄灯光。冷色调的冰晶与暖色调的建筑形成对比，空气中悬浮微光粒子，营造静谧神圣的阿尔卑斯山居氛围，摄影风格强调雪地反光与木纹肌理，画面弥漫清冷而温暖的矛盾美感。",
+        "actual_prompt": "雪山之巅的木屋景象：俯瞰视角展现连绵起伏的雪峰，主峰上一座原木色尖顶小屋静立其中，屋顶积雪皑皑，烟囱飘出袅袅白烟。远景冰川在蓝调薄雾中若隐若现，近景冷杉银装素裹。晨光斜照，为木屋镀上琥珀光泽，窗内暖黄灯光透出。冷色调冰雪与暖色调建筑对比鲜明，空气中微光粒子浮动，营造静谧神圣氛围。写实摄影风格，注重雪地反光与木纹质感，展现清冷与温暖交织的独特美感。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/1b/20250310/b0fe3396/b8e0d061-7186-4c38-9734-ce837ec841d93392892093.png?Expires=1741673557&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=E9yxUdia0co%2BarqbS7Q8nrkD0mQ%3D"
+      },
+      {
+        "orig_prompt": "雪山之巅的木质小屋：俯视视角呈现巍峨雪峰层叠延展，主峰顶矗立着原木色尖顶木屋，屋顶覆盖积雪，烟囱轻吐白烟。远景冰川蓝调雪山笼罩薄雾，近景冷杉林披银装，斜射晨光为木屋镀上琥珀色光晕，木质窗框透出暖黄灯光。冷色调的冰晶与暖色调的建筑形成对比，空气中悬浮微光粒子，营造静谧神圣的阿尔卑斯山居氛围，摄影风格强调雪地反光与木纹肌理，画面弥漫清冷而温暖的矛盾美感。",
+        "actual_prompt": "雪山之巅的木屋景象：俯瞰视角展现连绵起伏的雪峰，主峰上一座原木色尖顶小屋静立其中，屋顶积雪皑皑，烟囱飘出袅袅白烟。远景冰川在蓝调薄雾中若隐若现，近景冷杉银装素裹。晨光斜照，为木屋镀上琥珀光泽，窗内暖黄灯光透出。冷色调冰雪与暖色调建筑对比鲜明，空气中微光粒子浮动，营造静谧神圣氛围。写实摄影风格，注重雪地反光与木纹质感，展现清冷与温暖交织的独特美感。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/27/20250310/b0fe3396/b8e0d061-7186-4c38-9734-ce837ec841d93392892094.png?Expires=1741673557&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=%2FZurcznW1FyUsrkNOOrinVioFNw%3D"
+      },
+      {
+        "orig_prompt": "雪山之巅的木质小屋：俯视视角呈现巍峨雪峰层叠延展，主峰顶矗立着原木色尖顶木屋，屋顶覆盖积雪，烟囱轻吐白烟。远景冰川蓝调雪山笼罩薄雾，近景冷杉林披银装，斜射晨光为木屋镀上琥珀色光晕，木质窗框透出暖黄灯光。冷色调的冰晶与暖色调的建筑形成对比，空气中悬浮微光粒子，营造静谧神圣的阿尔卑斯山居氛围，摄影风格强调雪地反光与木纹肌理，画面弥漫清冷而温暖的矛盾美感。",
+        "actual_prompt": "雪山之巅的木屋景象：俯瞰视角展现连绵起伏的雪峰，主峰上一座原木色尖顶小屋静立其中，屋顶积雪皑皑，烟囱飘出袅袅白烟。远景冰川在蓝调薄雾中若隐若现，近景冷杉银装素裹。晨光斜照，为木屋镀上琥珀光泽，窗内暖黄灯光透出。冷色调冰雪与暖色调建筑对比鲜明，空气中微光粒子浮动，营造静谧神圣氛围。写实摄影风格，注重雪地反光与木纹质感，展现清冷与温暖交织的独特美感。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/08/20250310/b0fe3396/b8e0d061-7186-4c38-9734-ce837ec841d93392892095.png?Expires=1741673557&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=1CIWPjJJGv7wE8BrDxWmqkqcFaY%3D"
+      }
+    ],
+    "task_metrics": {
+      "TOTAL": 4,
+      "SUCCEEDED": 4,
+      "FAILED": 0
+    }
+  },
+  "usage": {
+    "image_count": 4
+  }
+}
+-----------------------------------
+[2025-03-10T06:12:39.408Z] INFO: 任务成功完成
+数据: {
+  "request_id": "7b2b9429-e61d-933c-8de2-5febe34bbf45",
+  "output": {
+    "task_id": "b8e0d061-7186-4c38-9734-ce837ec841d9",
+    "task_status": "SUCCEEDED",
+    "submit_time": "2025-03-10 14:12:28.855",
+    "scheduled_time": "2025-03-10 14:12:28.874",
+    "end_time": "2025-03-10 14:12:38.098",
+    "results": [
+      {
+        "orig_prompt": "雪山之巅的木质小屋：俯视视角呈现巍峨雪峰层叠延展，主峰顶矗立着原木色尖顶木屋，屋顶覆盖积雪，烟囱轻吐白烟。远景冰川蓝调雪山笼罩薄雾，近景冷杉林披银装，斜射晨光为木屋镀上琥珀色光晕，木质窗框透出暖黄灯光。冷色调的冰晶与暖色调的建筑形成对比，空气中悬浮微光粒子，营造静谧神圣的阿尔卑斯山居氛围，摄影风格强调雪地反光与木纹肌理，画面弥漫清冷而温暖的矛盾美感。",
+        "actual_prompt": "雪山之巅的木屋景象：俯瞰视角展现连绵起伏的雪峰，主峰上一座原木色尖顶小屋静立其中，屋顶积雪皑皑，烟囱飘出袅袅白烟。远景冰川在蓝调薄雾中若隐若现，近景冷杉银装素裹。晨光斜照，为木屋镀上琥珀光泽，窗内暖黄灯光透出。冷色调冰雪与暖色调建筑对比鲜明，空气中微光粒子浮动，营造静谧神圣氛围。写实摄影风格，注重雪地反光与木纹质感，展现清冷与温暖交织的独特美感。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/91/20250310/8928fb36/b8e0d061-7186-4c38-9734-ce837ec841d93392892092.png?Expires=1741673557&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=O2J%2Bj%2F4O0s%2FR9naE0WDMcWVKQWU%3D"
+      },
+      {
+        "orig_prompt": "雪山之巅的木质小屋：俯视视角呈现巍峨雪峰层叠延展，主峰顶矗立着原木色尖顶木屋，屋顶覆盖积雪，烟囱轻吐白烟。远景冰川蓝调雪山笼罩薄雾，近景冷杉林披银装，斜射晨光为木屋镀上琥珀色光晕，木质窗框透出暖黄灯光。冷色调的冰晶与暖色调的建筑形成对比，空气中悬浮微光粒子，营造静谧神圣的阿尔卑斯山居氛围，摄影风格强调雪地反光与木纹肌理，画面弥漫清冷而温暖的矛盾美感。",
+        "actual_prompt": "雪山之巅的木屋景象：俯瞰视角展现连绵起伏的雪峰，主峰上一座原木色尖顶小屋静立其中，屋顶积雪皑皑，烟囱飘出袅袅白烟。远景冰川在蓝调薄雾中若隐若现，近景冷杉银装素裹。晨光斜照，为木屋镀上琥珀光泽，窗内暖黄灯光透出。冷色调冰雪与暖色调建筑对比鲜明，空气中微光粒子浮动，营造静谧神圣氛围。写实摄影风格，注重雪地反光与木纹质感，展现清冷与温暖交织的独特美感。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/1b/20250310/b0fe3396/b8e0d061-7186-4c38-9734-ce837ec841d93392892093.png?Expires=1741673557&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=E9yxUdia0co%2BarqbS7Q8nrkD0mQ%3D"
+      },
+      {
+        "orig_prompt": "雪山之巅的木质小屋：俯视视角呈现巍峨雪峰层叠延展，主峰顶矗立着原木色尖顶木屋，屋顶覆盖积雪，烟囱轻吐白烟。远景冰川蓝调雪山笼罩薄雾，近景冷杉林披银装，斜射晨光为木屋镀上琥珀色光晕，木质窗框透出暖黄灯光。冷色调的冰晶与暖色调的建筑形成对比，空气中悬浮微光粒子，营造静谧神圣的阿尔卑斯山居氛围，摄影风格强调雪地反光与木纹肌理，画面弥漫清冷而温暖的矛盾美感。",
+        "actual_prompt": "雪山之巅的木屋景象：俯瞰视角展现连绵起伏的雪峰，主峰上一座原木色尖顶小屋静立其中，屋顶积雪皑皑，烟囱飘出袅袅白烟。远景冰川在蓝调薄雾中若隐若现，近景冷杉银装素裹。晨光斜照，为木屋镀上琥珀光泽，窗内暖黄灯光透出。冷色调冰雪与暖色调建筑对比鲜明，空气中微光粒子浮动，营造静谧神圣氛围。写实摄影风格，注重雪地反光与木纹质感，展现清冷与温暖交织的独特美感。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/27/20250310/b0fe3396/b8e0d061-7186-4c38-9734-ce837ec841d93392892094.png?Expires=1741673557&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=%2FZurcznW1FyUsrkNOOrinVioFNw%3D"
+      },
+      {
+        "orig_prompt": "雪山之巅的木质小屋：俯视视角呈现巍峨雪峰层叠延展，主峰顶矗立着原木色尖顶木屋，屋顶覆盖积雪，烟囱轻吐白烟。远景冰川蓝调雪山笼罩薄雾，近景冷杉林披银装，斜射晨光为木屋镀上琥珀色光晕，木质窗框透出暖黄灯光。冷色调的冰晶与暖色调的建筑形成对比，空气中悬浮微光粒子，营造静谧神圣的阿尔卑斯山居氛围，摄影风格强调雪地反光与木纹肌理，画面弥漫清冷而温暖的矛盾美感。",
+        "actual_prompt": "雪山之巅的木屋景象：俯瞰视角展现连绵起伏的雪峰，主峰上一座原木色尖顶小屋静立其中，屋顶积雪皑皑，烟囱飘出袅袅白烟。远景冰川在蓝调薄雾中若隐若现，近景冷杉银装素裹。晨光斜照，为木屋镀上琥珀光泽，窗内暖黄灯光透出。冷色调冰雪与暖色调建筑对比鲜明，空气中微光粒子浮动，营造静谧神圣氛围。写实摄影风格，注重雪地反光与木纹质感，展现清冷与温暖交织的独特美感。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/08/20250310/b0fe3396/b8e0d061-7186-4c38-9734-ce837ec841d93392892095.png?Expires=1741673557&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=1CIWPjJJGv7wE8BrDxWmqkqcFaY%3D"
+      }
+    ],
+    "task_metrics": {
+      "TOTAL": 4,
+      "SUCCEEDED": 4,
+      "FAILED": 0
+    }
+  },
+  "usage": {
+    "image_count": 4
+  }
+}
+-----------------------------------
+[2025-03-10T06:12:39.413Z] INFO: 生成的图像URLs (4个):
+数据: [
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/91/20250310/8928fb36/b8e0d061-7186-4c38-9734-ce837ec841d93392892092.png?Expires=1741673557&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=O2J%2Bj%2F4O0s%2FR9naE0WDMcWVKQWU%3D",
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/1b/20250310/b0fe3396/b8e0d061-7186-4c38-9734-ce837ec841d93392892093.png?Expires=1741673557&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=E9yxUdia0co%2BarqbS7Q8nrkD0mQ%3D",
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/27/20250310/b0fe3396/b8e0d061-7186-4c38-9734-ce837ec841d93392892094.png?Expires=1741673557&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=%2FZurcznW1FyUsrkNOOrinVioFNw%3D",
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/08/20250310/b0fe3396/b8e0d061-7186-4c38-9734-ce837ec841d93392892095.png?Expires=1741673557&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=1CIWPjJJGv7wE8BrDxWmqkqcFaY%3D"
+]
+-----------------------------------
+[2025-03-10T06:12:39.414Z] INFO: ===== 图像生成请求完成 =====
+-----------------------------------
+[2025-03-10T07:05:31.405Z] INFO: ===== 开始新的图像生成请求 =====
+-----------------------------------
+
+[2025-03-10T07:05:31.407Z] INFO: 原始提示词: "一个小男孩，在足球场"
+-----------------------------------
+
+[2025-03-10T07:05:31.407Z] INFO: 开始处理提示词: "一个小男孩，在足球场"
+-----------------------------------
+
+[2025-03-10T07:05:31.407Z] INFO: 调用阿里云QWQ 32B API开始
+数据: {
+  "model": "qwq-32b",
+  "prompt": "我需要你帮我优化以下中文提示词，用于AI图像生成。\n请生成一个详细、富有创意、高质量的中文图像描述，包括构图、风格、光照、颜色、情绪等元素。\n仅输出优化后的中文提示词，不要翻译成英文，也不要有其他解释。\n原始提示词: \"一个小男孩，在足球场\""
+}
+-----------------------------------
+
+[2025-03-10T07:05:44.964Z] INFO: 阿里云QWQ 32B API响应
+数据: {
+  "optimizedPrompt": "【超现实主义足球场场景】俯视视角拍摄的10岁小男孩，金色夕阳将足球场染成琥珀色，男孩身着褪色蓝白条纹球衣，正以芭蕾式腾空动作凌空抽射，足球划出银色光轨直奔球门左上角。背景虚化的观众席泛起紫罗兰暮色，草叶在疾风中扬起翡翠色碎片，男孩发梢漂浮着细小的光尘，汗珠折射出彩虹光晕，画面弥漫着胜利在望的灼热张力，空气里凝固着0.01秒的戏剧性瞬间，普普艺术风格的橙红色球门网与克莱因蓝天空形成强烈撞色。"
+}
+-----------------------------------
+
+[2025-03-10T07:05:44.965Z] INFO: 优化后的提示词: "【超现实主义足球场场景】俯视视角拍摄的10岁小男孩，金色夕阳将足球场染成琥珀色，男孩身着褪色蓝白条纹球衣，正以芭蕾式腾空动作凌空抽射，足球划出银色光轨直奔球门左上角。背景虚化的观众席泛起紫罗兰暮色，草叶在疾风中扬起翡翠色碎片，男孩发梢漂浮着细小的光尘，汗珠折射出彩虹光晕，画面弥漫着胜利在望的灼热张力，空气里凝固着0.01秒的戏剧性瞬间，普普艺术风格的橙红色球门网与克莱因蓝天空形成强烈撞色。"
+-----------------------------------
+
+[2025-03-10T07:05:44.965Z] INFO: 准备生成图像，提示词: "【超现实主义足球场场景】俯视视角拍摄的10岁小男孩，金色夕阳将足球场染成琥珀色，男孩身着褪色蓝白条纹球衣，正以芭蕾式腾空动作凌空抽射，足球划出银色光轨直奔球门左上角。背景虚化的观众席泛起紫罗兰暮色，草叶在疾风中扬起翡翠色碎片，男孩发梢漂浮着细小的光尘，汗珠折射出彩虹光晕，画面弥漫着胜利在望的灼热张力，空气里凝固着0.01秒的戏剧性瞬间，普普艺术风格的橙红色球门网与克莱因蓝天空形成强烈撞色。"
+-----------------------------------
+
+[2025-03-10T07:05:44.966Z] INFO: 调用阿里云通义万相API开始
+数据: {
+  "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
+  "body": {
+    "model": "wanx2.1-t2i-turbo",
+    "input": {
+      "prompt": "【超现实主义足球场场景】俯视视角拍摄的10岁小男孩，金色夕阳将足球场染成琥珀色，男孩身着褪色蓝白条纹球衣，正以芭蕾式腾空动作凌空抽射，足球划出银色光轨直奔球门左上角。背景虚化的观众席泛起紫罗兰暮色，草叶在疾风中扬起翡翠色碎片，男孩发梢漂浮着细小的光尘，汗珠折射出彩虹光晕，画面弥漫着胜利在望的灼热张力，空气里凝固着0.01秒的戏剧性瞬间，普普艺术风格的橙红色球门网与克莱因蓝天空形成强烈撞色。"
+    },
+    "parameters": {
+      "size": "1024*1024",
+      "n": 4,
+      "prompt_extend": true,
+      "watermark": false
+    }
+  },
+  "headers": {
+    "Content-Type": "application/json",
+    "X-DashScope-Async": "enable",
+    "Authorization": "Beare**********"
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:05:45.286Z] INFO: 阿里云API响应: 状态码=200
+数据: {
+  "output": {
+    "task_status": "PENDING",
+    "task_id": "87deca9e-0389-450f-92d4-9062740de0c1"
+  },
+  "request_id": "20ee93d0-9f83-9e0a-8f61-ebdc33f95133"
+}
+-----------------------------------
+
+[2025-03-10T07:05:45.287Z] INFO: 通义万相任务创建成功
+数据: {
+  "output": {
+    "task_status": "PENDING",
+    "task_id": "87deca9e-0389-450f-92d4-9062740de0c1"
+  },
+  "request_id": "20ee93d0-9f83-9e0a-8f61-ebdc33f95133"
+}
+-----------------------------------
+
+[2025-03-10T07:05:45.288Z] INFO: 获取到任务ID: 87deca9e-0389-450f-92d4-9062740de0c1，开始等待任务完成
+-----------------------------------
+
+[2025-03-10T07:05:45.288Z] INFO: 轮询任务状态 (第1次): 任务ID=87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:05:47.289Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:05:47.407Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "6de55740-f942-9ab5-a127-597ae4daca27",
+  "output": {
+    "task_id": "87deca9e-0389-450f-92d4-9062740de0c1",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 15:05:45.354",
+    "scheduled_time": "2025-03-10 15:05:45.372"
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:05:47.409Z] INFO: 任务处理中... 第1次检查, 状态: RUNNING
+-----------------------------------
+
+[2025-03-10T07:05:47.410Z] INFO: 轮询任务状态 (第2次): 任务ID=87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:05:49.411Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:05:49.577Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "2270faae-77de-9a87-86f5-a51483405fd6",
+  "output": {
+    "task_id": "87deca9e-0389-450f-92d4-9062740de0c1",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 15:05:45.354",
+    "scheduled_time": "2025-03-10 15:05:45.372"
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:05:49.578Z] INFO: 任务处理中... 第2次检查, 状态: RUNNING
+-----------------------------------
+
+[2025-03-10T07:05:49.579Z] INFO: 轮询任务状态 (第3次): 任务ID=87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:05:51.582Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:05:51.694Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "04d24385-7cb5-9376-811b-ea69fdc14479",
+  "output": {
+    "task_id": "87deca9e-0389-450f-92d4-9062740de0c1",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 15:05:45.354",
+    "scheduled_time": "2025-03-10 15:05:45.372"
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:05:51.694Z] INFO: 任务处理中... 第3次检查, 状态: RUNNING
+-----------------------------------
+
+[2025-03-10T07:05:51.694Z] INFO: 轮询任务状态 (第4次): 任务ID=87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:05:53.697Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:05:53.793Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "bbf689e6-1570-997c-8fcc-86d69aa87b5e",
+  "output": {
+    "task_id": "87deca9e-0389-450f-92d4-9062740de0c1",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 15:05:45.354",
+    "scheduled_time": "2025-03-10 15:05:45.372"
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:05:53.794Z] INFO: 任务处理中... 第4次检查, 状态: RUNNING
+-----------------------------------
+
+[2025-03-10T07:05:53.794Z] INFO: 轮询任务状态 (第5次): 任务ID=87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:05:55.795Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:05:55.906Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "6738ff2f-aa00-9be3-8e81-545250df7c2b",
+  "output": {
+    "task_id": "87deca9e-0389-450f-92d4-9062740de0c1",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 15:05:45.354",
+    "scheduled_time": "2025-03-10 15:05:45.372"
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:05:55.908Z] INFO: 任务处理中... 第5次检查, 状态: RUNNING
+-----------------------------------
+
+[2025-03-10T07:05:55.909Z] INFO: 轮询任务状态 (第6次): 任务ID=87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:05:57.910Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:05:58.011Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "6a636dff-5430-909e-8f81-d4242fd3974b",
+  "output": {
+    "task_id": "87deca9e-0389-450f-92d4-9062740de0c1",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 15:05:45.354",
+    "scheduled_time": "2025-03-10 15:05:45.372"
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:05:58.012Z] INFO: 任务处理中... 第6次检查, 状态: RUNNING
+-----------------------------------
+
+[2025-03-10T07:05:58.013Z] INFO: 轮询任务状态 (第7次): 任务ID=87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:06:00.015Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:06:00.144Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "be3374c6-8282-9c1b-88a3-46796e36820b",
+  "output": {
+    "task_id": "87deca9e-0389-450f-92d4-9062740de0c1",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 15:05:45.354",
+    "scheduled_time": "2025-03-10 15:05:45.372"
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:06:00.145Z] INFO: 任务处理中... 第7次检查, 状态: RUNNING
+-----------------------------------
+
+[2025-03-10T07:06:00.146Z] INFO: 轮询任务状态 (第8次): 任务ID=87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:06:02.150Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:06:02.277Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "5edab497-c9df-98c9-9aed-8441469d6e01",
+  "output": {
+    "task_id": "87deca9e-0389-450f-92d4-9062740de0c1",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 15:05:45.354",
+    "scheduled_time": "2025-03-10 15:05:45.372"
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:06:02.279Z] INFO: 任务处理中... 第8次检查, 状态: RUNNING
+-----------------------------------
+
+[2025-03-10T07:06:02.279Z] INFO: 轮询任务状态 (第9次): 任务ID=87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:06:04.282Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:06:04.389Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "f03a9df8-df6a-91b0-bcfe-4619a3c386f9",
+  "output": {
+    "task_id": "87deca9e-0389-450f-92d4-9062740de0c1",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 15:05:45.354",
+    "scheduled_time": "2025-03-10 15:05:45.372"
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:06:04.391Z] INFO: 任务处理中... 第9次检查, 状态: RUNNING
+-----------------------------------
+
+[2025-03-10T07:06:04.391Z] INFO: 轮询任务状态 (第10次): 任务ID=87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:06:06.393Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:06:06.504Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "1ae2276c-e752-910c-aa19-f84ea6c4220d",
+  "output": {
+    "task_id": "87deca9e-0389-450f-92d4-9062740de0c1",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 15:05:45.354",
+    "scheduled_time": "2025-03-10 15:05:45.372"
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:06:06.505Z] INFO: 任务处理中... 第10次检查, 状态: RUNNING
+-----------------------------------
+
+[2025-03-10T07:06:06.506Z] INFO: 轮询任务状态 (第11次): 任务ID=87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:06:08.507Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:06:08.625Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "c83a8675-0308-9f12-b9f8-570f2a5ec349",
+  "output": {
+    "task_id": "87deca9e-0389-450f-92d4-9062740de0c1",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 15:05:45.354",
+    "scheduled_time": "2025-03-10 15:05:45.372"
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:06:08.627Z] INFO: 任务处理中... 第11次检查, 状态: RUNNING
+-----------------------------------
+
+[2025-03-10T07:06:08.628Z] INFO: 轮询任务状态 (第12次): 任务ID=87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:06:10.629Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/87deca9e-0389-450f-92d4-9062740de0c1
+-----------------------------------
+
+[2025-03-10T07:06:10.730Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "ca90a790-b639-9375-aa7a-f518cc9cc984",
+  "output": {
+    "task_id": "87deca9e-0389-450f-92d4-9062740de0c1",
+    "task_status": "SUCCEEDED",
+    "submit_time": "2025-03-10 15:05:45.354",
+    "scheduled_time": "2025-03-10 15:05:45.372",
+    "end_time": "2025-03-10 15:06:09.606",
+    "results": [
+      {
+        "orig_prompt": "【超现实主义足球场场景】俯视视角拍摄的10岁小男孩，金色夕阳将足球场染成琥珀色，男孩身着褪色蓝白条纹球衣，正以芭蕾式腾空动作凌空抽射，足球划出银色光轨直奔球门左上角。背景虚化的观众席泛起紫罗兰暮色，草叶在疾风中扬起翡翠色碎片，男孩发梢漂浮着细小的光尘，汗珠折射出彩虹光晕，画面弥漫着胜利在望的灼热张力，空气里凝固着0.01秒的戏剧性瞬间，普普艺术风格的橙红色球门网与克莱因蓝天空形成强烈撞色。",
+        "actual_prompt": "超现实主义足球场场景，俯视视角捕捉10岁小男孩的腾空瞬间。金色夕阳将绿茵场染成琥珀色调，男孩身着泛旧蓝白条纹球衣，以优雅芭蕾姿态凌空抽射。足球拖曳银色轨迹飞向橙红色普普风球门左上角。紫罗兰暮色笼罩虚化观众席，翡翠草屑与光尘飞扬，汗珠散射彩虹光芒。克莱因蓝天空映衬下，画面充满胜利张力与戏剧性定格瞬间，广角镜头强化视觉冲击力。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/be/20250310/8928fb36/87deca9e-0389-450f-92d4-9062740de0c12564616494.png?Expires=1741676753&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=Q4rh0%2FM4kzu%2F2SUnySBBLFOtkwg%3D"
+      },
+      {
+        "orig_prompt": "【超现实主义足球场场景】俯视视角拍摄的10岁小男孩，金色夕阳将足球场染成琥珀色，男孩身着褪色蓝白条纹球衣，正以芭蕾式腾空动作凌空抽射，足球划出银色光轨直奔球门左上角。背景虚化的观众席泛起紫罗兰暮色，草叶在疾风中扬起翡翠色碎片，男孩发梢漂浮着细小的光尘，汗珠折射出彩虹光晕，画面弥漫着胜利在望的灼热张力，空气里凝固着0.01秒的戏剧性瞬间，普普艺术风格的橙红色球门网与克莱因蓝天空形成强烈撞色。",
+        "actual_prompt": "超现实主义足球场场景，俯视视角捕捉10岁小男孩的腾空瞬间。金色夕阳将绿茵场染成琥珀色调，男孩身着泛旧蓝白条纹球衣，以优雅芭蕾姿态凌空抽射。足球拖曳银色轨迹飞向橙红色普普风球门左上角。紫罗兰暮色笼罩虚化观众席，翡翠草屑与光尘飞扬，汗珠散射彩虹光芒。克莱因蓝天空映衬下，画面充满胜利张力与戏剧性定格瞬间，广角镜头强化视觉冲击力。",
+        "url": "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/f9/20250310/775d1686/87deca9e-0389-450f-92d4-9062740de0c12564616496.png?Expires=1741676764&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=9idUyybprQl3q0wn%2B4vuvpHrObc%3D"
+      },
+      {
+        "orig_prompt": "【超现实主义足球场场景】俯视视角拍摄的10岁小男孩，金色夕阳将足球场染成琥珀色，男孩身着褪色蓝白条纹球衣，正以芭蕾式腾空动作凌空抽射，足球划出银色光轨直奔球门左上角。背景虚化的观众席泛起紫罗兰暮色，草叶在疾风中扬起翡翠色碎片，男孩发梢漂浮着细小的光尘，汗珠折射出彩虹光晕，画面弥漫着胜利在望的灼热张力，空气里凝固着0.01秒的戏剧性瞬间，普普艺术风格的橙红色球门网与克莱因蓝天空形成强烈撞色。",
+        "actual_prompt": "超现实主义足球场场景，俯视视角捕捉10岁小男孩的腾空瞬间。金色夕阳将绿茵场染成琥珀色调，男孩身着泛旧蓝白条纹球衣，以优雅芭蕾姿态凌空抽射。足球拖曳银色轨迹飞向橙红色普普风球门左上角。紫罗兰暮色笼罩虚化观众席，翡翠草屑与光尘飞扬，汗珠散射彩虹光芒。克莱因蓝天空映衬下，画面充满胜利张力与戏剧性定格瞬间，广角镜头强化视觉冲击力。",
+        "url": "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/e4/20250310/775d1686/87deca9e-0389-450f-92d4-9062740de0c12564616495.png?Expires=1741676760&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=1p3W0JKLExvLBvBPFFVtlEXG8ro%3D"
+      },
+      {
+        "orig_prompt": "【超现实主义足球场场景】俯视视角拍摄的10岁小男孩，金色夕阳将足球场染成琥珀色，男孩身着褪色蓝白条纹球衣，正以芭蕾式腾空动作凌空抽射，足球划出银色光轨直奔球门左上角。背景虚化的观众席泛起紫罗兰暮色，草叶在疾风中扬起翡翠色碎片，男孩发梢漂浮着细小的光尘，汗珠折射出彩虹光晕，画面弥漫着胜利在望的灼热张力，空气里凝固着0.01秒的戏剧性瞬间，普普艺术风格的橙红色球门网与克莱因蓝天空形成强烈撞色。",
+        "actual_prompt": "超现实主义足球场场景，俯视视角捕捉10岁小男孩的腾空瞬间。金色夕阳将绿茵场染成琥珀色调，男孩身着泛旧蓝白条纹球衣，以优雅芭蕾姿态凌空抽射。足球拖曳银色轨迹飞向橙红色普普风球门左上角。紫罗兰暮色笼罩虚化观众席，翡翠草屑与光尘飞扬，汗珠散射彩虹光芒。克莱因蓝天空映衬下，画面充满胜利张力与戏剧性定格瞬间，广角镜头强化视觉冲击力。",
+        "url": "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/b7/20250310/775d1686/87deca9e-0389-450f-92d4-9062740de0c12564616493.png?Expires=1741676756&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=chMMRTJhcHUWaA4PGCZQPsVRshU%3D"
+      }
+    ],
+    "task_metrics": {
+      "TOTAL": 4,
+      "SUCCEEDED": 4,
+      "FAILED": 0
+    }
+  },
+  "usage": {
+    "image_count": 4
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:06:10.734Z] INFO: 任务成功完成
+数据: {
+  "request_id": "ca90a790-b639-9375-aa7a-f518cc9cc984",
+  "output": {
+    "task_id": "87deca9e-0389-450f-92d4-9062740de0c1",
+    "task_status": "SUCCEEDED",
+    "submit_time": "2025-03-10 15:05:45.354",
+    "scheduled_time": "2025-03-10 15:05:45.372",
+    "end_time": "2025-03-10 15:06:09.606",
+    "results": [
+      {
+        "orig_prompt": "【超现实主义足球场场景】俯视视角拍摄的10岁小男孩，金色夕阳将足球场染成琥珀色，男孩身着褪色蓝白条纹球衣，正以芭蕾式腾空动作凌空抽射，足球划出银色光轨直奔球门左上角。背景虚化的观众席泛起紫罗兰暮色，草叶在疾风中扬起翡翠色碎片，男孩发梢漂浮着细小的光尘，汗珠折射出彩虹光晕，画面弥漫着胜利在望的灼热张力，空气里凝固着0.01秒的戏剧性瞬间，普普艺术风格的橙红色球门网与克莱因蓝天空形成强烈撞色。",
+        "actual_prompt": "超现实主义足球场场景，俯视视角捕捉10岁小男孩的腾空瞬间。金色夕阳将绿茵场染成琥珀色调，男孩身着泛旧蓝白条纹球衣，以优雅芭蕾姿态凌空抽射。足球拖曳银色轨迹飞向橙红色普普风球门左上角。紫罗兰暮色笼罩虚化观众席，翡翠草屑与光尘飞扬，汗珠散射彩虹光芒。克莱因蓝天空映衬下，画面充满胜利张力与戏剧性定格瞬间，广角镜头强化视觉冲击力。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/be/20250310/8928fb36/87deca9e-0389-450f-92d4-9062740de0c12564616494.png?Expires=1741676753&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=Q4rh0%2FM4kzu%2F2SUnySBBLFOtkwg%3D"
+      },
+      {
+        "orig_prompt": "【超现实主义足球场场景】俯视视角拍摄的10岁小男孩，金色夕阳将足球场染成琥珀色，男孩身着褪色蓝白条纹球衣，正以芭蕾式腾空动作凌空抽射，足球划出银色光轨直奔球门左上角。背景虚化的观众席泛起紫罗兰暮色，草叶在疾风中扬起翡翠色碎片，男孩发梢漂浮着细小的光尘，汗珠折射出彩虹光晕，画面弥漫着胜利在望的灼热张力，空气里凝固着0.01秒的戏剧性瞬间，普普艺术风格的橙红色球门网与克莱因蓝天空形成强烈撞色。",
+        "actual_prompt": "超现实主义足球场场景，俯视视角捕捉10岁小男孩的腾空瞬间。金色夕阳将绿茵场染成琥珀色调，男孩身着泛旧蓝白条纹球衣，以优雅芭蕾姿态凌空抽射。足球拖曳银色轨迹飞向橙红色普普风球门左上角。紫罗兰暮色笼罩虚化观众席，翡翠草屑与光尘飞扬，汗珠散射彩虹光芒。克莱因蓝天空映衬下，画面充满胜利张力与戏剧性定格瞬间，广角镜头强化视觉冲击力。",
+        "url": "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/f9/20250310/775d1686/87deca9e-0389-450f-92d4-9062740de0c12564616496.png?Expires=1741676764&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=9idUyybprQl3q0wn%2B4vuvpHrObc%3D"
+      },
+      {
+        "orig_prompt": "【超现实主义足球场场景】俯视视角拍摄的10岁小男孩，金色夕阳将足球场染成琥珀色，男孩身着褪色蓝白条纹球衣，正以芭蕾式腾空动作凌空抽射，足球划出银色光轨直奔球门左上角。背景虚化的观众席泛起紫罗兰暮色，草叶在疾风中扬起翡翠色碎片，男孩发梢漂浮着细小的光尘，汗珠折射出彩虹光晕，画面弥漫着胜利在望的灼热张力，空气里凝固着0.01秒的戏剧性瞬间，普普艺术风格的橙红色球门网与克莱因蓝天空形成强烈撞色。",
+        "actual_prompt": "超现实主义足球场场景，俯视视角捕捉10岁小男孩的腾空瞬间。金色夕阳将绿茵场染成琥珀色调，男孩身着泛旧蓝白条纹球衣，以优雅芭蕾姿态凌空抽射。足球拖曳银色轨迹飞向橙红色普普风球门左上角。紫罗兰暮色笼罩虚化观众席，翡翠草屑与光尘飞扬，汗珠散射彩虹光芒。克莱因蓝天空映衬下，画面充满胜利张力与戏剧性定格瞬间，广角镜头强化视觉冲击力。",
+        "url": "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/e4/20250310/775d1686/87deca9e-0389-450f-92d4-9062740de0c12564616495.png?Expires=1741676760&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=1p3W0JKLExvLBvBPFFVtlEXG8ro%3D"
+      },
+      {
+        "orig_prompt": "【超现实主义足球场场景】俯视视角拍摄的10岁小男孩，金色夕阳将足球场染成琥珀色，男孩身着褪色蓝白条纹球衣，正以芭蕾式腾空动作凌空抽射，足球划出银色光轨直奔球门左上角。背景虚化的观众席泛起紫罗兰暮色，草叶在疾风中扬起翡翠色碎片，男孩发梢漂浮着细小的光尘，汗珠折射出彩虹光晕，画面弥漫着胜利在望的灼热张力，空气里凝固着0.01秒的戏剧性瞬间，普普艺术风格的橙红色球门网与克莱因蓝天空形成强烈撞色。",
+        "actual_prompt": "超现实主义足球场场景，俯视视角捕捉10岁小男孩的腾空瞬间。金色夕阳将绿茵场染成琥珀色调，男孩身着泛旧蓝白条纹球衣，以优雅芭蕾姿态凌空抽射。足球拖曳银色轨迹飞向橙红色普普风球门左上角。紫罗兰暮色笼罩虚化观众席，翡翠草屑与光尘飞扬，汗珠散射彩虹光芒。克莱因蓝天空映衬下，画面充满胜利张力与戏剧性定格瞬间，广角镜头强化视觉冲击力。",
+        "url": "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/b7/20250310/775d1686/87deca9e-0389-450f-92d4-9062740de0c12564616493.png?Expires=1741676756&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=chMMRTJhcHUWaA4PGCZQPsVRshU%3D"
+      }
+    ],
+    "task_metrics": {
+      "TOTAL": 4,
+      "SUCCEEDED": 4,
+      "FAILED": 0
+    }
+  },
+  "usage": {
+    "image_count": 4
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:06:10.735Z] INFO: 生成的图像URLs (4个):
+数据: [
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/be/20250310/8928fb36/87deca9e-0389-450f-92d4-9062740de0c12564616494.png?Expires=1741676753&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=Q4rh0%2FM4kzu%2F2SUnySBBLFOtkwg%3D",
+  "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/f9/20250310/775d1686/87deca9e-0389-450f-92d4-9062740de0c12564616496.png?Expires=1741676764&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=9idUyybprQl3q0wn%2B4vuvpHrObc%3D",
+  "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/e4/20250310/775d1686/87deca9e-0389-450f-92d4-9062740de0c12564616495.png?Expires=1741676760&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=1p3W0JKLExvLBvBPFFVtlEXG8ro%3D",
+  "https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/1d/b7/20250310/775d1686/87deca9e-0389-450f-92d4-9062740de0c12564616493.png?Expires=1741676756&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=chMMRTJhcHUWaA4PGCZQPsVRshU%3D"
+]
+-----------------------------------
+
+[2025-03-10T07:06:10.737Z] INFO: ===== 图像生成请求完成 =====
+-----------------------------------
+
+[2025-03-10T07:38:43.125Z] INFO: ===== 开始新的图像生成请求 =====
+-----------------------------------
+
+[2025-03-10T07:38:43.126Z] INFO: 原始提示词: "一片汪洋大海和一名旅行者"
+-----------------------------------
+
+[2025-03-10T07:38:43.126Z] INFO: 开始处理提示词: "一片汪洋大海和一名旅行者"
+-----------------------------------
+
+[2025-03-10T07:38:43.127Z] INFO: 调用阿里云QWQ 32B API开始
+数据: {
+  "model": "qwq-32b",
+  "prompt": "我需要你帮我优化以下中文提示词，用于AI图像生成。\n请生成一个详细、富有创意、高质量的中文图像描述，包括构图、风格、光照、颜色、情绪等元素。\n仅输出优化后的中文提示词，不要翻译成英文，也不要有其他解释。\n原始提示词: \"一片汪洋大海和一名旅行者\""
+}
+-----------------------------------
+
+[2025-03-10T07:39:00.297Z] INFO: 阿里云QWQ 32B API响应
+数据: {
+  "optimizedPrompt": "超现实风格，8K高清细节，电影级灯光渲染——广袤无垠的深蓝海洋与碧绿波涛在夕阳下交融，金色霞光穿透层叠云海洒向远方，一名身着深灰色风衣的旅行者立于巨石嶙峋的海岸，左手轻扶古旧皮质地图，右手指向天际线隐约浮现的雾霭山脉，海浪在脚下碎成晶莹水珠，发梢被海风扬起，目光坚定而深邃，背景海天交界处浮动着若隐若现的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘感与诗意。"
+}
+-----------------------------------
+
+[2025-03-10T07:39:00.300Z] INFO: 优化后的提示词: "超现实风格，8K高清细节，电影级灯光渲染——广袤无垠的深蓝海洋与碧绿波涛在夕阳下交融，金色霞光穿透层叠云海洒向远方，一名身着深灰色风衣的旅行者立于巨石嶙峋的海岸，左手轻扶古旧皮质地图，右手指向天际线隐约浮现的雾霭山脉，海浪在脚下碎成晶莹水珠，发梢被海风扬起，目光坚定而深邃，背景海天交界处浮动着若隐若现的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘感与诗意。"
+-----------------------------------
+
+[2025-03-10T07:39:00.301Z] INFO: 准备生成图像，提示词: "超现实风格，8K高清细节，电影级灯光渲染——广袤无垠的深蓝海洋与碧绿波涛在夕阳下交融，金色霞光穿透层叠云海洒向远方，一名身着深灰色风衣的旅行者立于巨石嶙峋的海岸，左手轻扶古旧皮质地图，右手指向天际线隐约浮现的雾霭山脉，海浪在脚下碎成晶莹水珠，发梢被海风扬起，目光坚定而深邃，背景海天交界处浮动着若隐若现的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘感与诗意。"
+-----------------------------------
+
+[2025-03-10T07:39:00.302Z] INFO: 调用阿里云通义万相API开始
+数据: {
+  "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
+  "body": {
+    "model": "wanx2.1-t2i-turbo",
+    "input": {
+      "prompt": "超现实风格，8K高清细节，电影级灯光渲染——广袤无垠的深蓝海洋与碧绿波涛在夕阳下交融，金色霞光穿透层叠云海洒向远方，一名身着深灰色风衣的旅行者立于巨石嶙峋的海岸，左手轻扶古旧皮质地图，右手指向天际线隐约浮现的雾霭山脉，海浪在脚下碎成晶莹水珠，发梢被海风扬起，目光坚定而深邃，背景海天交界处浮动着若隐若现的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘感与诗意。"
+    },
+    "parameters": {
+      "size": "1024*1024",
+      "n": 4,
+      "prompt_extend": true,
+      "watermark": false
+    }
+  },
+  "headers": {
+    "Content-Type": "application/json",
+    "X-DashScope-Async": "enable",
+    "Authorization": "Beare**********"
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:39:00.676Z] INFO: 阿里云API响应: 状态码=200
+数据: {
+  "output": {
+    "task_status": "PENDING",
+    "task_id": "2dba0f33-b9c5-466c-aba5-a01fa48255bf"
+  },
+  "request_id": "e2c8d1a1-6983-986e-802f-202670bb6c47"
+}
+-----------------------------------
+
+[2025-03-10T07:39:00.677Z] INFO: 通义万相任务创建成功
+数据: {
+  "output": {
+    "task_status": "PENDING",
+    "task_id": "2dba0f33-b9c5-466c-aba5-a01fa48255bf"
+  },
+  "request_id": "e2c8d1a1-6983-986e-802f-202670bb6c47"
+}
+-----------------------------------
+
+[2025-03-10T07:39:00.677Z] INFO: 获取到任务ID: 2dba0f33-b9c5-466c-aba5-a01fa48255bf，开始等待任务完成
+-----------------------------------
+
+[2025-03-10T07:39:00.678Z] INFO: 轮询任务状态 (第1次): 任务ID=2dba0f33-b9c5-466c-aba5-a01fa48255bf
+-----------------------------------
+
+[2025-03-10T07:39:02.680Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/2dba0f33-b9c5-466c-aba5-a01fa48255bf
+-----------------------------------
+
+[2025-03-10T07:39:02.797Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "3b5d2df9-6ca7-9c1d-9f9d-e8f49f653116",
+  "output": {
+    "task_id": "2dba0f33-b9c5-466c-aba5-a01fa48255bf",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 15:39:00.673",
+    "scheduled_time": "2025-03-10 15:39:00.697"
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:39:02.798Z] INFO: 任务处理中... 第1次检查, 状态: RUNNING
+-----------------------------------
+
+[2025-03-10T07:39:02.798Z] INFO: 轮询任务状态 (第2次): 任务ID=2dba0f33-b9c5-466c-aba5-a01fa48255bf
+-----------------------------------
+
+[2025-03-10T07:39:04.800Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/2dba0f33-b9c5-466c-aba5-a01fa48255bf
+-----------------------------------
+
+[2025-03-10T07:39:05.051Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "1c3e2c4e-7236-919f-99d4-0e6674d8d008",
+  "output": {
+    "task_id": "2dba0f33-b9c5-466c-aba5-a01fa48255bf",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 15:39:00.673",
+    "scheduled_time": "2025-03-10 15:39:00.697"
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:39:05.053Z] INFO: 任务处理中... 第2次检查, 状态: RUNNING
+-----------------------------------
+
+[2025-03-10T07:39:05.053Z] INFO: 轮询任务状态 (第3次): 任务ID=2dba0f33-b9c5-466c-aba5-a01fa48255bf
+-----------------------------------
+
+[2025-03-10T07:39:07.056Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/2dba0f33-b9c5-466c-aba5-a01fa48255bf
+-----------------------------------
+
+[2025-03-10T07:39:07.181Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "43296e68-d053-9ddd-80be-ac452f4d3b59",
+  "output": {
+    "task_id": "2dba0f33-b9c5-466c-aba5-a01fa48255bf",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 15:39:00.673",
+    "scheduled_time": "2025-03-10 15:39:00.697"
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:39:07.182Z] INFO: 任务处理中... 第3次检查, 状态: RUNNING
+-----------------------------------
+
+[2025-03-10T07:39:07.183Z] INFO: 轮询任务状态 (第4次): 任务ID=2dba0f33-b9c5-466c-aba5-a01fa48255bf
+-----------------------------------
+
+[2025-03-10T07:39:09.184Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/2dba0f33-b9c5-466c-aba5-a01fa48255bf
+-----------------------------------
+
+[2025-03-10T07:39:09.298Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "8fdb66c4-c6ca-901a-973d-4a92b8655b46",
+  "output": {
+    "task_id": "2dba0f33-b9c5-466c-aba5-a01fa48255bf",
+    "task_status": "RUNNING",
+    "submit_time": "2025-03-10 15:39:00.673",
+    "scheduled_time": "2025-03-10 15:39:00.697"
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:39:09.299Z] INFO: 任务处理中... 第4次检查, 状态: RUNNING
+-----------------------------------
+
+[2025-03-10T07:39:09.299Z] INFO: 轮询任务状态 (第5次): 任务ID=2dba0f33-b9c5-466c-aba5-a01fa48255bf
+-----------------------------------
+
+[2025-03-10T07:39:11.300Z] INFO: 查询任务状态: GET https://dashscope.aliyuncs.com/api/v1/tasks/2dba0f33-b9c5-466c-aba5-a01fa48255bf
+-----------------------------------
+
+[2025-03-10T07:39:11.400Z] INFO: 任务状态响应: 状态码=200
+数据: {
+  "request_id": "9bcf6ea4-3571-922e-9da9-da52e7e9c3aa",
+  "output": {
+    "task_id": "2dba0f33-b9c5-466c-aba5-a01fa48255bf",
+    "task_status": "SUCCEEDED",
+    "submit_time": "2025-03-10 15:39:00.673",
+    "scheduled_time": "2025-03-10 15:39:00.697",
+    "end_time": "2025-03-10 15:39:10.306",
+    "results": [
+      {
+        "orig_prompt": "超现实风格，8K高清细节，电影级灯光渲染——广袤无垠的深蓝海洋与碧绿波涛在夕阳下交融，金色霞光穿透层叠云海洒向远方，一名身着深灰色风衣的旅行者立于巨石嶙峋的海岸，左手轻扶古旧皮质地图，右手指向天际线隐约浮现的雾霭山脉，海浪在脚下碎成晶莹水珠，发梢被海风扬起，目光坚定而深邃，背景海天交界处浮动着若隐若现的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘感与诗意。",
+        "actual_prompt": "超现实主义数字艺术，8K超高清细节呈现。深蓝海洋与翡翠绿波涛在夕阳余晖中交织，金色霞光穿透层次分明的云海，洒落在远方天际。一位身着深灰风衣的旅人立于崎岖海岸边，左手轻按古旧皮质地图，右手指向天边若隐若现的雾霭山脉。脚下海浪碎成晶莹剔透的水珠，微风吹拂起他的发梢，眼神坚定而深邃。背景海天交接处浮动着梦幻般的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘诗意感。电影级灯光渲染，全景构图。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/14/20250310/8928fb36/2dba0f33-b9c5-466c-aba5-a01fa48255bf3762737579.png?Expires=1741678749&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=FpTPX01gp9TATpfzhrhhDRWgqCw%3D"
+      },
+      {
+        "orig_prompt": "超现实风格，8K高清细节，电影级灯光渲染——广袤无垠的深蓝海洋与碧绿波涛在夕阳下交融，金色霞光穿透层叠云海洒向远方，一名身着深灰色风衣的旅行者立于巨石嶙峋的海岸，左手轻扶古旧皮质地图，右手指向天际线隐约浮现的雾霭山脉，海浪在脚下碎成晶莹水珠，发梢被海风扬起，目光坚定而深邃，背景海天交界处浮动着若隐若现的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘感与诗意。",
+        "actual_prompt": "超现实主义数字艺术，8K超高清细节呈现。深蓝海洋与翡翠绿波涛在夕阳余晖中交织，金色霞光穿透层次分明的云海，洒落在远方天际。一位身着深灰风衣的旅人立于崎岖海岸边，左手轻按古旧皮质地图，右手指向天边若隐若现的雾霭山脉。脚下海浪碎成晶莹剔透的水珠，微风吹拂起他的发梢，眼神坚定而深邃。背景海天交接处浮动着梦幻般的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘诗意感。电影级灯光渲染，全景构图。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/96/20250310/b0fe3396/2dba0f33-b9c5-466c-aba5-a01fa48255bf3762737577.png?Expires=1741678749&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=BVLX9sppn4hm%2BOZdwFN0ifLiPgE%3D"
+      },
+      {
+        "orig_prompt": "超现实风格，8K高清细节，电影级灯光渲染——广袤无垠的深蓝海洋与碧绿波涛在夕阳下交融，金色霞光穿透层叠云海洒向远方，一名身着深灰色风衣的旅行者立于巨石嶙峋的海岸，左手轻扶古旧皮质地图，右手指向天际线隐约浮现的雾霭山脉，海浪在脚下碎成晶莹水珠，发梢被海风扬起，目光坚定而深邃，背景海天交界处浮动着若隐若现的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘感与诗意。",
+        "actual_prompt": "超现实主义数字艺术，8K超高清细节呈现。深蓝海洋与翡翠绿波涛在夕阳余晖中交织，金色霞光穿透层次分明的云海，洒落在远方天际。一位身着深灰风衣的旅人立于崎岖海岸边，左手轻按古旧皮质地图，右手指向天边若隐若现的雾霭山脉。脚下海浪碎成晶莹剔透的水珠，微风吹拂起他的发梢，眼神坚定而深邃。背景海天交接处浮动着梦幻般的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘诗意感。电影级灯光渲染，全景构图。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/89/20250310/b0fe3396/2dba0f33-b9c5-466c-aba5-a01fa48255bf3762737578.png?Expires=1741678749&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=j11USbkBh7h2GCRKlU3fu%2Ffe7RA%3D"
+      },
+      {
+        "orig_prompt": "超现实风格，8K高清细节，电影级灯光渲染——广袤无垠的深蓝海洋与碧绿波涛在夕阳下交融，金色霞光穿透层叠云海洒向远方，一名身着深灰色风衣的旅行者立于巨石嶙峋的海岸，左手轻扶古旧皮质地图，右手指向天际线隐约浮现的雾霭山脉，海浪在脚下碎成晶莹水珠，发梢被海风扬起，目光坚定而深邃，背景海天交界处浮动着若隐若现的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘感与诗意。",
+        "actual_prompt": "超现实主义数字艺术，8K超高清细节呈现。深蓝海洋与翡翠绿波涛在夕阳余晖中交织，金色霞光穿透层次分明的云海，洒落在远方天际。一位身着深灰风衣的旅人立于崎岖海岸边，左手轻按古旧皮质地图，右手指向天边若隐若现的雾霭山脉。脚下海浪碎成晶莹剔透的水珠，微风吹拂起他的发梢，眼神坚定而深邃。背景海天交接处浮动着梦幻般的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘诗意感。电影级灯光渲染，全景构图。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/0b/20250310/8928fb36/2dba0f33-b9c5-466c-aba5-a01fa48255bf3762737580.png?Expires=1741678749&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=D%2B6PRrmt4i0dE%2Bi3TtGxtNRv4Kg%3D"
+      }
+    ],
+    "task_metrics": {
+      "TOTAL": 4,
+      "SUCCEEDED": 4,
+      "FAILED": 0
+    }
+  },
+  "usage": {
+    "image_count": 4
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:39:11.401Z] INFO: 任务成功完成
+数据: {
+  "request_id": "9bcf6ea4-3571-922e-9da9-da52e7e9c3aa",
+  "output": {
+    "task_id": "2dba0f33-b9c5-466c-aba5-a01fa48255bf",
+    "task_status": "SUCCEEDED",
+    "submit_time": "2025-03-10 15:39:00.673",
+    "scheduled_time": "2025-03-10 15:39:00.697",
+    "end_time": "2025-03-10 15:39:10.306",
+    "results": [
+      {
+        "orig_prompt": "超现实风格，8K高清细节，电影级灯光渲染——广袤无垠的深蓝海洋与碧绿波涛在夕阳下交融，金色霞光穿透层叠云海洒向远方，一名身着深灰色风衣的旅行者立于巨石嶙峋的海岸，左手轻扶古旧皮质地图，右手指向天际线隐约浮现的雾霭山脉，海浪在脚下碎成晶莹水珠，发梢被海风扬起，目光坚定而深邃，背景海天交界处浮动着若隐若现的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘感与诗意。",
+        "actual_prompt": "超现实主义数字艺术，8K超高清细节呈现。深蓝海洋与翡翠绿波涛在夕阳余晖中交织，金色霞光穿透层次分明的云海，洒落在远方天际。一位身着深灰风衣的旅人立于崎岖海岸边，左手轻按古旧皮质地图，右手指向天边若隐若现的雾霭山脉。脚下海浪碎成晶莹剔透的水珠，微风吹拂起他的发梢，眼神坚定而深邃。背景海天交接处浮动着梦幻般的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘诗意感。电影级灯光渲染，全景构图。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/14/20250310/8928fb36/2dba0f33-b9c5-466c-aba5-a01fa48255bf3762737579.png?Expires=1741678749&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=FpTPX01gp9TATpfzhrhhDRWgqCw%3D"
+      },
+      {
+        "orig_prompt": "超现实风格，8K高清细节，电影级灯光渲染——广袤无垠的深蓝海洋与碧绿波涛在夕阳下交融，金色霞光穿透层叠云海洒向远方，一名身着深灰色风衣的旅行者立于巨石嶙峋的海岸，左手轻扶古旧皮质地图，右手指向天际线隐约浮现的雾霭山脉，海浪在脚下碎成晶莹水珠，发梢被海风扬起，目光坚定而深邃，背景海天交界处浮动着若隐若现的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘感与诗意。",
+        "actual_prompt": "超现实主义数字艺术，8K超高清细节呈现。深蓝海洋与翡翠绿波涛在夕阳余晖中交织，金色霞光穿透层次分明的云海，洒落在远方天际。一位身着深灰风衣的旅人立于崎岖海岸边，左手轻按古旧皮质地图，右手指向天边若隐若现的雾霭山脉。脚下海浪碎成晶莹剔透的水珠，微风吹拂起他的发梢，眼神坚定而深邃。背景海天交接处浮动着梦幻般的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘诗意感。电影级灯光渲染，全景构图。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/96/20250310/b0fe3396/2dba0f33-b9c5-466c-aba5-a01fa48255bf3762737577.png?Expires=1741678749&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=BVLX9sppn4hm%2BOZdwFN0ifLiPgE%3D"
+      },
+      {
+        "orig_prompt": "超现实风格，8K高清细节，电影级灯光渲染——广袤无垠的深蓝海洋与碧绿波涛在夕阳下交融，金色霞光穿透层叠云海洒向远方，一名身着深灰色风衣的旅行者立于巨石嶙峋的海岸，左手轻扶古旧皮质地图，右手指向天际线隐约浮现的雾霭山脉，海浪在脚下碎成晶莹水珠，发梢被海风扬起，目光坚定而深邃，背景海天交界处浮动着若隐若现的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘感与诗意。",
+        "actual_prompt": "超现实主义数字艺术，8K超高清细节呈现。深蓝海洋与翡翠绿波涛在夕阳余晖中交织，金色霞光穿透层次分明的云海，洒落在远方天际。一位身着深灰风衣的旅人立于崎岖海岸边，左手轻按古旧皮质地图，右手指向天边若隐若现的雾霭山脉。脚下海浪碎成晶莹剔透的水珠，微风吹拂起他的发梢，眼神坚定而深邃。背景海天交接处浮动着梦幻般的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘诗意感。电影级灯光渲染，全景构图。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/89/20250310/b0fe3396/2dba0f33-b9c5-466c-aba5-a01fa48255bf3762737578.png?Expires=1741678749&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=j11USbkBh7h2GCRKlU3fu%2Ffe7RA%3D"
+      },
+      {
+        "orig_prompt": "超现实风格，8K高清细节，电影级灯光渲染——广袤无垠的深蓝海洋与碧绿波涛在夕阳下交融，金色霞光穿透层叠云海洒向远方，一名身着深灰色风衣的旅行者立于巨石嶙峋的海岸，左手轻扶古旧皮质地图，右手指向天际线隐约浮现的雾霭山脉，海浪在脚下碎成晶莹水珠，发梢被海风扬起，目光坚定而深邃，背景海天交界处浮动着若隐若现的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘感与诗意。",
+        "actual_prompt": "超现实主义数字艺术，8K超高清细节呈现。深蓝海洋与翡翠绿波涛在夕阳余晖中交织，金色霞光穿透层次分明的云海，洒落在远方天际。一位身着深灰风衣的旅人立于崎岖海岸边，左手轻按古旧皮质地图，右手指向天边若隐若现的雾霭山脉。脚下海浪碎成晶莹剔透的水珠，微风吹拂起他的发梢，眼神坚定而深邃。背景海天交接处浮动着梦幻般的光晕与云霞，整体氛围静谧壮阔，充满探索未知的神秘诗意感。电影级灯光渲染，全景构图。",
+        "url": "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/0b/20250310/8928fb36/2dba0f33-b9c5-466c-aba5-a01fa48255bf3762737580.png?Expires=1741678749&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=D%2B6PRrmt4i0dE%2Bi3TtGxtNRv4Kg%3D"
+      }
+    ],
+    "task_metrics": {
+      "TOTAL": 4,
+      "SUCCEEDED": 4,
+      "FAILED": 0
+    }
+  },
+  "usage": {
+    "image_count": 4
+  }
+}
+-----------------------------------
+
+[2025-03-10T07:39:11.402Z] INFO: 生成的图像URLs (4个):
+数据: [
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/14/20250310/8928fb36/2dba0f33-b9c5-466c-aba5-a01fa48255bf3762737579.png?Expires=1741678749&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=FpTPX01gp9TATpfzhrhhDRWgqCw%3D",
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/96/20250310/b0fe3396/2dba0f33-b9c5-466c-aba5-a01fa48255bf3762737577.png?Expires=1741678749&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=BVLX9sppn4hm%2BOZdwFN0ifLiPgE%3D",
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/89/20250310/b0fe3396/2dba0f33-b9c5-466c-aba5-a01fa48255bf3762737578.png?Expires=1741678749&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=j11USbkBh7h2GCRKlU3fu%2Ffe7RA%3D",
+  "https://dashscope-result-wlcb-acdr-1.oss-cn-wulanchabu-acdr-1.aliyuncs.com/1d/0b/20250310/8928fb36/2dba0f33-b9c5-466c-aba5-a01fa48255bf3762737580.png?Expires=1741678749&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=D%2B6PRrmt4i0dE%2Bi3TtGxtNRv4Kg%3D"
+]
+-----------------------------------
+
+[2025-03-10T07:39:11.402Z] INFO: ===== 图像生成请求完成 =====
+-----------------------------------
+

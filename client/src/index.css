@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 自定义样式 */
+body {
+  @apply bg-primary text-white;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 bg-accent text-white rounded-full transition-all hover:bg-opacity-90;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-br from-[#121212] to-[#222];
+  }
+}

@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom';
 
 const HomePage = () => {
+  // 在新标签页中打开创作窗口
+  const openCreatorInNewTab = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.open('/create', '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#121212] to-[#222] text-white">
       {/* 导航栏 */}
@@ -15,7 +21,7 @@ const HomePage = () => {
             </nav>
           </div>
           <div className="flex items-center space-x-4">
-            <Link to="/create" className="btn">开始创作</Link>
+            <Link to="/create" className="btn" onClick={openCreatorInNewTab}>开始创作</Link>
           </div>
         </div>
       </header>
@@ -31,7 +37,7 @@ const HomePage = () => {
             构思、可视化、创作视频，并与世界分享您的梦想，使用我们最强大的图像和视频AI模型。现已在Web上提供。
           </p>
           <div className="flex flex-col md:flex-row justify-center gap-4 mb-16">
-            <Link to="/create" className="btn text-lg px-8 py-3">立即试用</Link>
+            <Link to="/create" className="btn text-lg px-8 py-3" onClick={openCreatorInNewTab}>立即试用</Link>
             <a href="#examples" className="btn bg-gray-800 text-lg px-8 py-3">观看演示</a>
           </div>
         </div>

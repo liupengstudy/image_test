@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import { config } from './config';
 import { validateEnv, printEnvStatus } from './utils/envValidator';
 import imageRoutes from './routes/imageRoutes';
+import brainstormRoutes from './routes/brainstormRoutes';
 import { errorHandler, AppError } from './middlewares';
 import logger from './utils/logger';
 
@@ -37,6 +38,7 @@ app.use(express.json());
 
 // 路由
 app.use('/api/images', imageRoutes);
+app.use('/api/brainstorm', brainstormRoutes);
 
 // 健康检查端点
 app.get('/health', (req, res) => {

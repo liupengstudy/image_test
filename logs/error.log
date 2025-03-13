@@ -124,3 +124,264 @@
 }
 -----------------------------------
 
+[2025-03-10T09:05:10.464Z] ERROR: 数据库存储失败，但图像生成成功:
+数据: {
+  "message": "Operation `images.insertOne()` buffering timed out after 10000ms",
+  "stack": "MongooseError: Operation `images.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+
+[2025-03-10T09:20:48.873Z] ERROR: 数据库存储失败，但图像生成成功:
+数据: {
+  "message": "Operation `images.insertOne()` buffering timed out after 10000ms",
+  "stack": "MongooseError: Operation `images.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+
+[2025-03-10T21:47:14.992Z] ERROR: MongoDB连接失败:
+数据: {
+  "message": "connect ECONNREFUSED 127.0.0.1:27017, connect ECONNREFUSED ::1:27017",
+  "stack": "MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017, connect ECONNREFUSED ::1:27017\n    at _handleConnectionErrors (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/connection.js:1165:11)\n    at NativeConnection.openUri (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/connection.js:1096:11)\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at listOnTimeout (node:internal/timers:555:9)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+
+[2025-03-10T21:47:46.895Z] ERROR: 数据库存储失败，但图像生成成功:
+数据: {
+  "message": "Operation `images.insertOne()` buffering timed out after 10000ms",
+  "stack": "MongooseError: Operation `images.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+
+[2025-03-10T21:48:33.600Z] ERROR: 数据库存储失败，但图像生成成功:
+数据: {
+  "message": "Operation `images.insertOne()` buffering timed out after 10000ms",
+  "stack": "MongooseError: Operation `images.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+
+[2025-03-13T01:07:45.740Z] ERROR: MongoDB连接失败:
+数据: {
+  "message": "connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017",
+  "stack": "MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017\n    at _handleConnectionErrors (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/connection.js:1165:11)\n    at NativeConnection.openUri (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/connection.js:1096:11)\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at listOnTimeout (node:internal/timers:555:9)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+
+[2025-03-13T02:40:40.698Z] ERROR: 未捕获的异常:
+数据: {
+  "message": "listen EADDRINUSE: address already in use :::5001",
+  "stack": "Error: listen EADDRINUSE: address already in use :::5001\n    at Server.setupListenHandle [as _listen2] (node:net:1937:16)\n    at listenInCluster (node:net:1994:12)\n    at Server.listen (node:net:2099:7)\n    at Function.listen (/Users/liujinlong/Documents/Luma_clone/server/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/src/index.ts:70:5)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Module.m._compile (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1618:23)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)"
+}
+-----------------------------------
+
+[2025-03-13T02:40:59.351Z] ERROR: 未捕获的异常:
+数据: {
+  "message": "listen EADDRINUSE: address already in use :::5001",
+  "stack": "Error: listen EADDRINUSE: address already in use :::5001\n    at Server.setupListenHandle [as _listen2] (node:net:1937:16)\n    at listenInCluster (node:net:1994:12)\n    at Server.listen (node:net:2099:7)\n    at Function.listen (/Users/liujinlong/Documents/Luma_clone/server/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/src/index.ts:70:5)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Module.m._compile (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1618:23)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)"
+}
+-----------------------------------
+
+[2025-03-13T02:41:15.842Z] ERROR: 未捕获的异常:
+数据: {
+  "message": "listen EADDRINUSE: address already in use :::5001",
+  "stack": "Error: listen EADDRINUSE: address already in use :::5001\n    at Server.setupListenHandle [as _listen2] (node:net:1937:16)\n    at listenInCluster (node:net:1994:12)\n    at Server.listen (node:net:2099:7)\n    at Function.listen (/Users/liujinlong/Documents/Luma_clone/server/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/src/index.ts:70:5)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Module.m._compile (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1618:23)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)"
+}
+-----------------------------------
+
+[2025-03-13T02:41:36.779Z] ERROR: 未捕获的异常:
+数据: {
+  "message": "listen EADDRINUSE: address already in use :::5001",
+  "stack": "Error: listen EADDRINUSE: address already in use :::5001\n    at Server.setupListenHandle [as _listen2] (node:net:1937:16)\n    at listenInCluster (node:net:1994:12)\n    at Server.listen (node:net:2099:7)\n    at Function.listen (/Users/liujinlong/Documents/Luma_clone/server/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/src/index.ts:70:5)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Module.m._compile (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1618:23)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (/Users/liujinlong/Documents/Luma_clone/server/node_modules/ts-node/src/index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)"
+}
+-----------------------------------
+
+[2025-03-13T02:42:06.757Z] ERROR: MongoDB连接失败:
+数据: {
+  "message": "connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017",
+  "stack": "MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017\n    at _handleConnectionErrors (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/connection.js:1165:11)\n    at NativeConnection.openUri (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/connection.js:1096:11)\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at listOnTimeout (node:internal/timers:555:9)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+
+[2025-03-13T02:42:30.853Z] ERROR: 数据库存储失败，但图像生成成功:
+数据: {
+  "message": "Operation `images.insertOne()` buffering timed out after 10000ms",
+  "stack": "MongooseError: Operation `images.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+
+[2025-03-13T02:43:49.202Z] ERROR: 数据库存储失败，但图像生成成功:
+数据: {
+  "message": "Operation `images.insertOne()` buffering timed out after 10000ms",
+  "stack": "MongooseError: Operation `images.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+
+[2025-03-13T02:45:21.653Z] ERROR: 数据库存储失败，但图像生成成功:
+数据: {
+  "message": "Operation `images.insertOne()` buffering timed out after 10000ms",
+  "stack": "MongooseError: Operation `images.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+
+[2025-03-13T02:46:57.823Z] ERROR: 数据库存储失败，但图像生成成功:
+数据: {
+  "message": "Operation `images.insertOne()` buffering timed out after 10000ms",
+  "stack": "MongooseError: Operation `images.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+
+[2025-03-13T02:48:21.881Z] ERROR: 数据库存储失败，但图像生成成功:
+数据: {
+  "message": "Operation `images.insertOne()` buffering timed out after 10000ms",
+  "stack": "MongooseError: Operation `images.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+
+[2025-03-13T02:49:43.664Z] ERROR: 数据库存储失败，但图像生成成功:
+数据: {
+  "message": "Operation `images.insertOne()` buffering timed out after 10000ms",
+  "stack": "MongooseError: Operation `images.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+
+[2025-03-13T02:50:44.072Z] ERROR: 数据库存储失败，但图像生成成功:
+数据: {
+  "message": "Operation `images.insertOne()` buffering timed out after 10000ms",
+  "stack": "MongooseError: Operation `images.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+
+[2025-03-13T02:52:08.621Z] ERROR: QWQ创意提示生成失败
+数据: {
+  "status": 400,
+  "headers": {
+    "content-encoding": "gzip",
+    "content-type": "application/json",
+    "date": "Thu, 13 Mar 2025 02:52:08 GMT",
+    "req-arrive-time": "1741834328586",
+    "req-cost-time": "55",
+    "resp-start-time": "1741834328641",
+    "server": "istio-envoy",
+    "set-cookie": "acw_tc=16889e8f-8485-9e23-bfe6-bd509db8f5f5f3a5cde6b880cca9303f7ed59092f88f;path=/;HttpOnly;Max-Age=1800",
+    "transfer-encoding": "chunked",
+    "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers, Accept-Encoding",
+    "x-dashscope-call-gateway": "true",
+    "x-envoy-upstream-service-time": "54",
+    "x-request-id": "16889e8f-8485-9e23-bfe6-bd509db8f5f5"
+  },
+  "request_id": "16889e8f-8485-9e23-bfe6-bd509db8f5f5",
+  "error": {
+    "code": "invalid_parameter_error",
+    "param": null,
+    "message": "This model only support stream mode, please enable the stream parameter to access the model. ",
+    "type": "invalid_request_error"
+  },
+  "code": "invalid_parameter_error",
+  "param": null,
+  "type": "invalid_request_error"
+}
+-----------------------------------
+
+[2025-03-13T02:52:13.603Z] ERROR: QWQ创意提示生成失败
+数据: {
+  "status": 400,
+  "headers": {
+    "content-encoding": "gzip",
+    "content-type": "application/json",
+    "date": "Thu, 13 Mar 2025 02:52:13 GMT",
+    "req-arrive-time": "1741834333565",
+    "req-cost-time": "62",
+    "resp-start-time": "1741834333627",
+    "server": "istio-envoy",
+    "set-cookie": "acw_tc=df4e768a-5c13-9daa-a752-bc21812d946bbc319e16aa35678efc546eed8de547df;path=/;HttpOnly;Max-Age=1800",
+    "transfer-encoding": "chunked",
+    "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers, Accept-Encoding",
+    "x-dashscope-call-gateway": "true",
+    "x-envoy-upstream-service-time": "62",
+    "x-request-id": "df4e768a-5c13-9daa-a752-bc21812d946b"
+  },
+  "request_id": "df4e768a-5c13-9daa-a752-bc21812d946b",
+  "error": {
+    "code": "invalid_parameter_error",
+    "param": null,
+    "message": "This model only support stream mode, please enable the stream parameter to access the model. ",
+    "type": "invalid_request_error"
+  },
+  "code": "invalid_parameter_error",
+  "param": null,
+  "type": "invalid_request_error"
+}
+-----------------------------------
+
+[2025-03-13T02:52:14.364Z] ERROR: QWQ创意提示生成失败
+数据: {
+  "status": 400,
+  "headers": {
+    "content-encoding": "gzip",
+    "content-type": "application/json",
+    "date": "Thu, 13 Mar 2025 02:52:14 GMT",
+    "req-arrive-time": "1741834334304",
+    "req-cost-time": "79",
+    "resp-start-time": "1741834334383",
+    "server": "istio-envoy",
+    "set-cookie": "acw_tc=6adb7d3c-7060-9d6e-9a16-e41f2c94e07a544e8b46ddc9224402420eae3ce7c0e4;path=/;HttpOnly;Max-Age=1800",
+    "transfer-encoding": "chunked",
+    "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers, Accept-Encoding",
+    "x-dashscope-call-gateway": "true",
+    "x-envoy-upstream-service-time": "78",
+    "x-request-id": "6adb7d3c-7060-9d6e-9a16-e41f2c94e07a"
+  },
+  "request_id": "6adb7d3c-7060-9d6e-9a16-e41f2c94e07a",
+  "error": {
+    "code": "invalid_parameter_error",
+    "param": null,
+    "message": "This model only support stream mode, please enable the stream parameter to access the model. ",
+    "type": "invalid_request_error"
+  },
+  "code": "invalid_parameter_error",
+  "param": null,
+  "type": "invalid_request_error"
+}
+-----------------------------------
+
+[2025-03-13T02:52:50.200Z] ERROR: 数据库存储失败，但图像生成成功:
+数据: {
+  "message": "Operation `images.insertOne()` buffering timed out after 10000ms",
+  "stack": "MongooseError: Operation `images.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+
+[2025-03-13T02:54:04.388Z] ERROR: 数据库存储失败，但图像生成成功:
+数据: {
+  "message": "Operation `images.insertOne()` buffering timed out after 10000ms",
+  "stack": "MongooseError: Operation `images.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+
+[2025-03-13T02:54:20.863Z] ERROR: 数据库存储失败，但图像生成成功:
+数据: {
+  "message": "Operation `images.insertOne()` buffering timed out after 10000ms",
+  "stack": "MongooseError: Operation `images.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+
+[2025-03-13T02:55:29.858Z] ERROR: 数据库存储失败，但图像生成成功:
+数据: {
+  "message": "Operation `images.insertOne()` buffering timed out after 10000ms",
+  "stack": "MongooseError: Operation `images.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+
+[2025-03-13T02:57:55.824Z] ERROR: 数据库存储失败，但图像生成成功:
+数据: {
+  "message": "Operation `images.insertOne()` buffering timed out after 10000ms",
+  "stack": "MongooseError: Operation `images.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+
+[2025-03-13T03:00:18.355Z] ERROR: 数据库存储失败，但图像生成成功:
+数据: {
+  "message": "Operation `images.insertOne()` buffering timed out after 10000ms",
+  "stack": "MongooseError: Operation `images.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/Users/liujinlong/Documents/Luma_clone/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+}
+-----------------------------------
+

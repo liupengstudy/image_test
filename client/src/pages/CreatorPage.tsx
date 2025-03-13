@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { generateImage } from '../services/api';
+import BrainstormPanel from '../components/BrainstormPanel';
+import { createPortal } from 'react-dom';
 
 // 消息类型定义
 interface Message {
@@ -195,122 +197,16 @@ interface ExampleProps {
 }
 
 const Example = ({ image, title, description, onClick }: ExampleProps) => (
-  <div className="flex items-center gap-6 hover:bg-gray-800/20 p-5 rounded-2xl cursor-pointer transition-colors" onClick={onClick}>
-    <div className="h-20 w-20 rounded-full overflow-hidden flex-shrink-0 border border-gray-700/30 shadow-lg">
+  <div className="flex items-center gap-8 hover:bg-gray-800/20 p-6 rounded-2xl cursor-pointer transition-colors" onClick={onClick}>
+    <div className="h-[72px] w-[72px] rounded-full overflow-hidden flex-shrink-0 border border-gray-700/30 shadow-lg">
       {image}
     </div>
-    <div>
+    <div className="flex-1">
       <h3 className="text-lg font-medium text-white">{title}</h3>
-      <p className="text-gray-400 text-sm mt-1">{description}</p>
+      <p className="text-gray-400 text-sm mt-1.5">{description}</p>
     </div>
   </div>
 );
-
-// 头脑风暴分类和示例接口
-interface BrainstormCategory {
-  title: string;
-  examples: {
-    image: string;
-    description: string;
-  }[];
-}
-
-// 添加头脑风暴弹窗组件
-const BrainstormPanel = ({ 
-  isOpen, 
-  onClose, 
-  onSelect 
-}: { 
-  isOpen: boolean; 
-  onClose: () => void;
-  onSelect: (prompt: string) => void;
-}) => {
-  // 头脑风暴示例数据
-  const brainstormCategories: BrainstormCategory[] = [
-    {
-      title: "Whimsical Skies",
-      examples: [
-        {
-          image: "https://picsum.photos/seed/sky1/200",
-          description: "A pastel-colored sky with fluffy clouds and a glowing golden sunset."
-        },
-        {
-          image: "https://picsum.photos/seed/sky2/200",
-          description: "A dreamy gradient sky blending pink, lavender, and soft blue hues."
-        }
-      ]
-    },
-    {
-      title: "Oceanic Wonders",
-      examples: [
-        {
-          image: "https://picsum.photos/seed/ocean1/200",
-          description: "Crystal-clear ocean waves reflecting the sky with shimmering highlights."
-        },
-        {
-          image: "https://picsum.photos/seed/ocean2/200",
-          description: "Deep blue waters with mysterious underwater formations illuminated by sunrays."
-        }
-      ]
-    },
-    {
-      title: "Enchanted Forests",
-      examples: [
-        {
-          image: "https://picsum.photos/seed/forest1/200",
-          description: "A magical forest with glowing mushrooms and sparkling fireflies."
-        },
-        {
-          image: "https://picsum.photos/seed/forest2/200",
-          description: "Ancient trees covered in moss with rays of sunlight filtering through the canopy."
-        }
-      ]
-    }
-  ];
-
-  // 如果弹窗不开启，返回null
-  if (!isOpen) return null;
-
-  return (
-    <div className="fixed top-0 right-0 bottom-0 max-w-[480px] w-full bg-[#121212] border-l border-gray-800/30 shadow-xl z-50 overflow-y-auto">
-      <div className="p-8">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-2xl font-bold tracking-wider uppercase">BRAINSTORM</h2>
-          <button 
-            onClick={onClose}
-            className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-800/60"
-          >
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-
-        <div className="space-y-10">
-          {brainstormCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex}>
-              <h3 className="text-xl font-medium mb-6">{category.title}</h3>
-              <div className="space-y-4">
-                {category.examples.map((example, exampleIndex) => (
-                  <div 
-                    key={exampleIndex}
-                    className="flex items-center gap-4 cursor-pointer hover:bg-gray-800/30 p-3 rounded-lg transition-colors"
-                    onClick={() => onSelect(example.description)}
-                  >
-                    <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
-                      <img src={example.image} alt={example.description} className="w-full h-full object-cover" />
-                    </div>
-                    <p className="text-gray-300">{example.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
 
 // 定义历史记录项目类型
 interface Project {
@@ -495,8 +391,8 @@ const CreatorPage = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [isVideoMode, setIsVideoMode] = useState(false);
   const [aspectRatio, setAspectRatio] = useState('16:9');
+  const [showAspectRatioSelector, setShowAspectRatioSelector] = useState(false);
   const [projectTitle, setProjectTitle] = useState('SLEEPING KITTEN');
   const [uploadedImages, setUploadedImages] = useState<string[]>([]);
   const [isBrainstormOpen, setIsBrainstormOpen] = useState(false);
@@ -507,6 +403,9 @@ const CreatorPage = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const aspectRatioSelectorRef = useRef<HTMLDivElement>(null);
+  
+  const aspectRatioOptions = ['9:16', '3:4', '1:1', '4:3', '16:9', '21:9'];
   
   // 示例项目
   const examples = [
@@ -517,8 +416,8 @@ const CreatorPage = () => {
     },
     {
       image: <img src="https://picsum.photos/seed/bunny/200" alt="Bunny" className="w-full h-full object-cover" />,
-      title: "Make a video of",
-      description: "a bunny in 3d cartoon style playing guitar in front of a waterfall"
+      title: "关于风景的画面",
+      description: "a beautiful landscape with mountains and a lake at sunset"
     },
     {
       image: <img src="https://picsum.photos/seed/style/200" alt="Style" className="w-full h-full object-cover" />,
@@ -615,11 +514,12 @@ const CreatorPage = () => {
       
       setMessages(prev => [...prev, tempAiMessage]);
       
-      // 调用API生成图像，传递引用的图像
+      // 调用API生成图像，传递引用的图像和宽高比参数
       const response = await generateImage({ 
         prompt: userMessage.content,
         referenceImages: userMessage.userImages,
-        referencedGeneratedImages: referencedImages.length > 0 ? referencedImages : undefined
+        referencedGeneratedImages: referencedImages.length > 0 ? referencedImages : undefined,
+        aspectRatio: aspectRatio
       });
       
       // 清除引用的图像
@@ -710,18 +610,34 @@ const CreatorPage = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
   
-  // 切换视频/图像模式
-  const toggleMode = () => {
-    setIsVideoMode(!isVideoMode);
-  };
-
-  // 切换宽高比
+  // 切换宽高比选择器的显示状态
   const toggleAspectRatio = () => {
-    const ratios = ['16:9', '1:1', '9:16', '4:3'];
-    const currentIndex = ratios.indexOf(aspectRatio);
-    const nextIndex = (currentIndex + 1) % ratios.length;
-    setAspectRatio(ratios[nextIndex]);
+    console.log('切换宽高比选择器，当前状态:', !showAspectRatioSelector);
+    setShowAspectRatioSelector(prev => !prev);
   };
+  
+  // 选择宽高比并关闭选择器
+  const selectAspectRatio = (ratio: string) => {
+    setAspectRatio(ratio);
+    setShowAspectRatioSelector(false);
+  };
+  
+  // 点击外部区域关闭宽高比选择器
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        aspectRatioSelectorRef.current && 
+        !aspectRatioSelectorRef.current.contains(event.target as Node)
+      ) {
+        setShowAspectRatioSelector(false);
+      }
+    };
+    
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
   
   // 当消息更新时滚动到底部
   useEffect(() => {
@@ -756,18 +672,24 @@ const CreatorPage = () => {
     setError(null);
     
     try {
-      // 使用相同的提示词生成新图像
+      console.log(`尝试生成更多图像，提示词: "${userMessage.content}", 宽高比: "${aspectRatio || '默认'}"`);
+      
+      // 使用相同的提示词生成新图像，并传递宽高比参数
       const response = await generateImage({ 
         prompt: userMessage.content,
-        referenceImages: userMessage.userImages 
+        referenceImages: userMessage.userImages,
+        aspectRatio: aspectRatio
       });
       
+      console.log('API响应:', response);
+      
       if (response.success && response.data) {
-        // 创建模拟的图像数组（确保有4张图）
-        let newImages = (response.data?.images || []).slice();
-        while (newImages.length < 4) {
-          const randomId = Math.floor(Math.random() * 1000);
-          newImages.push(`https://picsum.photos/seed/${randomId}/800/600`);
+        // 使用API返回的图像
+        const newImages = response.data.images || [];
+        
+        if (newImages.length === 0) {
+          setError('生成的图像列表为空');
+          return;
         }
         
         // 更新消息中的图像，添加新生成的图像
@@ -935,8 +857,8 @@ const CreatorPage = () => {
             {/* 对话内容区 - 调整为从页面顶部开始，不再为顶部导航栏预留空间 */}
             <div className="flex-1 overflow-y-auto px-0 pb-32 pt-0 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent relative z-10">
               {messages.length === 0 ? (
-                <div className="h-full flex flex-col justify-center items-center max-w-[90%] mx-auto">
-                  <div className="w-full space-y-8 py-10">
+                <div className="h-full flex flex-col justify-center items-center">
+                  <div className="w-full max-w-[600px] mx-auto space-y-8 py-10">
                     {examples.map((example, index) => (
                       <Example 
                         key={index}
@@ -967,15 +889,26 @@ const CreatorPage = () => {
             
             {/* 错误提示 - 改为固定浮动，调整位置以避免与其他元素重叠 */}
             {error && (
-              <div className="fixed bottom-36 left-0 right-0 z-30 pointer-events-none">
-                <div className="w-2/3 mx-auto bg-red-900/50 backdrop-blur-sm border border-red-600/30 text-white px-4 py-3 rounded-xl shadow-xl pointer-events-auto">
+              <div className="fixed bottom-36 left-0 right-0 z-50 pointer-events-none">
+                <div className="w-5/6 md:w-2/3 mx-auto bg-red-900/80 backdrop-blur-sm border border-red-600/50 text-white px-5 py-4 rounded-xl shadow-xl pointer-events-auto">
                   <div className="flex items-start">
-                    <svg className="w-5 h-5 mr-2 text-red-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-6 h-6 mr-3 text-red-300 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
-                    <div>
-                      <div className="font-medium">{error}</div>
+                    <div className="flex-1">
+                      <div className="font-medium text-lg">{error}</div>
+                      <div className="mt-1 text-sm text-red-200">
+                        请尝试刷新页面或检查网络连接。如果问题持续存在，请联系技术支持。
+                      </div>
                     </div>
+                    <button 
+                      className="ml-3 text-red-300 hover:text-white transition-colors"
+                      onClick={() => setError(null)}
+                    >
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1066,15 +999,6 @@ const CreatorPage = () => {
                           <path d="M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </button>
-                      <button 
-                        type="button"
-                        onClick={openBrainstorm}
-                        className="text-gray-300 hover:text-white transition-colors"
-                      >
-                        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </button>
                     </div>
                     
                     {/* 输入框 */}
@@ -1091,25 +1015,49 @@ const CreatorPage = () => {
                     {/* 右侧选项和按钮 */}
                     <div className="flex items-center gap-3 ml-4">
                       <div 
-                        className="flex items-center text-gray-300 cursor-pointer"
+                        className="flex items-center text-gray-300 cursor-pointer relative"
                         onClick={toggleAspectRatio}
                       >
-                        <span className="uppercase font-medium text-xs tracking-wide">{isVideoMode ? "VIDEO" : "IMAGE"}</span>
+                        <span className="uppercase font-medium text-xs tracking-wide">宽高比</span>
                         <span className="mx-1 opacity-80">·</span>
                         <span className="font-medium text-xs">{aspectRatio}</span>
                         <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M19 9l-7 7-7-7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </div>
-                      <button
-                        type="button"
-                        onClick={toggleMode}
-                        className="h-8 w-8 flex items-center justify-center rounded-full bg-gray-700/50 hover:bg-gray-600/60 text-white transition-colors mr-1"
-                      >
-                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M13 11l1-1 1 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </button>
+
+                      {/* 完全重新实现的宽高比选择浮框 */}
+                      {showAspectRatioSelector && createPortal(
+                        <div 
+                          className="fixed inset-0 z-[9999] bg-black/20 flex items-center justify-center"
+                          onClick={() => setShowAspectRatioSelector(false)}
+                        >
+                          <div 
+                            className="absolute bottom-28 bg-[#222222] rounded-xl border-2 border-white/10 p-4 shadow-2xl"
+                            onClick={(e) => e.stopPropagation()}
+                            ref={aspectRatioSelectorRef}
+                          >
+                            <div className="text-white text-sm font-medium mb-2">选择宽高比</div>
+                            <div className="grid grid-cols-3 gap-2 w-[320px]">
+                              {aspectRatioOptions.map(ratio => (
+                                <button
+                                  key={ratio}
+                                  onClick={() => selectAspectRatio(ratio)}
+                                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                                    aspectRatio === ratio
+                                      ? 'bg-white text-black'
+                                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                                  }`}
+                                >
+                                  {ratio}
+                                </button>
+                              ))}
+                            </div>
+                          </div>
+                        </div>,
+                        document.body
+                      )}
+
                       <button
                         type="submit"
                         disabled={isGenerating}

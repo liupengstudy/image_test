@@ -15,6 +15,7 @@ export interface GenerateImageRequest {
   prompt: string;
   userId?: string;
   boardName?: string;
+  aspectRatio?: string;
 }
 
 /**

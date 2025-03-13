@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { generateImages } from '../services/imageGenerationService';
+import { generateImages, generateImagesWithWanx, optimizePrompt } from '../services/imageGenerationService';
 import Image from '../models/Image';
 import mongoose from 'mongoose';
 import { config } from '../config';
@@ -13,14 +13,15 @@ import { ApiResponse, GenerateImageRequest, GenerateImageResponse } from '../typ
  */
 export const createImage = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const { prompt, userId, boardName } = req.body as GenerateImageRequest;
+    const { prompt, userId, boardName, aspectRatio } = req.body as GenerateImageRequest;
 
     if (!prompt) {
       return next(new AppError('提示词不能为空', 400));
     }
 
     // 调用服务生成图像
-    const { optimizedPrompt, images } = await generateImages(prompt);
+    const optimizedPrompt = await optimizePrompt(prompt);
+    const images = await generateImagesWithWanx(optimizedPrompt, aspectRatio);
 
     // 如果仅使用模拟数据模式，可以跳过数据库存储
     if (!config.useMockData) {
@@ -36,6 +37,7 @@ export const createImage = async (req: Request, res: Response, next: NextFunctio
             width: 512,
             height: 512,
             format: 'png',
+            aspectRatio: aspectRatio || '1:1',
           },
         });
 

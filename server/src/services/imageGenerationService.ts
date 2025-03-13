@@ -134,29 +134,35 @@ const waitForTaskCompletion = async (taskId: string): Promise<string[]> => {
 /**
  * 使用阿里云通义万相生成图像
  * @param optimizedPrompt 优化后的提示词
+ * @param aspectRatio 宽高比（例如：'16:9', '4:3', '1:1'等）
  * @returns 生成的图像URL数组
  */
-export const generateImages = async (prompt: string): Promise<{ optimizedPrompt: string, images: string[] }> => {
-  logger.api(`===== 开始新的图像生成请求 =====`);
-  logger.api(`原始提示词: "${prompt}"`);
-  
-  // 1. 使用QWQ模型优化提示词
-  const optimizedPrompt = await optimizePrompt(prompt);
-  
-  // 2. 使用通义万相生成图像
-  const images = await generateImagesWithWanx(optimizedPrompt);
-  
-  logger.api(`===== 图像生成请求完成 =====`);
-  return { optimizedPrompt, images };
-};
+export const generateImagesWithWanx = async (optimizedPrompt: string, aspectRatio?: string): Promise<string[]> => {
+  logger.api(`准备生成图像，提示词: "${optimizedPrompt}", 宽高比: "${aspectRatio || '默认'}"`);
 
-/**
- * 使用阿里云通义万相生成图像
- * @param optimizedPrompt 优化后的提示词
- * @returns 生成的图像URL数组
- */
-export const generateImagesWithWanx = async (optimizedPrompt: string): Promise<string[]> => {
-  logger.api(`准备生成图像，提示词: "${optimizedPrompt}"`);
+  // 根据宽高比选择尺寸
+  let size = '1024*1024'; // 默认为1:1
+  if (aspectRatio) {
+    switch (aspectRatio) {
+      case '16:9':
+        size = '1024*576';
+        break;
+      case '9:16':
+        size = '576*1024';
+        break;
+      case '4:3':
+        size = '1024*768';
+        break;
+      case '3:4':
+        size = '768*1024';
+        break;
+      case '21:9':
+        size = '1024*440';
+        break;
+      default:
+        size = '1024*1024'; // 默认1:1
+    }
+  }
 
   try {
     const requestUrl = `${config.aliyun.baseUrl}/services/aigc/text2image/image-synthesis`;
@@ -166,7 +172,7 @@ export const generateImagesWithWanx = async (optimizedPrompt: string): Promise<s
         prompt: optimizedPrompt
       },
       parameters: {
-        size: '1024*1024',
+        size: size,
         n: 4,
         prompt_extend: true,
         watermark: false
@@ -243,4 +249,23 @@ export const generateImagesWithWanx = async (optimizedPrompt: string): Promise<s
     logger.api('API调用失败，使用备选图像源', fallbackImages);
     return fallbackImages;
   }
+};
+
+/**
+ * 使用阿里云通义万相生成图像
+ * @param optimizedPrompt 优化后的提示词
+ * @returns 生成的图像URL数组
+ */
+export const generateImages = async (prompt: string): Promise<{ optimizedPrompt: string, images: string[] }> => {
+  logger.api(`===== 开始新的图像生成请求 =====`);
+  logger.api(`原始提示词: "${prompt}"`);
+  
+  // 1. 使用QWQ模型优化提示词
+  const optimizedPrompt = await optimizePrompt(prompt);
+  
+  // 2. 使用通义万相生成图像
+  const images = await generateImagesWithWanx(optimizedPrompt);
+  
+  logger.api(`===== 图像生成请求完成 =====`);
+  return { optimizedPrompt, images };
 }; 
